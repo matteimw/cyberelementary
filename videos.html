@@ -1,0 +1,54 @@
+<!--
+  NOT CURRENTLY LINKED FROM THE SITE — kept in place on purpose.
+  This page and assets/js/data/videos.js still work exactly as built; they're
+  just not in the nav, footer, or home page right now (removed at the
+  owner's request, saved for future video ads). To bring it back: add
+  { href: "videos.html", label: "Videos" } to NAV_LINKS in assets/js/main.js,
+  and restore the Videos <section> + hero button + videos.js <script> tag
+  in index.html (see the HTML comment left there marking where it was).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Videos — Cyber Elementary</title>
+<meta name="description" content="Watch Cyber Elementary's video library — share individual videos to social media with a direct link." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+  <section class="hero" style="padding:44px 24px;">
+    <div class="hero-inner" style="grid-template-columns:1fr;">
+      <div>
+        <span class="hero-badge">Watch & Share</span>
+        <h1>Videos</h1>
+        <p class="lead">
+          Every video below has its own shareable link — click "Copy share link" on any video and
+          post it to Instagram, Facebook, or wherever you promote Cyber Elementary. It'll open this
+          page scrolled straight to that video.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid" id="videos-grid"></div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+<div id="sticky-bar"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data/videos.js"></script>
+<script src="assets/js/data/kindle.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
