@@ -299,6 +299,10 @@ nav.main-nav a[aria-current="page"] {
   padding: 4px 10px; border-radius: 999px;
   text-transform: uppercase; letter-spacing: 0.03em;
 }
+.card-badge-external {
+  left: auto; right: 10px;
+  background: var(--navy);
+}
 .card-media .free-stamp {
   position: absolute;
   left: -8px;

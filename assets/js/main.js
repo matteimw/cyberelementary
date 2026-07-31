@@ -322,10 +322,15 @@ function renderArticles() {
     return;
   }
 
-  mount.innerHTML = ARTICLES.map((a) => `
+  mount.innerHTML = ARTICLES.map((a) => {
+    const isExternal = /^https?:\/\//i.test(a.url);
+    const linkAttrs = isExternal ? ` target="_blank" rel="noopener"` : "";
+    const linkLabel = isExternal ? "🔗 Visit Resource" : "📖 Read Article";
+    return `
     <article class="card article-card">
       <div class="card-media">
         ${a.badge ? `<span class="card-badge">${a.badge}</span>` : ""}
+        ${isExternal ? `<span class="card-badge card-badge-external">EXTERNAL RESOURCE</span>` : ""}
         ${mediaBlock(a.image, a.icon || "📝", a.title)}
       </div>
       <div class="card-body">
@@ -333,11 +338,12 @@ function renderArticles() {
         <div class="card-meta">By ${a.author} · ${a.date}</div>
         <p class="card-desc">${a.excerpt}</p>
         <div class="card-actions">
-          <a class="btn btn-primary btn-sm" href="${a.url}">📖 Read Article</a>
+          <a class="btn btn-primary btn-sm" href="${a.url}"${linkAttrs}>${linkLabel}</a>
         </div>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 
 /* ---------------- Kindle Unlimited plans ---------------- */

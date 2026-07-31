@@ -20,7 +20,9 @@
    title    - Article title
    author   - Byline
    date     - Human-readable publish date, e.g. "July 30, 2026"
-   url      - Path to the article's own HTML page
+   url      - Path to the article's own HTML page, OR a full external URL
+              (https://...) to link out to an outside resource — external
+              links automatically open in a new tab.
    excerpt  - 1-2 sentence teaser shown on the card
    icon     - Emoji shown on the card if no image is set
    image    - Optional path to a cover image (e.g. "assets/images/blog/thing.svg");
@@ -39,5 +41,38 @@ const ARTICLES = [
     icon: "🧠",
     image: "assets/images/blog/ai-and-teen-mental-health.svg",
     badge: "NEW",
+  },
+  {
+    title: "NOVA Labs: Cybersecurity Lab",
+    author: "PBS NOVA",
+    date: "Recommended Resource",
+    url: "https://www.pbs.org/wgbh/nova/labs/lab/cyber/",
+    excerpt:
+      "A free, interactive game from PBS NOVA where kids defend a company from cyber attacks — cracking passwords, writing code, and outsmarting hackers along the way. A fun, hands-on intro to how cybersecurity really works.",
+    icon: "🛡️",
+    image: "assets/images/blog/nova-cybersecurity-lab.jpg",
+    badge: "",
+  },
+  {
+    title: "Wall of Sheep: Learn Why Encryption Matters",
+    author: "Packet Hacking Village",
+    date: "Recommended Resource",
+    url: "https://www.phvillage.io/pages/wall-of-lambs/",
+    excerpt:
+      "An eye-opening cybersecurity exhibit that uses packet-capture tools and forensics games to show how easily unencrypted logins can be exposed on a network — a memorable, real-world lesson in why encryption and strong passwords matter.",
+    icon: "🐑",
+    image: "assets/images/blog/wall-of-sheep.jpg",
+    badge: "",
+  },
+  {
+    title: "AI: What Should Parents, Caregivers & Educators Know?",
+    author: "Anti-Defamation League",
+    date: "Recommended Resource",
+    url: "https://www.adl.org/resources/tools-and-strategies/artificial-intelligence-what-do-parents-caregivers-and-educators",
+    excerpt:
+      "A practical guide from the ADL on helping kids navigate AI safely and critically — covering AI literacy, bias and misinformation, and conversation starters for building digital resilience at home and in the classroom.",
+    icon: "🤖",
+    image: "assets/images/blog/ai-parents-educators.jpg",
+    badge: "",
   },
 ];
