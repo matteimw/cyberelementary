@@ -12,7 +12,9 @@
    description - One line about the plan
    url         - Your affiliate link (used as-is, already tagged)
    badge       - Optional ribbon text, e.g. "MOST POPULAR"
-   icon        - Emoji shown on the card
+   icon        - Emoji shown on the card if no image is set
+   image       - Optional path to an image (e.g. "assets/images/deals/thing.jpg");
+                 leave "" to use the emoji in "icon" instead
    ========================================================================= */
 
 const KINDLE_PLANS = [
@@ -22,6 +24,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4vL8lcF",
     badge: "START HERE",
     icon: "🎉",
+    image: "assets/images/deals/kindle-unlimited-free-trial.jpg",
   },
   {
     title: "Kindle Unlimited — 6 Month Plan",
@@ -29,6 +32,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4vSiogk",
     badge: "",
     icon: "📖",
+    image: "assets/images/deals/kindle-unlimited-promo.jpg",
   },
   {
     title: "Kindle Unlimited — 12 Month Plan",
@@ -36,6 +40,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/3Tm7ulu",
     badge: "MOST POPULAR",
     icon: "📚",
+    image: "assets/images/deals/kindle-unlimited-promo.jpg",
   },
   {
     title: "Kindle Unlimited — 24 Month Plan",
@@ -43,5 +48,6 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4fW04hk",
     badge: "BEST VALUE",
     icon: "🏆",
+    image: "assets/images/deals/kindle-unlimited-promo.jpg",
   },
 ];
