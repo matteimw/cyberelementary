@@ -24,7 +24,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4vL8lcF",
     badge: "START HERE",
     icon: "🎉",
-    image: "assets/images/deals/kindle-unlimited-free-trial.jpg",
+    image: "",
   },
   {
     title: "Kindle Unlimited — 6 Month Plan",
@@ -32,7 +32,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4vSiogk",
     badge: "",
     icon: "📖",
-    image: "assets/images/deals/kindle-unlimited-promo.jpg",
+    image: "",
   },
   {
     title: "Kindle Unlimited — 12 Month Plan",
@@ -40,7 +40,7 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/3Tm7ulu",
     badge: "MOST POPULAR",
     icon: "📚",
-    image: "assets/images/deals/kindle-unlimited-promo.jpg",
+    image: "",
   },
   {
     title: "Kindle Unlimited — 24 Month Plan",
@@ -48,6 +48,6 @@ const KINDLE_PLANS = [
     url: "https://amzn.to/4fW04hk",
     badge: "BEST VALUE",
     icon: "🏆",
-    image: "assets/images/deals/kindle-unlimited-promo.jpg",
+    image: "",
   },
 ];

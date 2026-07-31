@@ -26,7 +26,7 @@
 const DEALS = [
   {
     title: "Prime Free Trial",
-    image: "assets/images/deals/prime-free-trial.jpg",
+    image: "",
     icon: "📦",
     description:
       "Try Amazon Prime free — fast shipping, Prime Video, and other Prime perks across Amazon.",
@@ -37,7 +37,7 @@ const DEALS = [
   },
   {
     title: "Prime Exclusives",
-    image: "assets/images/deals/prime-exclusive-savings.jpg",
+    image: "",
     icon: "🎁",
     description: "Prime member-only deals and early access to select Amazon promotions.",
     amazon: "https://amzn.to/44MWEaB",
@@ -47,7 +47,7 @@ const DEALS = [
   },
   {
     title: "Kindle Unlimited Special Promos",
-    image: "assets/images/deals/kindle-unlimited-promo.jpg",
+    image: "",
     icon: "⚡",
     description:
       "Amazon's current limited-time Kindle Unlimited promotions — check for today's discounted trial or membership pricing.",
@@ -58,7 +58,7 @@ const DEALS = [
   },
   {
     title: "Prime for Young Adults — Free Trial",
-    image: "assets/images/deals/prime-young-adults.jpg",
+    image: "",
     icon: "🎓",
     description: "A free trial of Amazon's discounted Prime plan for young adults (ages 18-24).",
     amazon: "https://amzn.to/4wYyOEG",
@@ -68,7 +68,7 @@ const DEALS = [
   },
   {
     title: "Prime for Young Adults — Paid Membership",
-    image: "assets/images/deals/prime-young-adults.jpg",
+    image: "",
     icon: "🎓",
     description: "Amazon Prime at a reduced rate for young adults (ages 18-24).",
     amazon: "https://amzn.to/4yHRomh",
@@ -78,7 +78,7 @@ const DEALS = [
   },
   {
     title: "Audible Premium Plus — Annual Membership",
-    image: "assets/images/deals/audible-better.jpg",
+    image: "",
     icon: "🎧",
     description:
       "A full year of Audible's top membership tier — one credit a month, plus unlimited access to their audiobook and podcast catalog.",
@@ -89,7 +89,7 @@ const DEALS = [
   },
   {
     title: "Audible Standard — Free Trial",
-    image: "assets/images/deals/audible-better.jpg",
+    image: "",
     icon: "🎧",
     description: "Try Audible free, including your first audiobook credit.",
     amazon: "https://amzn.to/4fEoWsO",
@@ -99,7 +99,7 @@ const DEALS = [
   },
   {
     title: "Audible Standard — Monthly Membership",
-    image: "assets/images/deals/audible-better.jpg",
+    image: "",
     icon: "🎧",
     description: "One audiobook credit a month, month-to-month, with no annual commitment.",
     amazon: "https://amzn.to/3RDx8RX",
