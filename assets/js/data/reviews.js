@@ -25,7 +25,7 @@
 const REVIEWS = [
   {
     productName: "The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning",
-    image: "",
+    image: "assets/images/reviews/fallacy-detective.jpg",
     icon: "🧠",
     rating: 5,
     summary:
@@ -37,7 +37,7 @@ const REVIEWS = [
   },
   {
     productName: "Santa and Me: The SCADA Before Christmas",
-    image: "",
+    image: "assets/images/reviews/santa-and-me-scada.jpg",
     icon: "🎄",
     rating: 5,
     summary:

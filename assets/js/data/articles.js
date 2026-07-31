@@ -22,7 +22,9 @@
    date     - Human-readable publish date, e.g. "July 30, 2026"
    url      - Path to the article's own HTML page
    excerpt  - 1-2 sentence teaser shown on the card
-   icon     - Emoji shown on the card (no cover images yet)
+   icon     - Emoji shown on the card if no image is set
+   image    - Optional path to a cover image (e.g. "assets/images/blog/thing.svg");
+              leave "" to use the emoji in "icon" instead
    badge    - Optional ribbon text, e.g. "NEW"
    ========================================================================= */
 
@@ -35,6 +37,7 @@ const ARTICLES = [
     excerpt:
       "AI is now part of everyday teen life — from study apps to chatbots and social feeds. Here's how it affects emotional well-being, and practical steps for teens, parents, and schools to use it more safely.",
     icon: "🧠",
+    image: "assets/images/blog/ai-and-teen-mental-health.svg",
     badge: "NEW",
   },
 ];

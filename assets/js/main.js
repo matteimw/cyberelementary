@@ -158,6 +158,7 @@ function renderBooks() {
     <article class="card book-card">
       <div class="card-media">
         ${b.badge ? `<span class="card-badge">${b.badge}</span>` : ""}
+        ${b.freePromo ? `<img class="free-stamp" src="assets/images/badges/free-stamp.svg" alt="Free for a limited time" />` : ""}
         ${mediaBlock(b.cover, b.icon, b.title)}
       </div>
       <div class="card-body">
@@ -325,7 +326,7 @@ function renderArticles() {
     <article class="card article-card">
       <div class="card-media">
         ${a.badge ? `<span class="card-badge">${a.badge}</span>` : ""}
-        <span aria-hidden="true">${a.icon || "📝"}</span>
+        ${mediaBlock(a.image, a.icon || "📝", a.title)}
       </div>
       <div class="card-body">
         <h3>${a.title}</h3>
@@ -349,7 +350,7 @@ function renderKindle() {
     <article class="card kindle-card">
       <div class="card-media">
         ${k.badge ? `<span class="card-badge">${k.badge}</span>` : ""}
-        <span aria-hidden="true">${k.icon || "📖"}</span>
+        ${mediaBlock(k.image, k.icon, k.title)}
       </div>
       <div class="card-body">
         <h3>${k.title}</h3>
@@ -379,7 +380,7 @@ function renderKindleTeaser() {
     <article class="card kindle-card" style="max-width:340px; margin:0 auto;">
       <div class="card-media">
         ${k.badge ? `<span class="card-badge">${k.badge}</span>` : ""}
-        <span aria-hidden="true">${k.icon || "📖"}</span>
+        ${mediaBlock(k.image, k.icon, k.title)}
       </div>
       <div class="card-body">
         <h3>${k.title}</h3>

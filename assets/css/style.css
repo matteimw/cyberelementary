@@ -299,6 +299,22 @@ nav.main-nav a[aria-current="page"] {
   padding: 4px 10px; border-radius: 999px;
   text-transform: uppercase; letter-spacing: 0.03em;
 }
+.card-media .free-stamp {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-6deg);
+  width: 38%;
+  min-width: 44px;
+  max-width: 92px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  z-index: 3;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+.grid-tight .card-media .free-stamp { width: 46%; left: -10px; }
 .card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card-body h3 { font-size: 1.08rem; margin: 0; }
 .card-meta { font-size: 0.82rem; color: var(--ink-soft); }
@@ -313,6 +329,11 @@ nav.main-nav a[aria-current="page"] {
 
 /* ---------- Deals ---------- */
 .deal-card .card-media { background: linear-gradient(135deg, var(--amazon), var(--coral)); }
+.deal-card .card-media img {
+  object-fit: contain;
+  padding: 14px;
+  background: #fff;
+}
 .deal-expiry {
   font-size: 0.78rem;
   font-weight: 800;
@@ -412,6 +433,13 @@ footer a:hover { color: var(--teal); }
 }
 .article-hero .eyebrow { margin-bottom: 10px; }
 .article-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.article-hero-image {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  display: block;
+}
 .article-meta {
   color: var(--ink-soft);
   font-size: 0.95rem;
@@ -455,6 +483,11 @@ footer a:hover { color: var(--teal); }
 
 /* ---------- Kindle plan cards ---------- */
 .kindle-card .card-media { background: linear-gradient(135deg, #232F52, var(--navy)); font-size: 2.4rem; }
+.kindle-card .card-media img {
+  object-fit: contain;
+  padding: 14px;
+  background: #fff;
+}
 
 /* ---------- Sticky bottom promo bar ---------- */
 body.has-sticky-bar { padding-bottom: 64px; }

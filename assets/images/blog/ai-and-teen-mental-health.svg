@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Illustration of a teen sitting cross-legged looking thoughtfully at a phone, with a caring AI-and-wellbeing thought bubble above">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#14213D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2EC4B6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2EC4B6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EAF7F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- soft ambient glow behind the figure -->
+  <circle cx="600" cy="330" r="330" fill="url(#glow)"/>
+
+  <!-- floating decorative dots / stars -->
+  <circle cx="150" cy="120" r="6" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="1080" cy="150" r="5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="980" cy="480" r="7" fill="#2EC4B6" opacity="0.5"/>
+  <circle cx="110" cy="470" r="5" fill="#FF9900" opacity="0.5"/>
+  <circle cx="220" cy="250" r="4" fill="#FFFFFF" opacity="0.35"/>
+  <circle cx="1030" cy="330" r="4" fill="#FFFFFF" opacity="0.35"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="600" cy="560" rx="230" ry="24" fill="#0B1730" opacity="0.35"/>
+
+  <!-- ===== seated figure (simple, gender-neutral flat illustration) ===== -->
+  <g>
+    <!-- crossed legs -->
+    <path d="M 470,520 Q 600,570 730,520 Q 700,545 600,552 Q 500,545 470,520 Z" fill="#0F1B33"/>
+    <path d="M 500,505 Q 600,545 700,505 L 700,525 Q 600,562 500,525 Z" fill="#16264A"/>
+
+    <!-- torso (hoodie) -->
+    <path d="M 520,335 Q 520,270 600,265 Q 680,270 680,335 L 690,500 Q 600,530 510,500 Z" fill="#1F3157"/>
+    <!-- hoodie pocket -->
+    <path d="M 555,420 Q 600,440 645,420 L 640,460 Q 600,475 560,460 Z" fill="#182A52"/>
+
+    <!-- arms holding phone -->
+    <path d="M 520,345 Q 470,380 480,430 Q 485,450 520,455 L 545,430 Q 520,410 525,385 Z" fill="#1F3157"/>
+    <path d="M 680,345 Q 730,380 720,430 Q 715,450 680,455 L 655,430 Q 680,410 675,385 Z" fill="#1F3157"/>
+
+    <!-- hands -->
+    <circle cx="518" cy="452" r="15" fill="#F2C29B"/>
+    <circle cx="682" cy="452" r="15" fill="#F2C29B"/>
+
+    <!-- phone -->
+    <rect x="560" y="415" width="80" height="130" rx="14" fill="#0B1730" stroke="#2EC4B6" stroke-width="3"/>
+    <rect x="572" y="430" width="56" height="88" rx="4" fill="#123055"/>
+    <circle cx="600" cy="470" r="10" fill="#2EC4B6" opacity="0.85"/>
+    <rect x="584" y="486" width="32" height="6" rx="3" fill="#2EC4B6" opacity="0.6"/>
+    <rect x="584" y="497" width="24" height="6" rx="3" fill="#2EC4B6" opacity="0.45"/>
+
+    <!-- neck -->
+    <rect x="584" y="255" width="32" height="30" rx="10" fill="#F2C29B"/>
+
+    <!-- head -->
+    <circle cx="600" cy="210" r="58" fill="#F6D2AE"/>
+    <!-- simple hair -->
+    <path d="M 542,205 Q 538,145 600,140 Q 662,145 658,205 Q 650,165 600,160 Q 550,165 542,205 Z" fill="#3B2A20"/>
+    <!-- soft, calm closed-eye / content expression -->
+    <path d="M 572,215 Q 580,222 588,215" stroke="#4A2E1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 612,215 Q 620,222 628,215" stroke="#4A2E1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 588,238 Q 600,246 612,238" stroke="#4A2E1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== thought bubble above, pairing AI + wellbeing ===== -->
+  <g>
+    <circle cx="720" cy="330" r="9" fill="url(#bubble)"/>
+    <circle cx="748" cy="290" r="14" fill="url(#bubble)"/>
+    <rect x="740" y="140" width="230" height="120" rx="30" fill="url(#bubble)"/>
+    <path d="M 790,258 L 810,235 L 835,258 Z" fill="url(#bubble)"/>
+
+    <!-- heart -->
+    <path d="M 815,205 C 815,190 795,190 795,207 C 795,220 815,235 815,235 C 815,235 835,220 835,207 C 835,190 815,190 815,205 Z" fill="#FF6B6B"/>
+    <!-- sparkle -->
+    <path d="M 875,175 L 880,190 L 895,195 L 880,200 L 875,215 L 870,200 L 855,195 L 870,190 Z" fill="#2EC4B6"/>
+    <!-- small circuit dot accents to nod at "AI" -->
+    <circle cx="930" cy="220" r="5" fill="#FF9900"/>
+    <circle cx="905" cy="230" r="3.5" fill="#FF9900"/>
+    <line x1="905" y1="230" x2="930" y2="220" stroke="#FF9900" stroke-width="2" opacity="0.6"/>
+  </g>
+</svg>
