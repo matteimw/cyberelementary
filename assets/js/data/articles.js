@@ -50,7 +50,7 @@ const ARTICLES = [
     excerpt:
       "A free, interactive game from PBS NOVA where kids defend a company from cyber attacks — cracking passwords, writing code, and outsmarting hackers along the way. A fun, hands-on intro to how cybersecurity really works.",
     icon: "🛡️",
-    image: "assets/images/blog/nova-cybersecurity-lab.jpg",
+    image: "",
     badge: "",
   },
   {
@@ -61,7 +61,7 @@ const ARTICLES = [
     excerpt:
       "An eye-opening cybersecurity exhibit that uses packet-capture tools and forensics games to show how easily unencrypted logins can be exposed on a network — a memorable, real-world lesson in why encryption and strong passwords matter.",
     icon: "🐑",
-    image: "assets/images/blog/wall-of-sheep.jpg",
+    image: "",
     badge: "",
   },
   {
@@ -72,7 +72,7 @@ const ARTICLES = [
     excerpt:
       "A practical guide from the ADL on helping kids navigate AI safely and critically — covering AI literacy, bias and misinformation, and conversation starters for building digital resilience at home and in the classroom.",
     icon: "🤖",
-    image: "assets/images/blog/ai-parents-educators.jpg",
+    image: "",
     badge: "",
   },
 ];
