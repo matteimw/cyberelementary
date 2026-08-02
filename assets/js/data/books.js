@@ -81,7 +81,7 @@ const BOOKS = [
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4wrUsRR",
-    badge: "STUDENT WORKBOOK",
+    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
   {
@@ -109,7 +109,7 @@ const BOOKS = [
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4pX9MDF",
-    badge: "STUDENT WORKBOOK",
+    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
   {
@@ -137,7 +137,7 @@ const BOOKS = [
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4ftJwxd",
-    badge: "STUDENT WORKBOOK",
+    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
   {
@@ -165,7 +165,7 @@ const BOOKS = [
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4fGFX5p",
-    badge: "STUDENT WORKBOOK",
+    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
 ];
