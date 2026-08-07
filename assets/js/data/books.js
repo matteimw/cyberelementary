@@ -54,7 +54,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4pLa7tb",
     badge: "ALL GRADES",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 3rd Grade Lesson Plan Book",
@@ -68,7 +68,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/3TxrOQM",
     badge: "TEACHER RESOURCE",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 3rd Grade Student Worksheet & Quiz Book",
@@ -82,7 +82,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4wrUsRR",
     badge: "MASTER WORKBOOK",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 4th Grade Lesson Plan Book",
@@ -96,7 +96,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/44WrHAU",
     badge: "TEACHER RESOURCE",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 4th Grade Student Worksheet & Quiz Book",
@@ -110,7 +110,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4pX9MDF",
     badge: "MASTER WORKBOOK",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 5th Grade Lesson Plan Book",
@@ -124,7 +124,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4g1meim",
     badge: "TEACHER RESOURCE",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 5th Grade Student Worksheet & Quiz Book",
@@ -138,7 +138,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4ftJwxd",
     badge: "MASTER WORKBOOK",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 6th Grade Lesson Plan Book",
@@ -152,7 +152,7 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/3TnVsbf",
     badge: "TEACHER RESOURCE",
-    freePromo: true,
+    freePromo: false,
   },
   {
     title: "Cyber Elementary School: 6th Grade Student Worksheet & Quiz Book",
@@ -166,6 +166,6 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4fGFX5p",
     badge: "MASTER WORKBOOK",
-    freePromo: true,
+    freePromo: false,
   },
 ];
