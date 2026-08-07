@@ -30,6 +30,7 @@
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="books.html">📚 Browse the Books</a>
+          <a class="btn btn-outline" href="videos.html">🎥 Watch a Video</a>
           <a class="btn btn-outline" href="articles.html">📝 Read the Blog</a>
         </div>
       </div>
@@ -59,9 +60,18 @@
     <div class="grid grid-tight" id="books-grid"></div>
   </section>
 
-  <!-- Note: a Videos section (for future video ads) previously lived here.
-       Removed for now — see assets/js/data/videos.js and videos.html, both
-       kept intact and ready to re-link when there's video content. -->
+  <!-- Videos teaser -->
+  <section class="section" id="videos">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Watch & Share</div>
+        <h2>Cyber Elementary videos</h2>
+        <p>Short, kid-friendly video lessons — share the direct link anywhere.</p>
+      </div>
+      <a class="btn btn-outline btn-sm" href="videos.html">See all videos →</a>
+    </div>
+    <div class="grid" id="videos-grid"></div>
+  </section>
 
   <!-- Reviews teaser -->
   <section class="section" id="reviews">
@@ -128,6 +138,7 @@
 
 <script src="assets/js/config.js"></script>
 <script src="assets/js/data/books.js"></script>
+<script src="assets/js/data/videos.js"></script>
 <script src="assets/js/data/reviews.js"></script>
 <script src="assets/js/data/articles.js"></script>
 <script src="assets/js/data/kindle.js"></script>
@@ -140,12 +151,11 @@
         .map((s) => `<a href="${s.url}" target="_blank" rel="noopener">${s.name} ↗</a>`)
         .join("");
     }
-    // Home page shows the FULL book series (it's the flagship section), but
-    // only teases the first 3 reviews/articles — see each full page for
-    // more. Today's Savings on the home page is just the Kindle free trial
-    // (see renderKindleTeaser in main.js) — the full deals list is on
-    // deals.html. (Videos section intentionally not loaded here — see the
-    // comment near the removed Videos section above.)
+    // Home page shows the FULL book series (it's the flagship section) and
+    // the full Videos list (small for now), but only teases the first 3
+    // reviews/articles — see each full page for more. Today's Savings on
+    // the home page is just the Kindle free trial (see renderKindleTeaser
+    // in main.js) — the full deals list is on deals.html.
     if (typeof REVIEWS !== "undefined") REVIEWS.length = Math.min(REVIEWS.length, 3);
     if (typeof ARTICLES !== "undefined") ARTICLES.length = Math.min(ARTICLES.length, 3);
     renderReviews(); renderArticles();

@@ -27,22 +27,10 @@
 
 const VIDEOS = [
   {
-    id: "dQw4w9WgXcQ",
-    title: "What Is a Password, Really? (Cyber Elementary Ep. 1)",
+    id: "bL60rozsDes",
+    title: "Creating Strong Passwords for Kids — Cyber Elementary Lesson 1",
     description:
-      "A 2-minute animated explainer kids can watch before picking their next password.",
+      "Lesson 1 from the Cyber Elementary video series — a kid-friendly walkthrough of what makes a password strong and how to build one that's hard to crack.",
     badge: "NEW",
-  },
-  {
-    id: "dQw4w9WgXcQ",
-    title: "Meet the Firewall Friends — Book Trailer",
-    description: "The official trailer for our first Cyber Elementary book, read aloud.",
-    badge: "",
-  },
-  {
-    id: "dQw4w9WgXcQ",
-    title: "How the Internet Works, for Kids",
-    description: "A simple visual explanation of how a message travels from your tablet to a website and back.",
-    badge: "",
   },
 ];

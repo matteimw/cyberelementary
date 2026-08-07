@@ -7,15 +7,10 @@
 
 /* ---------------- Shared header + footer ---------------- */
 
-// Videos is deliberately left out of the nav for now — see videos.html and
-// assets/js/data/videos.js, both kept in place and fully working for when
-// there's real video-ad content to publish. To bring it back: add
-// { href: "videos.html", label: "Videos" } here, and restore the Videos
-// <section> + hero "Watch a Video" button + videos.js <script> tag in
-// index.html (removed the same way, easy to re-add).
 const NAV_LINKS = [
   { href: "index.html", label: "Home" },
   { href: "books.html", label: "Books" },
+  { href: "videos.html", label: "Videos" },
   { href: "reviews.html", label: "Reviews" },
   { href: "deals.html", label: "Today's Savings" },
   { href: "articles.html", label: "Blog" },
@@ -94,6 +89,7 @@ function renderFooter() {
         <h4>Explore</h4>
         <ul>
           <li><a href="books.html">Books</a></li>
+          <li><a href="videos.html">Videos</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="deals.html">Today's Savings</a></li>
           <li><a href="articles.html">Blog</a></li>
