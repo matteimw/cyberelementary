@@ -31,6 +31,12 @@ const VIDEOS = [
     title: "Creating Strong Passwords for Kids — Cyber Elementary Lesson 1",
     description:
       "Lesson 1 from the Cyber Elementary video series — a kid-friendly walkthrough of what makes a password strong and how to build one that's hard to crack.",
+  },
+  {
+    id: "vB8WUq3meU8",
+    title: "Software Updates for Kids 🔧️ | CyberElementary Lesson 2",
+    description:
+      "Lesson 2 from the Cyber Elementary video series — a kid-friendly look at why software updates matter and how they help keep devices and information safe.",
     badge: "NEW",
   },
 ];
