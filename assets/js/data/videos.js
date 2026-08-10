@@ -43,6 +43,12 @@ const VIDEOS = [
     title: "Phishing Awareness — Cyber Elementary Lesson 3",
     description:
       "Lesson 3 from the Cyber Elementary video series — a kid-friendly look at how to spot sneaky phishing tricks and stay safe from scams online.",
+  },
+  {
+    id: "76epQrjoQmg",
+    title: "Understanding Malware — Cyber Elementary Lesson 4",
+    description:
+      "Lesson 4 from the Cyber Elementary video series — a kid-friendly look at what malware is and how kids can help keep their devices safe from it.",
     badge: "NEW",
   },
 ];
