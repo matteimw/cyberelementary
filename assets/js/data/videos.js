@@ -37,6 +37,12 @@ const VIDEOS = [
     title: "Software Updates for Kids 🔧️ | CyberElementary Lesson 2",
     description:
       "Lesson 2 from the Cyber Elementary video series — a kid-friendly look at why software updates matter and how they help keep devices and information safe.",
+  },
+  {
+    id: "h36O5gQCwbw",
+    title: "Phishing Awareness — Cyber Elementary Lesson 3",
+    description:
+      "Lesson 3 from the Cyber Elementary video series — a kid-friendly look at how to spot sneaky phishing tricks and stay safe from scams online.",
     badge: "NEW",
   },
 ];
