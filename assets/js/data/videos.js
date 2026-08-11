@@ -49,6 +49,12 @@ const VIDEOS = [
     title: "Understanding Malware — Cyber Elementary Lesson 4",
     description:
       "Lesson 4 from the Cyber Elementary video series — a kid-friendly look at what malware is and how kids can help keep their devices safe from it.",
+  },
+  {
+    id: "Fh5Bv3lvcSo",
+    title: "Is Your Wi-Fi Safe? — Cyber Elementary Lesson 5",
+    description:
+      "Lesson 5 from the Cyber Elementary video series — a kid-friendly look at how to keep your home Wi-Fi secure and avoid common wireless network risks.",
     badge: "NEW",
   },
 ];
