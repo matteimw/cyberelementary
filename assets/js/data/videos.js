@@ -55,6 +55,18 @@ const VIDEOS = [
     title: "Is Your Wi-Fi Safe? — Cyber Elementary Lesson 5",
     description:
       "Lesson 5 from the Cyber Elementary video series — a kid-friendly look at how to keep your home Wi-Fi secure and avoid common wireless network risks.",
+  },
+  {
+    id: "eieoshxBO-U",
+    title: "Protect Your Personal Info! 🔒💎 | CyberElementary Lesson 6",
+    description:
+      "Lesson 6 from the Cyber Elementary video series — a kid-friendly look at what personal information is and why it's important to keep it private online.",
+  },
+  {
+    id: "OfIGCn51gMQ",
+    title: "Set Up 2FA! 🔒🔒 | Cyber Elementary Lesson 7",
+    description:
+      "Lesson 7 from the Cyber Elementary video series — a kid-friendly introduction to two-factor authentication and how it adds an extra layer of protection to online accounts.",
     badge: "NEW",
   },
 ];
