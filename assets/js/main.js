@@ -38,8 +38,7 @@ function renderHeader() {
 
   mount.innerHTML = `
     <div class="promo-strip">
-      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page —
-      every purchase supports free learning resources.
+      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page.
     </div>
     <div class="nav-bar wrap">
       <a class="brand" href="index.html">
