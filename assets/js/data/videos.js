@@ -67,6 +67,12 @@ const VIDEOS = [
     title: "Set Up 2FA! 🔒🔒 | Cyber Elementary Lesson 7",
     description:
       "Lesson 7 from the Cyber Elementary video series — a kid-friendly introduction to two-factor authentication and how it adds an extra layer of protection to online accounts.",
+  },
+  {
+    id: "dlthYrrApY8",
+    title: "Back It Up! 💾🚫 | Cyber Elementary Lesson 8",
+    description:
+      "Lesson 8 from the Cyber Elementary video series — a kid-friendly look at why backing up your data matters and how to make sure important files are never lost.",
     badge: "NEW",
   },
 ];
