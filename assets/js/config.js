@@ -65,7 +65,7 @@ const SITE_CONFIG = {
   // show you a Measurement ID that looks like "G-XXXXXXXXXX". Paste it
   // below, replacing "G-XXXXXXXXXX". Analytics stays off (no script loads,
   // nothing to worry about privacy-wise) until you paste a real ID here.
-  gaMeasurementId: "G-XXXXXXXXXX",
+  gaMeasurementId: "G-VNRNG6XJ7V",
 };
 
 /**
