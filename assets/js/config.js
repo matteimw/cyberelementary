@@ -56,6 +56,16 @@ const SITE_CONFIG = {
   mascotImage: "assets/images/mascot/choco.png",
   mascotImage2: "assets/images/mascot/nacho.png",
   mascotEmoji: "🦕",
+
+  // Google Analytics 4 Measurement ID — this is what lets you see visitor
+  // counts, traffic sources, and Amazon-link clicks for the site.
+  // HOW TO GET ONE: go to https://analytics.google.com > Admin (gear icon,
+  // bottom left) > Create Property > name it "Cyber Elementary" > add a
+  // "Web" data stream with URL https://www.cyberelementary.com > it will
+  // show you a Measurement ID that looks like "G-XXXXXXXXXX". Paste it
+  // below, replacing "G-XXXXXXXXXX". Analytics stays off (no script loads,
+  // nothing to worry about privacy-wise) until you paste a real ID here.
+  gaMeasurementId: "G-XXXXXXXXXX",
 };
 
 /**

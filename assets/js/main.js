@@ -428,6 +428,66 @@ function renderStickyBar() {
   document.body.classList.add("has-sticky-bar");
 }
 
+/* ---------------- Analytics (Google Analytics 4) ---------------- */
+/* Loads GA4 automatically on every page, past and future, once you paste a
+   real Measurement ID into SITE_CONFIG.gaMeasurementId (assets/js/config.js)
+   — nothing else to edit. Until you paste a real ID, this does nothing.
+
+   Besides ordinary pageviews, this also fires a custom "affiliate_click"
+   event any time someone clicks a Buy on Amazon / Shop This Deal / Kindle
+   trial button (anything linking to amazon.* or amzn.to), tagged with which
+   item and which page it happened on — that's what lets you see clicks
+   toward a purchase in GA4, not just visits. It also tags outbound clicks to
+   your other sites (Baldwin Terney Press, Rachel Mattei, Baldwin Terney
+   Consulting) as "family_site_click" events, and clicks to your YouTube
+   channel link as "youtube_click", so you can see which cross-promotion is
+   actually working. */
+
+function loadAnalytics() {
+  const id = SITE_CONFIG.gaMeasurementId;
+  if (!id || id === "G-XXXXXXXXXX") return; // not configured yet — no-op
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", id);
+
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link || !link.href) return;
+
+    const isAmazon = /amazon\.[a-z.]+|amzn\.to/i.test(link.href);
+    const isYouTube = /youtube\.com/i.test(link.href);
+    const familySite = SITE_CONFIG.familySites.find((s) => link.href.startsWith(s.url));
+
+    if (isAmazon) {
+      const card = link.closest(".card");
+      const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
+      gtag("event", "affiliate_click", {
+        link_url: link.href,
+        item_name: itemName,
+        page_path: window.location.pathname,
+      });
+    } else if (familySite) {
+      gtag("event", "family_site_click", {
+        site_name: familySite.name,
+        page_path: window.location.pathname,
+      });
+    } else if (isYouTube) {
+      gtag("event", "youtube_click", {
+        link_url: link.href,
+        page_path: window.location.pathname,
+      });
+    }
+  });
+}
+
 /* ---------------- Init ---------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -440,4 +500,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderArticles();
   renderKindle();
   renderStickyBar();
+  loadAnalytics();
 });
