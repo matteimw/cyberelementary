@@ -73,6 +73,12 @@ const VIDEOS = [
     title: "Back It Up! 💾🚫 | Cyber Elementary Lesson 8",
     description:
       "Lesson 8 from the Cyber Elementary video series — a kid-friendly look at why backing up your data matters and how to make sure important files are never lost.",
+  },
+  {
+    id: "EUKhgwl8tJY",
+    title: "Lock It, Track It, Protect It! 🔐📱 | CyberElementary Lesson 9",
+    description:
+      "Lesson 9 from the Cyber Elementary video series — a kid-friendly look at locking devices, using tracking features, and protecting them if they're ever lost or stolen.",
     badge: "NEW",
   },
 ];
