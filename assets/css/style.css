@@ -325,6 +325,7 @@ nav.main-nav a[aria-current="page"] {
 .card-subtitle { font-size: 0.85rem; color: var(--ink-soft); font-style: italic; margin: -4px 0 0; }
 .card-desc { font-size: 0.92rem; color: var(--ink-soft); flex: 1; }
 .card-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.card-actions-top { margin-top: 0; margin-bottom: 4px; }
 .stars { color: var(--amazon); font-size: 0.95rem; letter-spacing: 1px; }
 
 /* ---------- Video grid ---------- */

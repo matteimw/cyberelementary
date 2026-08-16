@@ -7,9 +7,12 @@
 
    Titles, subtitles, and descriptions came from your KDP metadata files
    (final versions/<grade>/KDP_Metadata_*.docx). Covers came from the
-   matching *_eBook_Cover images, resized for web. Every title is available
-   in both Kindle eBook and paperback on Amazon, so the "amazon" link
-   should point at whichever page shows both format options.
+   matching *_eBook_Cover images, resized for web.
+
+   Updated 2026-08-16: the 4 Student Worksheet & Quiz Books (grades 3-6)
+   are paperback-only now — set their "formats" field to "Paperback" and
+   removed the Kindle mention. The 5 Lesson Plan Books (Complete + grades
+   3-6) are still available in both Kindle eBook and paperback.
 
    HOW TO ADD ANOTHER BOOK
    --------------------------
@@ -74,7 +77,7 @@ const BOOKS = [
     icon: "🦕",
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Kindle eBook & Paperback",
+    formats: "Paperback",
     amazon: "https://amzn.to/460GcnA",
     badge: "MASTER WORKBOOK",
     freePromo: false,
@@ -102,7 +105,7 @@ const BOOKS = [
     icon: "🦕",
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Kindle eBook & Paperback",
+    formats: "Paperback",
     amazon: "https://amzn.to/45PcbHv",
     badge: "MASTER WORKBOOK",
     freePromo: false,
@@ -130,7 +133,7 @@ const BOOKS = [
     icon: "🦕",
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Kindle eBook & Paperback",
+    formats: "Paperback",
     amazon: "https://amzn.to/4xJgPCH",
     badge: "MASTER WORKBOOK",
     freePromo: false,
@@ -158,7 +161,7 @@ const BOOKS = [
     icon: "🦕",
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Kindle eBook & Paperback",
+    formats: "Paperback",
     amazon: "https://amzn.to/3Sgq2Do",
     badge: "MASTER WORKBOOK",
     freePromo: false,

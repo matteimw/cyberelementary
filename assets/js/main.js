@@ -157,16 +157,16 @@ function renderBooks() {
         ${mediaBlock(b.cover, b.icon, b.title)}
       </div>
       <div class="card-body">
+        <div class="card-actions card-actions-top">
+          <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Buy on Amazon
+          </a>
+        </div>
         <h3>${b.title}</h3>
         ${b.subtitle ? `<p class="card-subtitle">${b.subtitle}</p>` : ""}
         ${(b.grade || b.audience) ? `<div class="card-meta">${[b.grade, b.audience].filter(Boolean).join(" · ")}</div>` : ""}
         <p class="card-desc">${b.description}</p>
         ${b.formats ? `<div class="card-meta">📕 ${b.formats}</div>` : ""}
-        <div class="card-actions">
-          <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
-            🛒 Buy on Amazon
-          </a>
-        </div>
       </div>
     </article>
   `).join("");
