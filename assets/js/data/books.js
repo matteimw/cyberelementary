@@ -1,14 +1,9 @@
 /* =========================================================================
    BOOKS DATA — Cyber Elementary School curriculum (9 real titles)
    =========================================================================
-   *** PLEASE DOUBLE-CHECK THIS ***
-   You sent 9 amzn.to links without saying which book each one is for, so
-   I matched them to your real titles in the order you pasted them — Grade
-   3 Lesson Plan, Grade 3 Worksheet, Grade 4 Lesson Plan, Grade 4 Worksheet,
-   Grade 5 Lesson Plan, Grade 5 Worksheet, Grade 6 Lesson Plan, Grade 6
-   Worksheet, then the Complete book. If any of those 9 links actually goes
-   to a different book than what's listed here, just swap the "amazon"
-   values between the two entries below — nothing else needs to change.
+   Updated 2026-08-16: refreshed all 9 Amazon affiliate links after the
+   old amzn.to links stopped working. This time each link was labeled by
+   title/grade, so the mapping below is a direct 1:1 match — no guessing.
 
    Titles, subtitles, and descriptions came from your KDP metadata files
    (final versions/<grade>/KDP_Metadata_*.docx). Covers came from the
@@ -52,7 +47,7 @@ const BOOKS = [
     description:
       "One volume covering all four grade levels — 36 lessons with grade-differentiated talking points for 3rd through 6th grade, plus full assessments and answer keys for every grade.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4pLa7tb",
+    amazon: "https://amzn.to/4qmWOPQ",
     badge: "ALL GRADES",
     freePromo: false,
   },
@@ -66,7 +61,7 @@ const BOOKS = [
     description:
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/3TxrOQM",
+    amazon: "https://amzn.to/4g02ziV",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -80,7 +75,7 @@ const BOOKS = [
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4wrUsRR",
+    amazon: "https://amzn.to/460GcnA",
     badge: "MASTER WORKBOOK",
     freePromo: false,
   },
@@ -94,7 +89,7 @@ const BOOKS = [
     description:
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/44WrHAU",
+    amazon: "https://amzn.to/4wXGJm4",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -108,7 +103,7 @@ const BOOKS = [
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4pX9MDF",
+    amazon: "https://amzn.to/45PcbHv",
     badge: "MASTER WORKBOOK",
     freePromo: false,
   },
@@ -122,7 +117,7 @@ const BOOKS = [
     description:
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4g1meim",
+    amazon: "https://amzn.to/4x5uqV5",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -136,7 +131,7 @@ const BOOKS = [
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4ftJwxd",
+    amazon: "https://amzn.to/4xJgPCH",
     badge: "MASTER WORKBOOK",
     freePromo: false,
   },
@@ -150,7 +145,7 @@ const BOOKS = [
     description:
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/3TnVsbf",
+    amazon: "https://amzn.to/3UkxNst",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -164,7 +159,7 @@ const BOOKS = [
     description:
       "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
     formats: "Kindle eBook & Paperback",
-    amazon: "https://amzn.to/4fGFX5p",
+    amazon: "https://amzn.to/3Sgq2Do",
     badge: "MASTER WORKBOOK",
     freePromo: false,
   },
