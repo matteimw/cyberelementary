@@ -79,6 +79,12 @@ const VIDEOS = [
     title: "Lock It, Track It, Protect It! 🔐📱 | CyberElementary Lesson 9",
     description:
       "Lesson 9 from the Cyber Elementary video series — a kid-friendly look at locking devices, using tracking features, and protecting them if they're ever lost or stolen.",
+  },
+  {
+    id: "FvLKpZYwfKs",
+    title: "Pause, Think, Then Post! 🥥📱 | Cyber Elementary Lesson 10",
+    description:
+      "Lesson 10 from the Cyber Elementary video series — a kid-friendly look at why it's important to pause and think before posting online, and how to make smart choices on social media.",
     badge: "NEW",
   },
 ];
