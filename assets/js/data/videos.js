@@ -85,6 +85,12 @@ const VIDEOS = [
     title: "Pause, Think, Then Post! 🥥📱 | Cyber Elementary Lesson 10",
     description:
       "Lesson 10 from the Cyber Elementary video series — a kid-friendly look at why it's important to pause and think before posting online, and how to make smart choices on social media.",
+  },
+  {
+    id: "1fNha2KvRUA",
+    title: "Digital Footprints Don't Wash Away! 👣💻 | Cyber Elementary Lesson 11",
+    description:
+      "Lesson 11 from the Cyber Elementary video series — a kid-friendly look at how everything we do online leaves a digital footprint, and why it's important to think about the trail we leave behind.",
     badge: "NEW",
   },
 ];
