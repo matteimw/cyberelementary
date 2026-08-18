@@ -91,6 +91,12 @@ const VIDEOS = [
     title: "Digital Footprints Don't Wash Away! 👣💻 | Cyber Elementary Lesson 11",
     description:
       "Lesson 11 from the Cyber Elementary video series — a kid-friendly look at how everything we do online leaves a digital footprint, and why it's important to think about the trail we leave behind.",
+  },
+  {
+    id: "u4vE2WWqTEE",
+    title: "You Can't Un-Crumple Hurtful Words! 📝💔 | CyberElementary Lesson 12",
+    description:
+      "Lesson 12 from the Cyber Elementary video series — a kid-friendly look at how hurtful words online can't be taken back, and why it's important to think before typing something unkind.",
     badge: "NEW",
   },
 ];
