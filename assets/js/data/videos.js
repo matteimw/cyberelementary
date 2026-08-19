@@ -97,6 +97,12 @@ const VIDEOS = [
     title: "You Can't Un-Crumple Hurtful Words! 📝💔 | CyberElementary Lesson 12",
     description:
       "Lesson 12 from the Cyber Elementary video series — a kid-friendly look at how hurtful words online can't be taken back, and why it's important to think before typing something unkind.",
+  },
+  {
+    id: "Kd_CvhWjM-w",
+    title: "A Private Account Is Like a Guest List! 🔒🎉 | CyberElementary Lesson 13",
+    description:
+      "Lesson 13 from the Cyber Elementary video series — a kid-friendly look at how a private account works like a guest list, so only approved people can see what you share online.",
     badge: "NEW",
   },
 ];
