@@ -103,6 +103,12 @@ const VIDEOS = [
     title: "A Private Account Is Like a Guest List! 🔒🎉 | CyberElementary Lesson 13",
     description:
       "Lesson 13 from the Cyber Elementary video series — a kid-friendly look at how a private account works like a guest list, so only approved people can see what you share online.",
+  },
+  {
+    id: "UkcqdvdYk6Q",
+    title: "Online Strangers Could Be Wearing a Mask! 🎭 | CyberElementary Lesson 14",
+    description:
+      "Lesson 14 from the Cyber Elementary video series — a kid-friendly look at why online strangers might not be who they say, the warning signs of catfishing, and the one rule that never changes: never share personal info, and never agree to meet an online stranger in person.",
     badge: "NEW",
   },
 ];
