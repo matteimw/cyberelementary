@@ -23,6 +23,10 @@
    title       - Video title shown under the player
    description - Short caption/description
    badge       - Optional ribbon text, e.g. "NEW"
+   featured    - Optional. Set to true to give this video its own full-width
+                 row in the grid (nothing shares its row, and whatever comes
+                 next starts a fresh row) — handy for compilation/marathon
+                 videos that recap a batch of lessons.
    ========================================================================= */
 
 const VIDEOS = [
@@ -79,6 +83,13 @@ const VIDEOS = [
     title: "Lock It, Track It, Protect It! 🔐📱 | CyberElementary Lesson 9",
     description:
       "Lesson 9 from the Cyber Elementary video series — a kid-friendly look at locking devices, using tracking features, and protecting them if they're ever lost or stolen.",
+  },
+  {
+    id: "eRb1zp_yjSY",
+    title: "Cyber Security Basics for Kids: All 9 Lessons 🔒 | CyberElementary Compilation",
+    description:
+      "All 9 Cyber Security Basics lessons back-to-back in one video — Choco, Nacho & Strawberry cover passwords, updates, phishing, malware, Wi-Fi, personal info, 2FA, backups, and device security in a single 22-minute watch, perfect for catching up on the whole unit at once.",
+    featured: true,
   },
   {
     id: "FvLKpZYwfKs",

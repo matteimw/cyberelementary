@@ -184,7 +184,7 @@ function renderVideos() {
   }
 
   mount.innerHTML = VIDEOS.map((v) => `
-    <article class="card video-card" id="${v.id}-${slugify(v.title)}">
+    <article class="card video-card${v.featured ? " video-card-featured" : ""}" id="${v.id}-${slugify(v.title)}">
       <div class="card-media">
         ${v.badge ? `<span class="card-badge">${v.badge}</span>` : ""}
         <iframe
