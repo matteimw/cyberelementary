@@ -120,6 +120,12 @@ const VIDEOS = [
     title: "Online Strangers Could Be Wearing a Mask! 🎭 | CyberElementary Lesson 14",
     description:
       "Lesson 14 from the Cyber Elementary video series — a kid-friendly look at why online strangers might not be who they say, the warning signs of catfishing, and the one rule that never changes: never share personal info, and never agree to meet an online stranger in person.",
+  },
+  {
+    id: "Nh9nlbkphmo",
+    title: "Not Everything Online Is True! ✅ | CyberElementary Lesson 15",
+    description:
+      "Lesson 15 from the Cyber Elementary video series — a kid-friendly look at why not everything online is true, the 3 questions to ask before trusting a website (who wrote it, why, and does it match other trusted sources), and \"lateral reading,\" the trick real fact-checkers use to double-check surprising claims.",
     badge: "NEW",
   },
 ];
