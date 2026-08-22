@@ -126,6 +126,12 @@ const VIDEOS = [
     title: "Not Everything Online Is True! ✅ | CyberElementary Lesson 15",
     description:
       "Lesson 15 from the Cyber Elementary video series — a kid-friendly look at why not everything online is true, the 3 questions to ask before trusting a website (who wrote it, why, and does it match other trusted sources), and \"lateral reading,\" the trick real fact-checkers use to double-check surprising claims.",
+  },
+  {
+    id: "tlXw9pJX0Yo",
+    title: "What If Every Meal Was Just Dessert? 🍨 | CyberElementary Lesson 16",
+    description:
+      "Lesson 16 from the Cyber Elementary video series — a kid-friendly look at digital balance: why screens are great but shouldn't be the only thing on your plate, the difference between active and passive screen time, and simple habits like taking breaks and keeping screens out of the bedroom at bedtime.",
     badge: "NEW",
   },
 ];
