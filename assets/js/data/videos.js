@@ -132,6 +132,18 @@ const VIDEOS = [
     title: "What If Every Meal Was Just Dessert? 🍨 | CyberElementary Lesson 16",
     description:
       "Lesson 16 from the Cyber Elementary video series — a kid-friendly look at digital balance: why screens are great but shouldn't be the only thing on your plate, the difference between active and passive screen time, and simple habits like taking breaks and keeping screens out of the bedroom at bedtime.",
+  },
+  {
+    id: "Im6zhIvI3TM",
+    title: "Play Smart, Play Kind! 🎮 | Cyber Elementary Lesson 17",
+    description:
+      "Lesson 17 from the Cyber Elementary video series — a kid-friendly look at being a good sport in online games: playing fair, staying kind to other players, and knowing what to do if a game stops being fun.",
+  },
+  {
+    id: "oofPTBFC62w",
+    title: "Speaking Up the Right Way! 🚩 | CyberElementary Lesson 18",
+    description:
+      "Lesson 18 from the Cyber Elementary video series — a kid-friendly look at spotting the red flags of something wrong online and speaking up the right way: telling a trusted adult instead of handling it alone.",
     badge: "NEW",
   },
 ];
