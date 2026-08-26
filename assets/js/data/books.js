@@ -1,9 +1,13 @@
 /* =========================================================================
-   BOOKS DATA — Cyber Elementary School curriculum (9 real titles)
+   BOOKS DATA — Cyber Elementary School curriculum (5 real titles)
    =========================================================================
    Updated 2026-08-16: refreshed all 9 Amazon affiliate links after the
    old amzn.to links stopped working. This time each link was labeled by
    title/grade, so the mapping below is a direct 1:1 match — no guessing.
+
+   Updated 2026-08-26: removed the 4 Student Worksheet & Quiz Books
+   (grades 3-6) at Mark's request. Only the 5 Lesson Plan Books
+   (Complete + grades 3-6) remain.
 
    Titles, subtitles, and descriptions came from your KDP metadata files
    (final versions/<grade>/KDP_Metadata_*.docx). Covers came from the
@@ -69,20 +73,6 @@ const BOOKS = [
     freePromo: false,
   },
   {
-    title: "Cyber Elementary School: 3rd Grade Student Worksheet & Quiz Book",
-    subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets and Quizzes for 3rd Graders",
-    grade: "Grade 3",
-    audience: "For Students (Ages 8-9)",
-    cover: "assets/images/books/grade3-worksheet-quiz.jpg",
-    icon: "🦕",
-    description:
-      "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Paperback",
-    amazon: "https://amzn.to/460GcnA",
-    badge: "MASTER WORKBOOK",
-    freePromo: false,
-  },
-  {
     title: "Cyber Elementary School: 4th Grade Lesson Plan Book",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 4th Grade",
     grade: "Grade 4",
@@ -94,20 +84,6 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4wXGJm4",
     badge: "TEACHER RESOURCE",
-    freePromo: false,
-  },
-  {
-    title: "Cyber Elementary School: 4th Grade Student Worksheet & Quiz Book",
-    subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets and Quizzes for 4th Graders",
-    grade: "Grade 4",
-    audience: "For Students (Ages 9-10)",
-    cover: "assets/images/books/grade4-worksheet-quiz.jpg",
-    icon: "🦕",
-    description:
-      "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Paperback",
-    amazon: "https://amzn.to/45PcbHv",
-    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
   {
@@ -125,20 +101,6 @@ const BOOKS = [
     freePromo: false,
   },
   {
-    title: "Cyber Elementary School: 5th Grade Student Worksheet & Quiz Book",
-    subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets and Quizzes for 5th Graders",
-    grade: "Grade 5",
-    audience: "For Students (Ages 10-11)",
-    cover: "assets/images/books/grade5-worksheet-quiz.jpg",
-    icon: "🦕",
-    description:
-      "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Paperback",
-    amazon: "https://amzn.to/4xJgPCH",
-    badge: "MASTER WORKBOOK",
-    freePromo: false,
-  },
-  {
     title: "Cyber Elementary School: 6th Grade Lesson Plan Book",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 6th Grade",
     grade: "Grade 6",
@@ -150,20 +112,6 @@ const BOOKS = [
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/3UkxNst",
     badge: "TEACHER RESOURCE",
-    freePromo: false,
-  },
-  {
-    title: "Cyber Elementary School: 6th Grade Student Worksheet & Quiz Book",
-    subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets and Quizzes for 6th Graders",
-    grade: "Grade 6",
-    audience: "For Students (Ages 11-12)",
-    cover: "assets/images/books/grade6-worksheet-quiz.jpg",
-    icon: "🦕",
-    description:
-      "Hands-on practice with the skills every kid needs today — one worksheet and one quiz per lesson, from strong passwords and spotting phishing to understanding AI chatbots.",
-    formats: "Paperback",
-    amazon: "https://amzn.to/3Sgq2Do",
-    badge: "MASTER WORKBOOK",
     freePromo: false,
   },
 ];
