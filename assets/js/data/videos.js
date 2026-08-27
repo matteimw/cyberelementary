@@ -144,6 +144,12 @@ const VIDEOS = [
     title: "Speaking Up the Right Way! 🚩 | CyberElementary Lesson 18",
     description:
       "Lesson 18 from the Cyber Elementary video series — a kid-friendly look at spotting the red flags of something wrong online and speaking up the right way: telling a trusted adult instead of handling it alone.",
+  },
+  {
+    id: "g6ZYZZ29Qh4",
+    title: "The Golden Rule Goes Digital! 💛 | CyberElementary Lesson 19",
+    description:
+      "Lesson 19 from the Cyber Elementary video series — a kid-friendly look at how the Golden Rule applies online too: treating others the way you'd want to be treated, even behind a screen.",
     badge: "NEW",
   },
 ];
