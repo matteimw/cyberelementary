@@ -125,7 +125,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 3rd grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4y4OG9a",
-    badge: "NEW",
+    badge: "",
     freePromo: false,
   },
   {
@@ -139,7 +139,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 4th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/3UHi3jr",
-    badge: "NEW",
+    badge: "",
     freePromo: false,
   },
   {
@@ -153,6 +153,19 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 5th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4xoY1ZL",
+    badge: "",
+    freePromo: false,
+  },  {
+    title: "Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes",
+    subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
+    grade: "Grade 6",
+    audience: "For Teachers & Homeschool Parents",
+    cover: "assets/images/books/grade6-skills-workbook.jpg",
+    icon: "🦕",
+    description:
+      "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 6th grade only, plus a complete teacher answer key for every worksheet and quiz.",
+    formats: "Paperback",
+    amazon: "https://amzn.to/3SDsyDU",
     badge: "NEW",
     freePromo: false,
   },
