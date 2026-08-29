@@ -150,6 +150,12 @@ const VIDEOS = [
     title: "The Golden Rule Goes Digital! 💛 | CyberElementary Lesson 19",
     description:
       "Lesson 19 from the Cyber Elementary video series — a kid-friendly look at how the Golden Rule applies online too: treating others the way you'd want to be treated, even behind a screen.",
+  },
+  {
+    id: "LX7ykpBKDPc",
+    title: "Copyright & Plagiarism Explained! 📝 | Cyber Elementary Lesson 20",
+    description:
+      "Lesson 20 from the Cyber Elementary video series — a kid-friendly look at copyright and plagiarism: why it matters to give credit for others' work online and how to do it the right way.",
     badge: "NEW",
   },
 ];
