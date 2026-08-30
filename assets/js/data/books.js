@@ -125,7 +125,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 3rd grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4y4OG9a",
-    badge: "",
+    badge: "Learning Activities",
     freePromo: false,
   },
   {
@@ -139,7 +139,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 4th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/3UHi3jr",
-    badge: "",
+    badge: "Learning Activities",
     freePromo: false,
   },
   {
@@ -153,7 +153,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 5th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4xoY1ZL",
-    badge: "",
+    badge: "Learning Activities",
     freePromo: false,
   },  {
     title: "Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes",
@@ -166,7 +166,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 6th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/3SDsyDU",
-    badge: "NEW",
+    badge: "Learning Activities",
     freePromo: false,
   },
 ];
