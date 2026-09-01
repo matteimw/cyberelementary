@@ -156,6 +156,18 @@ const VIDEOS = [
     title: "Copyright & Plagiarism Explained! 📝 | Cyber Elementary Lesson 20",
     description:
       "Lesson 20 from the Cyber Elementary video series — a kid-friendly look at copyright and plagiarism: why it matters to give credit for others' work online and how to do it the right way.",
+  },
+  {
+    id: "us5pO4KlqCk",
+    title: "Email & Messaging Etiquette! ✉️ | CyberElementary Lesson 21",
+    description:
+      "Lesson 21 from the Cyber Elementary video series — a kid-friendly look at email and messaging etiquette: how to write clearly, stay polite, and communicate respectfully online.",
+  },
+  {
+    id: "ON0X0xPQ2Ww",
+    title: "Video Chat & Webcam Safety! 📹 | Cyber Elementary Lesson 22",
+    description:
+      "Lesson 22 from the Cyber Elementary video series — a kid-friendly look at video chat and webcam safety: smart habits for staying safe and comfortable on camera.",
     badge: "NEW",
   },
 ];
