@@ -146,6 +146,13 @@ const VIDEOS = [
       "Lesson 18 from the Cyber Elementary video series — a kid-friendly look at spotting the red flags of something wrong online and speaking up the right way: telling a trusted adult instead of handling it alone.",
   },
   {
+    id: "xjfcIpFKk9I",
+    title: "Online Safety for Kids: All 9 Lessons 🛡️ | Cyber Elementary Compilation Lessons 10-18",
+    description:
+      "All 9 lessons from the second unit back-to-back in one video — pausing before you post, digital footprints, choosing kind words, private accounts, online strangers, spotting misinformation, digital balance, good sportsmanship, and speaking up about red flags, perfect for catching up on the whole unit at once.",
+    featured: true,
+  },
+  {
     id: "g6ZYZZ29Qh4",
     title: "The Golden Rule Goes Digital! 💛 | CyberElementary Lesson 19",
     description:
