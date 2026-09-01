@@ -81,6 +81,22 @@
   @media (max-width: 700px) {
     #deals-grid { grid-template-columns: 1fr; }
   }
+
+  .book-with-sample { display: flex; flex-direction: column; gap: 8px; }
+  .book-sample {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: inherit;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 6px 8px;
+    font-size: 0.72rem; font-weight: 700; line-height: 1.2;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .book-sample:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .book-sample img {
+    width: 68px; height: 88px; object-fit: cover;
+    border-radius: 3px; border: 1px solid var(--border); flex-shrink: 0;
+  }
+  .book-sample span { color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -261,6 +277,27 @@
   // Plan Book, and 3rd Grade Skills Workbook & Lesson Quizzes. Matched by
   // title against assets/js/data/books.js, so this keeps working even if
   // book order in that file changes.
+  // Free sample PDF to show + link under each matching home-page book
+  // card. Keyed by exact book title from books.js. Add/replace entries here
+  // as new sample PDFs come in.
+  const HOME_BOOK_SAMPLES = {
+    "Cyber Elementary School: Complete Lesson Plan Book": {
+      pdf: "assets/pdfs/lessonplan-sample-lesson01.pdf",
+      thumb: "assets/images/pdfs/lessonplan-sample-lesson01-thumb.jpg",
+      label: "Free Sample: Lesson 1",
+    },
+    "Cyber Elementary School: 3rd Grade Lesson Plan Book": {
+      pdf: "assets/pdfs/grade3-lesson3-sample.pdf",
+      thumb: "assets/images/pdfs/grade3-lesson3-sample-thumb.jpg",
+      label: "Free Sample: Lesson 3",
+    },
+    "Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes": {
+      pdf: "assets/pdfs/grade3-sample-pages.pdf",
+      thumb: "assets/images/pdfs/grade3-sample-pages-thumb.jpg",
+      label: "Free Sample Pages",
+    },
+  };
+
   function renderHomeBooks() {
     const mount = document.getElementById("home-books-grid");
     if (!mount || typeof BOOKS === "undefined") return;
@@ -272,22 +309,33 @@
     ];
     const picks = wantedTitles.map((t) => BOOKS.find((b) => b.title === t)).filter(Boolean);
 
-    mount.innerHTML = picks.map((b) => `
-      <article class="card book-card">
-        <div class="card-media">
-          ${b.badge ? `<span class="card-badge">${b.badge}</span>` : ""}
-          ${mediaBlock(b.cover, b.icon, b.title)}
-        </div>
-        <div class="card-body">
-          <div class="card-actions card-actions-top">
-            <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
-              🛒 Buy on Amazon
-            </a>
+    mount.innerHTML = picks.map((b) => {
+      const sample = HOME_BOOK_SAMPLES[b.title];
+      const sampleBlock = sample ? `
+        <a class="book-sample" href="${sample.pdf}" download target="_blank" rel="noopener">
+          <img src="${sample.thumb}" alt="Preview of ${sample.label} from ${b.title}" loading="lazy" />
+          <span>⬇ ${sample.label}</span>
+        </a>` : "";
+      return `
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            ${b.badge ? `<span class="card-badge">${b.badge}</span>` : ""}
+            ${mediaBlock(b.cover, b.icon, b.title)}
           </div>
-          <h3>${b.title}</h3>
-        </div>
-      </article>
-    `).join("");
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>${b.title}</h3>
+          </div>
+        </article>
+        ${sampleBlock}
+      </div>
+    `;
+    }).join("");
   }
 
   // ---- Home page video picks: exactly 4, 2-across, 2 rows ----

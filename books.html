@@ -10,6 +10,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .book-with-sample { display: flex; flex-direction: column; gap: 8px; }
+  .book-sample {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: inherit;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 6px 8px;
+    font-size: 0.72rem; font-weight: 700; line-height: 1.2;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .book-sample:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .book-sample img {
+    width: 68px; height: 88px; object-fit: cover;
+    border-radius: 3px; border: 1px solid var(--border); flex-shrink: 0;
+  }
+  .book-sample span { color: var(--ink-soft); }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -42,5 +59,96 @@
 <script src="assets/js/data/books.js"></script>
 <script src="assets/js/data/kindle.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+  // Free sample PDF to show + link under each book card on the Books
+  // page. Keyed by exact book title from books.js.
+  const BOOK_SAMPLES = {
+    "Cyber Elementary School: Complete Lesson Plan Book": {
+      pdf: "assets/pdfs/lessonplan-sample-lesson01.pdf",
+      thumb: "assets/images/pdfs/lessonplan-sample-lesson01-thumb.jpg",
+      label: "Free Sample: Lesson 1",
+    },
+    "Cyber Elementary School: 3rd Grade Lesson Plan Book": {
+      pdf: "assets/pdfs/grade3-lesson3-sample.pdf",
+      thumb: "assets/images/pdfs/grade3-lesson3-sample-thumb.jpg",
+      label: "Free Sample: Lesson 3",
+    },
+    "Cyber Elementary School: 4th Grade Lesson Plan Book": {
+      pdf: "assets/pdfs/grade4-lesson4-sample.pdf",
+      thumb: "assets/images/pdfs/grade4-lesson4-sample-thumb.jpg",
+      label: "Free Sample: Lesson 4",
+    },
+    "Cyber Elementary School: 5th Grade Lesson Plan Book": {
+      pdf: "assets/pdfs/grade5-lesson5-sample.pdf",
+      thumb: "assets/images/pdfs/grade5-lesson5-sample-thumb.jpg",
+      label: "Free Sample: Lesson 5",
+    },
+    "Cyber Elementary School: 6th Grade Lesson Plan Book": {
+      pdf: "assets/pdfs/grade6-lesson6-sample.pdf",
+      thumb: "assets/images/pdfs/grade6-lesson6-sample-thumb.jpg",
+      label: "Free Sample: Lesson 6",
+    },
+    "Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes": {
+      pdf: "assets/pdfs/grade3-sample-pages.pdf",
+      thumb: "assets/images/pdfs/grade3-sample-pages-thumb.jpg",
+      label: "Free Sample Pages",
+    },
+    "Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes": {
+      pdf: "assets/pdfs/grade4-lesson4-crossword-sample.pdf",
+      thumb: "assets/images/pdfs/grade4-lesson4-crossword-sample-thumb.jpg",
+      label: "Free Sample: Lesson 4 Crossword",
+    },
+    "Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes": {
+      pdf: "assets/pdfs/grade5-lesson5-wordsearch-sample.pdf",
+      thumb: "assets/images/pdfs/grade5-lesson5-wordsearch-sample-thumb.jpg",
+      label: "Free Sample: Lesson 5 Word Search",
+    },
+    "Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes": {
+      pdf: "assets/pdfs/grade6-lesson6-crossword-sample.pdf",
+      thumb: "assets/images/pdfs/grade6-lesson6-crossword-sample-thumb.jpg",
+      label: "Free Sample: Lesson 6 Crossword",
+    },
+  };
+
+  function renderBooksWithSamples() {
+    const mount = document.getElementById("books-grid");
+    if (!mount || typeof BOOKS === "undefined") return;
+
+    mount.innerHTML = BOOKS.map((b) => {
+      const sample = BOOK_SAMPLES[b.title];
+      const sampleBlock = sample ? `
+        <a class="book-sample" href="${sample.pdf}" download target="_blank" rel="noopener">
+          <img src="${sample.thumb}" alt="Preview of ${sample.label} from ${b.title}" loading="lazy" />
+          <span>⬇ ${sample.label}</span>
+        </a>` : "";
+      return `
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            ${b.badge ? `<span class="card-badge">${b.badge}</span>` : ""}
+            ${b.freePromo ? `<img class="free-stamp" src="assets/images/badges/free-stamp.svg" alt="Free for a limited time" />` : ""}
+            ${mediaBlock(b.cover, b.icon, b.title)}
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>${b.title}</h3>
+            ${b.subtitle ? `<p class="card-subtitle">${b.subtitle}</p>` : ""}
+            ${(b.grade || b.audience) ? `<div class="card-meta">${[b.grade, b.audience].filter(Boolean).join(" · ")}</div>` : ""}
+            <p class="card-desc">${b.description}</p>
+            ${b.formats ? `<div class="card-meta">📕 ${b.formats}</div>` : ""}
+          </div>
+        </article>
+        ${sampleBlock}
+      </div>
+    `;
+    }).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", renderBooksWithSamples);
+</script>
 </body>
 </html>
