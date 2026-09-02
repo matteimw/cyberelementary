@@ -175,6 +175,12 @@ const VIDEOS = [
     title: "Video Chat & Webcam Safety! 📹 | Cyber Elementary Lesson 22",
     description:
       "Lesson 22 from the Cyber Elementary video series — a kid-friendly look at video chat and webcam safety: smart habits for staying safe and comfortable on camera.",
+  },
+  {
+    id: "eMSKSP3mDyg",
+    title: "Cookies & Trackers Explained! 🍪 | Cyber Elementary Lesson 23",
+    description:
+      "Lesson 23 from the Cyber Elementary video series — a kid-friendly look at cookies and trackers: what they are, how websites use them, and simple habits for protecting your privacy online.",
     badge: "NEW",
   },
 ];
