@@ -181,6 +181,12 @@ const VIDEOS = [
     title: "Cookies & Trackers Explained! 🍪 | Cyber Elementary Lesson 23",
     description:
       "Lesson 23 from the Cyber Elementary video series — a kid-friendly look at cookies and trackers: what they are, how websites use them, and simple habits for protecting your privacy online.",
+  },
+  {
+    id: "vU6oEhZB2wA",
+    title: "Public vs. Private Info! 🔒 | Cyber Elementary Lesson 24",
+    description:
+      "Lesson 24 from the Cyber Elementary video series — a kid-friendly look at the difference between public and private information, and how to keep personal details safe online.",
     badge: "NEW",
   },
 ];
