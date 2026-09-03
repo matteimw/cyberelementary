@@ -47,4 +47,16 @@ const REVIEWS = [
     linkLabel: "See it on Amazon",
     badge: "",
   },
+  {
+    productName: "KeePass Password Manager",
+    image: "",
+    icon: "🔐",
+    rating: 5,
+    summary:
+      "I use KeePass to create and store all of my passwords in one encrypted database, protected by a single passphrase that I only have to remember once. Every account gets its own long, complex, unique password, but I'm not stuck trying to memorize any of them. I keep my KeePass database file saved in cloud storage and backed up, so it stays safe even if something happens to my computer, and I can open it on my iPhone whenever I need a password on the go. It's a free, open-source tool that's been around for years and is well documented, and it's made managing strong passwords across my whole family's devices simple instead of stressful.",
+    linkType: "other",
+    linkTarget: "https://keepass.info/",
+    linkLabel: "Get KeePass Free",
+    badge: "OPEN SOURCE & FREE",
+  },
 ];
