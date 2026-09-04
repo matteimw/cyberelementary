@@ -187,6 +187,12 @@ const VIDEOS = [
     title: "Public vs. Private Info! 🔒 | Cyber Elementary Lesson 24",
     description:
       "Lesson 24 from the Cyber Elementary video series — a kid-friendly look at the difference between public and private information, and how to keep personal details safe online.",
+  },
+  {
+    id: "KY7VSOD1j0E",
+    title: "Spot a Scam! 🚩 | Cyber Elementary Lesson 25",
+    description:
+      "Lesson 25 from the Cyber Elementary video series — a kid-friendly look at spotting the red flags of an online scam and knowing what to do if something feels off.",
     badge: "NEW",
   },
 ];
