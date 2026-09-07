@@ -193,6 +193,18 @@ const VIDEOS = [
     title: "Spot a Scam! 🚩 | Cyber Elementary Lesson 25",
     description:
       "Lesson 25 from the Cyber Elementary video series — a kid-friendly look at spotting the red flags of an online scam and knowing what to do if something feels off.",
+  },
+  {
+    id: "3TTaIOX7kSo",
+    title: "Safe Online Shopping! 🛍️ | Cyber Elementary Lesson 26",
+    description:
+      "Lesson 26 from the Cyber Elementary video series — a kid-friendly look at safe online shopping: spotting secure sites, protecting payment info, and avoiding scams before you buy.",
+  },
+  {
+    id: "e3e8_LAj9ZU",
+    title: "Digital Footprint Cleanup! 🧹 | Cyber Elementary Lesson 27",
+    description:
+      "Lesson 27 from the Cyber Elementary video series — a kid-friendly look at cleaning up your digital footprint: reviewing old posts and accounts and taking control of what's out there.",
     badge: "NEW",
   },
 ];
