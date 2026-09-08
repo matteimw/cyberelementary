@@ -332,6 +332,13 @@ nav.main-nav a[aria-current="page"] {
 .video-card .card-media { aspect-ratio: 16/9; background: #000; }
 .video-card .card-media iframe { width: 100%; height: 100%; border: 0; }
 
+/* Google's YouTube "Subscribe" button widget, rendered as its own iframe.
+   .card-actions is display:flex with no align-items set (default stretch),
+   which would otherwise stretch the widget's iframe tall — pin it to a
+   normal inline height and vertically center it next to the other button. */
+.video-card .g-ytsubscribe { align-self: center; line-height: 0; }
+.video-card .g-ytsubscribe iframe { vertical-align: middle; }
+
 /* Featured video: takes its own full-width row in the grid, so nothing
    shares its row and whatever comes next starts a fresh row. Capped and
    centered so it reads as one highlighted card, not a stretched-out one. */

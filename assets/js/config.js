@@ -45,6 +45,13 @@ const SITE_CONFIG = {
     youtube: "https://www.youtube.com/@CyberElementary?sub_confirmation=1",
   },
 
+  // Your YouTube channel ID (the "UC..." string, not the @handle) — used to
+  // render the real "Subscribe" button widget on every video card on the
+  // Videos page (Google's official embeddable subscribe button, not just a
+  // link). Find it in YouTube Studio under Settings > Channel > Advanced
+  // settings, or leave blank to hide the button.
+  youtubeChannelId: "UCBXzpr01DRw1mu2XebimLIg",
+
   // Contact / suggestions email shown on the Contact section, footer, and
   // every mailto: link site-wide. Change it once here.
   contactEmail: "support@baldwinterneypress.com",

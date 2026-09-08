@@ -203,6 +203,9 @@ function renderVideos() {
           <button class="btn btn-outline btn-sm" onclick="copyShareLink('${v.id}-${slugify(v.title)}', this)">
             🔗 Copy share link
           </button>
+          ${SITE_CONFIG.youtubeChannelId ? `
+          <div class="g-ytsubscribe" data-channelid="${SITE_CONFIG.youtubeChannelId}" data-layout="default" data-count="default" data-theme="default"></div>
+          ` : ""}
         </div>
       </div>
     </article>
@@ -488,6 +491,36 @@ function loadAnalytics() {
   });
 }
 
+/* ---------------- YouTube Subscribe button widget ---------------- */
+/* Renders Google's official embeddable "Subscribe" button (with live
+   subscriber count) on every video card on the Videos page — a real
+   one-click subscribe, not just a link to the channel. Configured once via
+   SITE_CONFIG.youtubeChannelId (config.js); does nothing if that's blank.
+
+   renderVideos() already wrote a <div class="g-ytsubscribe" ...> into each
+   card before this runs. We set parsetags to "explicit" (instead of
+   Google's default "onload" auto-scan) so the widget only renders once we
+   explicitly call gapi.ytsubscribe.go() below — that avoids any race with
+   exactly when the async platform.js script finishes loading relative to
+   when the video cards get injected. */
+
+function loadYouTubeSubscribeWidget() {
+  if (!SITE_CONFIG.youtubeChannelId) return; // not configured yet — no-op
+  if (!document.querySelector(".g-ytsubscribe")) return; // not on this page
+
+  window.___gcfg = { parsetags: "explicit" };
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://apis.google.com/js/platform.js";
+  script.onload = () => {
+    if (window.gapi && window.gapi.ytsubscribe) {
+      window.gapi.ytsubscribe.go();
+    }
+  };
+  document.head.appendChild(script);
+}
+
 /* ---------------- Init ---------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -501,4 +534,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderKindle();
   renderStickyBar();
   loadAnalytics();
+  loadYouTubeSubscribeWidget();
 });
