@@ -336,6 +336,8 @@ nav.main-nav a[aria-current="page"] {
    .card-actions is display:flex with no align-items set (default stretch),
    which would otherwise stretch the widget's iframe tall — pin it to a
    normal inline height and vertically center it next to the other button. */
+.video-card .ytsubscribe-wrap { display: inline-flex; align-items: center; gap: 6px; }
+.video-card .ytsubscribe-label { font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); }
 .video-card .g-ytsubscribe { align-self: center; line-height: 0; }
 .video-card .g-ytsubscribe iframe { vertical-align: middle; }
 

@@ -204,7 +204,10 @@ function renderVideos() {
             🔗 Copy share link
           </button>
           ${SITE_CONFIG.youtubeChannelId ? `
-          <div class="g-ytsubscribe" data-channelid="${SITE_CONFIG.youtubeChannelId}" data-layout="default" data-count="default" data-theme="default"></div>
+          <span class="ytsubscribe-wrap">
+            <span class="ytsubscribe-label">Subscribe:</span>
+            <div class="g-ytsubscribe" data-channelid="${SITE_CONFIG.youtubeChannelId}" data-layout="default" data-count="default" data-theme="default"></div>
+          </span>
           ` : ""}
         </div>
       </div>
