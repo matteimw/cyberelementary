@@ -33,15 +33,16 @@ const SITE_CONFIG = {
     { name: "Baldwin Terney Consulting", url: "https://www.baldwinterneyconsulting.com" },
   ],
 
-  // Social links shown in the footer. Instagram points at Cyber
-  // Elementary's own account; Facebook and LinkedIn still point at
-  // Baldwin Terney Press's accounts. YouTube is left out for now — add it
-  // back with { youtube: "..." } and it'll reappear in the footer
-  // automatically.
+  // Social links shown in the footer. Instagram and YouTube point at Cyber
+  // Elementary's own accounts; Facebook and LinkedIn still point at
+  // Baldwin Terney Press's accounts. The YouTube link includes
+  // ?sub_confirmation=1 so signed-in visitors get a one-click subscribe
+  // popup when they land on the channel.
   social: {
     facebook: "https://www.facebook.com/baldwinterneypress",
     instagram: "https://www.instagram.com/cyberelementary",
     linkedin: "https://www.linkedin.com/company/baldwin-terney-press-llc/",
+    youtube: "https://www.youtube.com/@CyberElementary?sub_confirmation=1",
   },
 
   // Contact / suggestions email shown on the Contact section, footer, and
