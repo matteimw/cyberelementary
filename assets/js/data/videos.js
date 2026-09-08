@@ -205,6 +205,25 @@ const VIDEOS = [
     title: "Digital Footprint Cleanup! 🧹 | Cyber Elementary Lesson 27",
     description:
       "Lesson 27 from the Cyber Elementary video series — a kid-friendly look at cleaning up your digital footprint: reviewing old posts and accounts and taking control of what's out there.",
+  },
+  {
+    id: "xL9z9XQPIhA",
+    title: "Digital Citizenship for Kids: All 9 Lessons 💛 | Cyber Elementary Compilation (Lessons 19-27)",
+    description:
+      "All 9 lessons from the third unit back-to-back in one video — treating others online the way you'd want to be treated, giving credit for others' work, email and messaging etiquette, video chat and webcam safety, cookies and trackers, public vs. private info, spotting scams, safe online shopping, and cleaning up your digital footprint, perfect for catching up on the whole unit at once.",
+    featured: true,
+  },
+  {
+    id: "eVskqqdv1tA",
+    title: "What Is Artificial Intelligence? 🤖 | CyberElementary Lesson 28",
+    description:
+      "Lesson 28 from the Cyber Elementary video series — a kid-friendly introduction to what artificial intelligence is and how it shows up in everyday apps and games.",
+  },
+  {
+    id: "qQtOcKo1nMg",
+    title: "How AI Chatbots Work! 🤖 | Cyber Elementary Lesson 29",
+    description:
+      "Lesson 29 from the Cyber Elementary video series — a kid-friendly look at how AI chatbots work and how to think critically about what they tell you.",
     badge: "NEW",
   },
 ];
