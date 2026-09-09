@@ -224,6 +224,12 @@ const VIDEOS = [
     title: "How AI Chatbots Work! 🤖 | Cyber Elementary Lesson 29",
     description:
       "Lesson 29 from the Cyber Elementary video series — a kid-friendly look at how AI chatbots work and how to think critically about what they tell you.",
+  },
+  {
+    id: "-OH2-eC1fzI",
+    title: "Is That Picture Even Real? 🕵️ | Cyber Elementary Lesson 30",
+    description:
+      "Lesson 30 from the Cyber Elementary video series — a kid-friendly look at spotting fake or manipulated images online and why it pays to look closely before believing what a picture shows.",
     badge: "NEW",
   },
 ];
