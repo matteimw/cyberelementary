@@ -230,6 +230,12 @@ const VIDEOS = [
     title: "Is That Picture Even Real? 🕵️ | Cyber Elementary Lesson 30",
     description:
       "Lesson 30 from the Cyber Elementary video series — a kid-friendly look at spotting fake or manipulated images online and why it pays to look closely before believing what a picture shows.",
+  },
+  {
+    id: "UVM67z4yBRM",
+    title: "AI Isn't Always Fair! ⚖️ | Cyber Elementary Lesson 31",
+    description:
+      "Lesson 31 from the Cyber Elementary video series — a kid-friendly look at how AI can sometimes be unfair or biased, and why it's important to think critically about the answers AI gives.",
     badge: "NEW",
   },
 ];
