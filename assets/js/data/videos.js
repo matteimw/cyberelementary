@@ -236,6 +236,24 @@ const VIDEOS = [
     title: "AI Isn't Always Fair! ⚖️ | Cyber Elementary Lesson 31",
     description:
       "Lesson 31 from the Cyber Elementary video series — a kid-friendly look at how AI can sometimes be unfair or biased, and why it's important to think critically about the answers AI gives.",
+  },
+  {
+    id: "94HyFYIwNRk",
+    title: "Privacy with AI & Voice Assistants 🎯 Who's Listening? | Cyber Elementary Lesson 32",
+    description:
+      "Lesson 32 from the Cyber Elementary video series — a kid-friendly look at how AI and voice assistants listen and learn, and simple habits for protecting your privacy around smart devices.",
+  },
+  {
+    id: "qzjbQjpo5U0",
+    title: "Safe AI Use for Homework: Helper or Cheat Sheet? 🚲 | Cyber Elementary Lesson 33",
+    description:
+      "Lesson 33 from the Cyber Elementary video series — a kid-friendly look at using AI responsibly for homework: when it's a helpful tool and when leaning on it crosses into cheating.",
+  },
+  {
+    id: "yy3CIMadgHI",
+    title: "Don't Believe Everything You See! AI Misinformation & Fact-Checking | Cyber Elementary Lesson 34",
+    description:
+      "Lesson 34 from the Cyber Elementary video series — a kid-friendly look at spotting AI-generated misinformation and simple fact-checking habits for figuring out what's real online.",
     badge: "NEW",
   },
 ];
