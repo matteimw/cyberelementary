@@ -268,4 +268,11 @@ const VIDEOS = [
       "Lesson 36 from the Cyber Elementary video series — kids wrap up the AI safety batch by making their own pledge to use AI responsibly.",
     badge: "NEW",
   },
+  {
+    id: "0I-Rt2Vw10s",
+    title: "AI Safety for Kids: All 9 Lessons 🤖 | Cyber Elementary Compilation",
+    description:
+      "All 9 AI Security & AI Safety lessons back-to-back in one video — what AI is, how chatbots work, spotting fake images, AI bias and fairness, privacy with voice assistants, safe AI use for homework, AI misinformation and fact-checking, protecting your data from AI apps, and making your AI citizenship pledge, perfect for catching up on the whole unit at once.",
+    featured: true,
+  },
 ];
