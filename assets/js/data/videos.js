@@ -254,6 +254,18 @@ const VIDEOS = [
     title: "Don't Believe Everything You See! AI Misinformation & Fact-Checking | Cyber Elementary Lesson 34",
     description:
       "Lesson 34 from the Cyber Elementary video series — a kid-friendly look at spotting AI-generated misinformation and simple fact-checking habits for figuring out what's real online.",
+  },
+  {
+    id: "Ju14d-84KHI",
+    title: "Protect Your Data from AI Apps! 🎒 | Cyber Elementary Lesson 35",
+    description:
+      "Lesson 35 from the Cyber Elementary video series — a kid-friendly look at what personal data AI apps collect and simple habits for keeping that information safe.",
+  },
+  {
+    id: "K0h4XLU1OUU",
+    title: "Make Your Pledge! Being a Responsible AI Citizen | Cyber Elementary Lesson 36",
+    description:
+      "Lesson 36 from the Cyber Elementary video series — kids wrap up the AI safety batch by making their own pledge to use AI responsibly.",
     badge: "NEW",
   },
 ];
