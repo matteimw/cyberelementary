@@ -103,7 +103,29 @@
     border-radius: 3px; border: 1px solid var(--border); flex-shrink: 0;
   }
   .book-sample span { color: var(--ink-soft); }
+
+  /* ---- Newsletter signup strip ---- */
+  .newsletter-strip {
+    background: var(--accent-bg, #e8f4fd);
+    border-top: 2px solid var(--accent, #1a73e8);
+    border-bottom: 2px solid var(--accent, #1a73e8);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .newsletter-strip h2 { margin: 0 0 8px; font-size: 1.5rem; }
+  .newsletter-strip p  { margin: 0 0 20px; color: var(--ink-soft); }
+  .newsletter-strip .ml-embedded { max-width: 480px; margin: 0 auto; }
 </style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2635532');
+</script>
+<!-- End MailerLite Universal -->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -209,6 +231,13 @@
     <div class="text-center" style="margin-top:20px;">
       <a class="btn btn-outline btn-sm" href="deals.html">See all savings →</a>
     </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-strip">
+    <h2>📬 Get Free Cyber Safety Tips</h2>
+    <p>Join teachers and parents getting Cyber Elementary updates, new lessons, and book news.</p>
+    <div class="ml-embedded" data-form="OU3kYS"></div>
   </section>
 
   <!-- Family sites -->
