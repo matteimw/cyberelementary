@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { href: "reviews.html", label: "Reviews" },
   { href: "deals.html", label: "Today's Savings" },
   { href: "articles.html", label: "Blog" },
+  { href: "about.html", label: "About" },
   { href: "index.html#contact", label: "Contact" },
 ];
 
@@ -92,6 +93,7 @@ function renderFooter() {
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="deals.html">Today's Savings</a></li>
           <li><a href="articles.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </div>
       <div class="footer-col">

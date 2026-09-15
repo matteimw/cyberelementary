@@ -31,6 +31,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.cyberelementary.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.cyberelementary.com/blog-ai-and-teen-mental-health.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

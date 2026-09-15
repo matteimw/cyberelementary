@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Cyber Elementary</title>
+<meta name="description" content="Why a cybersecurity veteran with 30 years of experience decided to build Cyber Elementary — a simple answer: his kids." />
+<link rel="canonical" href="https://www.cyberelementary.com/about.html" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+
+/* ── About page scoped styles ─────────────────────────────── */
+
+.about-hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark, #1a2a5e) 100%);
+  color: #fff;
+  padding: 64px 24px 52px;
+  text-align: center;
+}
+.about-hero .hero-badge {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.about-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 12px 0 16px;
+  line-height: 1.15;
+}
+.about-hero .lead {
+  max-width: 54ch;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+
+/* ── Pull-quote card ── */
+.pull-quote {
+  background: var(--accent-light, #fef3c7);
+  border-left: 5px solid var(--accent, #f59e0b);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin: 28px 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+/* ── Story section ── */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .story-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.story-text p:last-child { margin-bottom: 0; }
+
+/* ── Credential strip ── */
+.cred-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 12px 0 0;
+}
+@media (max-width: 640px) {
+  .cred-strip { grid-template-columns: 1fr; }
+}
+.cred-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 18px;
+  text-align: center;
+}
+.cred-card .cred-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.cred-card h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--brand);
+}
+.cred-card p {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Mission strip ── */
+.mission-strip {
+  background: var(--brand);
+  color: #fff;
+  border-radius: 18px;
+  padding: 36px 32px;
+  text-align: center;
+  margin: 8px 0 0;
+}
+.mission-strip h2 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.mission-strip p {
+  max-width: 58ch;
+  margin: 0 auto 24px;
+  opacity: 0.9;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.mission-strip .btn-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-light {
+  background: #fff;
+  color: var(--brand);
+  border: 2px solid transparent;
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.btn-light:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.18); transform: translateY(-2px); }
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.7);
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.btn-outline-light:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+/* ── Press links ── */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.press-link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.press-link-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.press-link-card .icon { font-size: 1.8rem; flex-shrink: 0; }
+.press-link-card h4 { margin: 0 0 3px; font-size: 0.92rem; font-weight: 800; color: var(--brand); }
+.press-link-card p { margin: 0; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4; }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section class="about-hero">
+    <div class="wrap" style="max-width: 700px;">
+      <span class="hero-badge">Our Story</span>
+      <h1>Built by a dad.<br>Powered by 30 years of cyber.</h1>
+      <p class="lead">
+        Cyber Elementary started with one simple question from the dinner table —
+        and a realization that the world's best cybersecurity training had never
+        been written for kids.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── The personal story ─────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <div class="story-grid">
+
+        <div class="story-text">
+          <span class="hero-badge" style="display:inline-block; margin-bottom:16px;">The Story</span>
+          <h2 style="margin-top:0;">It started at the dinner table.</h2>
+
+          <p>
+            My kids were eight and ten years old when I realized I had a problem.
+            I'd spent three decades in cybersecurity — National Security Agency, USCENTCOM,
+            enterprise managed security programs — and I could brief a Fortune 500 board on
+            threat intelligence. But when my own children sat down at a screen,
+            I didn't have a good answer for <em>how</em> to teach them to stay safe.
+          </p>
+
+          <p>
+            I looked for the kind of curriculum I'd want them to use. Something rigorous
+            but age-appropriate. Lesson-plan ready. Written as if a real cybersecurity
+            professional — not a children's textbook committee — had put it together.
+            I couldn't find it.
+          </p>
+
+          <p>
+            So I wrote it myself.
+          </p>
+
+          <div class="pull-quote">
+            "The best cybersecurity training in the world is worthless if it never
+            reaches the people who need it most — and my kids needed it now."
+            <cite>— Mark W. Mattei, LTC (USA, Ret.)</cite>
+          </div>
+
+          <p>
+            What started as a lesson plan for our dining room table grew into a full
+            curriculum series — 36 video lessons, graded workbooks for 3rd through 6th grade,
+            and teacher resources designed to drop straight into a classroom. Cyber Elementary
+            is the program I wish had existed when my kids first picked up a device.
+          </p>
+        </div>
+
+        <div>
+          <span class="hero-badge" style="display:inline-block; margin-bottom:16px;">The Background</span>
+          <h2 style="margin-top:0;">30 years of experience, distilled for kids.</h2>
+
+          <p class="story-text" style="font-size:1.05rem; line-height:1.75; color:var(--ink); margin-bottom:18px;">
+            A career in cyber gives you pattern recognition that's hard to put into
+            words — you see the attacks, the failures, the human errors that real
+            organizations pay billions trying to prevent. Most of those failures trace
+            back to basic behaviors: clicking the wrong link, trusting the wrong message,
+            sharing too much online.
+          </p>
+          <p class="story-text" style="font-size:1.05rem; line-height:1.75; color:var(--ink); margin-bottom:18px;">
+            Those basics are teachable. They're actually <em>easier</em> to learn early,
+            before bad habits form. That insight — earned across a long career and a
+            dinner table full of kids — is what every Cyber Elementary lesson is built on.
+          </p>
+          <p class="story-text" style="font-size:1.05rem; line-height:1.75; color:var(--ink);">
+            The books are published through
+            <a href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">Baldwin Terney Press</a>,
+            a family publishing house with roots going back three generations. The
+            consulting practice behind the curriculum —
+            <a href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">Baldwin Terney Consulting</a>
+            — advises enterprise organizations on the same cybersecurity principles
+            these lessons teach.
+          </p>
+
+          <!-- Credential cards -->
+          <div class="cred-strip" style="margin-top:28px;">
+            <div class="cred-card">
+              <span class="cred-icon">🏛️</span>
+              <h4>National Security Agency</h4>
+              <p>Signals intelligence &amp; national-level cyber operations</p>
+            </div>
+            <div class="cred-card">
+              <span class="cred-icon">🌐</span>
+              <h4>USCENTCOM / DoD</h4>
+              <p>Joint cyber operations &amp; critical infrastructure protection</p>
+            </div>
+            <div class="cred-card">
+              <span class="cred-icon">🔒</span>
+              <h4>Enterprise MSSP</h4>
+              <p>Built &amp; led managed security programs at Kudelski Security &amp; 1898 &amp; Co.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Mission strip ─────────────────────────────────────── -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="mission-strip">
+        <h2>Every kid deserves to grow up cyber-smart.</h2>
+        <p>
+          Cyber Elementary exists because the gap between professional-grade
+          cybersecurity knowledge and what reaches kids is enormous — and completely
+          unnecessary. The lessons are simple. The stakes are real.
+          Let's close that gap together.
+        </p>
+        <div class="btn-row">
+          <a class="btn-light" href="books.html">Browse the Books</a>
+          <a class="btn-outline-light" href="videos.html">Watch Free Lessons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Family of sites ───────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom: 28px;">
+        <span class="hero-badge">Our Family</span>
+        <h2 style="margin-top: 10px;">Part of something bigger.</h2>
+        <p style="max-width:52ch; margin: 0 auto; color:var(--ink-soft); font-size:1rem; line-height:1.6;">
+          Cyber Elementary lives alongside a family of related sites — the publisher,
+          the consulting practice, and the people behind it all.
+        </p>
+      </div>
+      <div class="press-grid">
+        <a class="press-link-card" href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">
+          <span class="icon">📚</span>
+          <div>
+            <h4>Baldwin Terney Press</h4>
+            <p>Our family publishing house — books for kids, professionals, and curious minds.</p>
+          </div>
+        </a>
+        <a class="press-link-card" href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">
+          <span class="icon">🛡️</span>
+          <div>
+            <h4>Baldwin Terney Consulting</h4>
+            <p>Enterprise cybersecurity advisory for critical infrastructure and MSSP leaders.</p>
+          </div>
+        </a>
+        <a class="press-link-card" href="https://www.rachelmattei.com" target="_blank" rel="noopener">
+          <span class="icon">🎨</span>
+          <div>
+            <h4>Rachel Mattei</h4>
+            <p>Children's picture books — starting with <em>I Need Chocolate Milk!</em></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+<div id="sticky-bar"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
