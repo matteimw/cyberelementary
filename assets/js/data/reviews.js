@@ -24,6 +24,18 @@
 
 const REVIEWS = [
   {
+    productName: "The Chatbot Crisis: How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them",
+    image: "assets/images/books/chatbot-crisis.jpg",
+    icon: "🤖",
+    rating: 5,
+    summary:
+      "<strong>Author's note:</strong> I wrote this one, so read this as a note from the author rather than an outside review. After 25+ years in cybersecurity and years of teaching kids online and AI safety, I kept seeing the same gap: AI companion chatbots are talking with teens every day, and the safeguards around them aren't keeping up. The Chatbot Crisis is my independent analysis of where these apps fall short for teens, and how Big Tech is shaping the rules meant to stop them. If you're a parent, teacher, or anyone who cares about kids and AI, it's written for you.",
+    linkType: "amazon",
+    linkTarget: "https://link.amazon/B0cXdD3HA",
+    linkLabel: "See it on Amazon",
+    badge: "FROM THE AUTHOR",
+  },
+  {
     productName: "The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning",
     image: "",
     icon: "🧠",

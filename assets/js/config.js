@@ -89,7 +89,7 @@ const SITE_CONFIG = {
 function buildAmazonLink(asinOrUrl, overrideTag) {
   const tag = overrideTag || SITE_CONFIG.amazonTag;
 
-  if (/^https?:\/\/amzn\.to\//i.test(asinOrUrl)) {
+  if (/^https?:\/\/(amzn\.to|link\.amazon)\//i.test(asinOrUrl)) {
     return asinOrUrl; // pre-tagged SiteStripe short link — leave it alone
   }
 

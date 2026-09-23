@@ -45,6 +45,20 @@
 
 const BOOKS = [
   {
+    title: "The Chatbot Crisis",
+    subtitle: "How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them",
+    grade: "",
+    audience: "For Parents, Educators & Policymakers",
+    cover: "assets/images/books/chatbot-crisis.jpg",
+    icon: "🤖",
+    description:
+      "AI chatbots are talking to your kids — and nobody's stopping them. Mark Mattei's independent analysis of how AI companion apps are failing teens, and how Big Tech is shaping the rules meant to rein them in.",
+    formats: "Available on Amazon",
+    amazon: "https://link.amazon/B0cXdD3HA",
+    badge: "NEW",
+    freePromo: false,
+  },
+  {
     title: "Cyber Elementary School: Complete Lesson Plan Book",
     subtitle: "The Complete Teacher Lesson Plan Book — 36 Lessons for Grades 3-6",
     grade: "Grades 3-6",
