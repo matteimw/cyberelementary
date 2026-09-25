@@ -110,6 +110,23 @@ After editing any data file, from inside `cyberelementary-site`:
   defaults to Mark W. Mattei), `uploadDate` ("2026-09-11") on videos,
   `itemType` ("SoftwareApplication", etc.) on reviews (default "Product").
 
+## Curriculum page (curriculum.html)
+
+Generated from `assets/js/data/curriculum.js` by `node tools/prerender.js`.
+Don't edit curriculum.html by hand.
+
+KEEP IT TO LESSON TITLES. If the Kindle editions are in KDP Select, Amazon
+only allows about 10% of a book to appear elsewhere online (the free sample
+PDFs count too). So the page shows the scope & sequence (lesson titles =
+the table of contents), unit summaries written just for the site, the FAQ,
+and links to the videos and books. No objectives, activities, worksheets,
+quizzes or other text copied from the books. The full extracted lesson data
+is kept outside this repo in the parent folder
+(curriculum-FULL-lesson-data-PRIVATE-do-not-publish.js).
+
+The prerender step also rebuilds `sitemap.xml` (lastmod changes only when a
+page changes; tracked in `tools/.page-hashes.json`) and `llms.txt`.
+
 ## Your Amazon affiliate tag
 
 Open `assets/js/config.js` and set `amazonTag` to your real Associates tracking ID

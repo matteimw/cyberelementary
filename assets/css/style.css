@@ -127,6 +127,11 @@ nav.main-nav a {
   font-size: 0.95rem;
   transition: background 0.15s, color 0.15s;
 }
+/* Desktop: slightly tighter links so all 9 menu items stay on the logo's line. */
+@media (min-width: 1000px) {
+  nav.main-nav { gap: 0; }
+  nav.main-nav a { padding: 8px 9px; font-size: 0.92rem; }
+}
 nav.main-nav a:hover,
 nav.main-nav a[aria-current="page"] {
   background: rgba(46, 196, 182, 0.14);
@@ -588,3 +593,82 @@ body.has-sticky-bar { padding-bottom: 64px; }
   border: 2px dashed var(--border);
   border-radius: var(--radius);
 }
+
+/* ---------- Curriculum pages (curriculum.html, curriculum-grade-*.html) ---------- */
+.draft-banner {
+  background: #FFE066; color: var(--navy); text-align: center;
+  font-weight: 800; padding: 10px 16px; font-size: 0.95rem;
+}
+.curr-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.curr-grade-nav {
+  display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; padding-bottom: 0;
+}
+.curr-grade-nav a {
+  text-decoration: none; font-weight: 800; padding: 8px 16px; border-radius: 999px;
+  background: #fff; border: 2px solid var(--border); color: var(--navy);
+}
+.curr-grade-nav a:hover { border-color: var(--teal); }
+.curr-grade-nav a[aria-current="page"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.curr-facts {
+  list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 10px;
+}
+.curr-facts li {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 8px 14px; box-shadow: var(--shadow); font-size: 0.95rem;
+}
+.curr-facts strong { color: var(--teal-dark); }
+.curr-intro { max-width: 75ch; color: var(--ink-soft); margin: 0 0 12px; }
+.curr-jump { font-weight: 700; margin: 0; }
+.curr-jump a, .curr-video-link { color: var(--teal-dark); }
+.curr-muted { color: var(--ink-soft); font-size: 0.9rem; }
+
+.curr-table-wrap { overflow-x: auto; margin-bottom: 20px; border-radius: var(--radius-sm); box-shadow: var(--shadow); }
+.curr-table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.95rem; min-width: 560px; }
+.curr-table caption { position: absolute; left: -9999px; }
+.curr-table th {
+  background: var(--navy); color: #fff; text-align: left; padding: 10px 12px;
+  font-family: var(--font-head); font-weight: 700;
+}
+.curr-table td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+.curr-table td:first-child { font-weight: 800; width: 4.5em; }
+.curr-table td:first-child a { color: var(--teal-dark); }
+
+.curr-lessons { display: grid; gap: 10px; }
+.curr-lesson {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.curr-lesson summary {
+  cursor: pointer; padding: 14px 18px; font-weight: 700; list-style: none;
+  display: flex; gap: 10px; align-items: baseline;
+}
+.curr-lesson summary::-webkit-details-marker { display: none; }
+.curr-lesson summary::after { content: "+"; margin-left: auto; font-weight: 800; color: var(--teal-dark); }
+.curr-lesson[open] summary::after { content: "–"; }
+.curr-lesson-num {
+  flex: none; background: var(--teal); color: #fff; border-radius: 999px;
+  padding: 2px 10px; font-size: 0.8rem; font-weight: 800;
+}
+.curr-lesson-body { padding: 0 18px 18px; border-top: 1px solid var(--border); }
+.curr-lesson-body h3 { margin-top: 16px; font-size: 1.2rem; }
+.curr-lesson-body h4 { margin: 16px 0 4px; font-size: 1rem; }
+.curr-lesson-body ul { margin: 0; padding-left: 20px; }
+.curr-lesson-body p { margin: 0; }
+.curr-lesson-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.curr-lesson:target { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+.curr-units { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.curr-unit { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; }
+.curr-unit ol { margin: 0; padding-left: 28px; }
+.curr-unit li { margin-bottom: 6px; }
+.curr-includes {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;
+  list-style: none; padding: 0; margin: 0;
+}
+.curr-includes li {
+  background: var(--bg); border-radius: var(--radius-sm); padding: 10px 14px; font-weight: 700;
+}
+.curr-includes li::before { content: "✓ "; color: var(--teal-dark); }
+.curr-cta { text-align: center; }
+.curr-cta p { color: var(--ink-soft); max-width: 60ch; margin: 0 auto; }
+.curr-cta .curr-hero-actions { justify-content: center; }

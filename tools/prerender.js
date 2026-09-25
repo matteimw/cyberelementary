@@ -191,7 +191,7 @@ function bodyScripts(html) {
 
 function loadData() {
   const { ctx } = makeContext("index.html");
-  for (const f of ["config.js", "data/books.js", "data/videos.js", "data/reviews.js", "data/articles.js"]) {
+  for (const f of ["config.js", "data/books.js", "data/videos.js", "data/reviews.js", "data/articles.js", "data/curriculum.js"]) {
     const p = path.join(ROOT, "assets/js", f);
     if (fs.existsSync(p)) run(ctx, fs.readFileSync(p, "utf8"), f);
   }
@@ -202,6 +202,7 @@ function loadData() {
     videos: get("VIDEOS") || [],
     reviews: get("REVIEWS") || [],
     articles: get("ARTICLES") || [],
+    curriculum: get("CURRICULUM"),
     amazonLink: (x) => vm.runInContext(`buildAmazonLink(${JSON.stringify(x)})`, ctx),
   };
 }
@@ -335,6 +336,38 @@ function articleNode(a) {
   };
 }
 
+const ORD = { 3: "3rd", 4: "4th", 5: "5th", 6: "6th" };
+function courseNode(D, g, url) {
+  const C = D.curriculum;
+  const book = D.books.find((b) => new RegExp(`${ORD[g]} Grade Lesson Plan Book`, "i").test(b.title));
+  return {
+    "@type": "Course",
+    "@id": `${url}#grade-${g}`,
+    name: `Cyber Elementary School: ${ORD[g]} Grade Cyber Safety & AI Safety Curriculum`,
+    description: `A 36-lesson ${ORD[g]}-grade curriculum in cyber security, online safety, digital citizenship and AI safety.`,
+    url,
+    provider: { "@id": ID.brand },
+    author: { "@id": ID.founder },
+    publisher: { "@id": ID.publisher },
+    educationalLevel: `Grade ${g}`,
+    inLanguage: "en",
+    isAccessibleForFree: false,
+    teaches: C.units.map((u) => u.name),
+    numberOfLessons: C.lessons.length,
+    workExample: book ? { "@id": `${SITE}/books.html#${slugify(book.title)}` } : undefined,
+    hasPart: C.lessons.map((l) => ({
+      "@type": "LearningResource",
+      name: `Lesson ${l.n}: ${l.topic} — ${l.tagline}`,
+      position: l.n,
+      learningResourceType: "Lesson plan",
+      educationalLevel: `Grade ${g}`,
+      about: l.topic,
+      isPartOf: { "@type": "CreativeWorkSeries", name: C.units.find((u) => { const [a, b] = u.lessons.split("-").map(Number); return l.n >= a && l.n <= b; }).name },
+      associatedMedia: l.videoId ? { "@type": "VideoObject", name: `Lesson ${l.n}: ${l.topic}`, embedUrl: `https://www.youtube.com/embed/${l.videoId}`, thumbnailUrl: `https://i.ytimg.com/vi/${l.videoId}/hqdefault.jpg` } : undefined,
+    })),
+  };
+}
+
 function itemList(name, items) {
   return {
     "@type": "ItemList",
@@ -372,6 +405,17 @@ function pageGraph(D, page, html) {
   } else if (page === "articles.html") {
     webPage["@type"] = "CollectionPage";
     webPage.mainEntity = itemList("Cyber Elementary blog and resources", D.articles.map(articleNode));
+  } else if (page === "curriculum.html" && D.curriculum) {
+    webPage["@type"] = "CollectionPage";
+    webPage.mainEntity = ["3", "4", "5", "6"].map((g) => ({ "@id": `${url}#grade-${g}` }));
+    for (const g of ["3", "4", "5", "6"]) graph.push(courseNode(D, g, url));
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${url}#faq`,
+      mainEntity: (D.curriculumFaq || []).map(([q, a]) => ({
+        "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    });
   } else if (page === "about.html") {
     webPage["@type"] = "AboutPage";
     webPage.mainEntity = { "@id": ID.founder };
@@ -386,10 +430,16 @@ function pageGraph(D, page, html) {
 /* ---------------- Main ---------------- */
 
 function main() {
+  const D0 = loadData();
+  let curr = { pages: [], published: false, faq: [] };
+  const builder = path.join(__dirname, "build-curriculum.js");
+  if (fs.existsSync(builder)) curr = require(builder)(ROOT, D0);
+
   const pages = fs.readdirSync(ROOT).filter(
     (f) => f.endsWith(".html") && !/draft|backup/i.test(f)
   );
-  const D = loadData();
+  const D = D0;
+  D.curriculumFaq = curr.faq;
   let changed = 0;
 
   for (const page of pages) {
@@ -420,7 +470,79 @@ function main() {
     }
     console.log(`${html !== original ? "updated " : "unchanged"} ${page}  [${filled.join(", ")}]`);
   }
+  writeSitemap(pages, curr);
+  writeLlmsTxt(D, curr);
   console.log(`\nDone — ${changed} page(s) changed. Now commit and push as usual.`);
+}
+
+/* ---------------- sitemap.xml + llms.txt ---------------- */
+
+function writeSitemap(pages, curr) {
+  const file = path.join(ROOT, "sitemap.xml");
+  const old = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+  const oldLastmod = {};
+  for (const m of old.matchAll(/<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>)?/g)) oldLastmod[m[1]] = m[2];
+  const hidden = new Set(curr.published ? [] : curr.pages);
+  const order = ["index.html", "curriculum.html", "books.html", "videos.html"];
+  const list = pages.filter((p) => !hidden.has(p) && p !== "404.html")
+    .sort((a, b) => ((order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99)) || a.localeCompare(b));
+  const entries = list.map((p) => {
+    const loc = p === "index.html" ? `${SITE}/` : `${SITE}/${p}`;
+    const hash = require("crypto").createHash("sha1")
+      .update(fs.readFileSync(path.join(ROOT, p), "utf8").replace(/<span id="year">[^<]*<\/span>/, "")).digest("hex").slice(0, 10);
+    return { loc, hash };
+  });
+  // lastmod only moves when a page's content actually changed.
+  const hashFile = path.join(__dirname, ".page-hashes.json");
+  const hashes = fs.existsSync(hashFile) ? JSON.parse(fs.readFileSync(hashFile, "utf8")) : {};
+  const today = new Date().toISOString().slice(0, 10);
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.map((e) => {
+    const lastmod = hashes[e.loc] === e.hash && oldLastmod[e.loc] ? oldLastmod[e.loc] : today;
+    hashes[e.loc] = e.hash;
+    return `  <url><loc>${e.loc}</loc><lastmod>${lastmod}</lastmod></url>`;
+  }).join("\n")}
+</urlset>
+`;
+  fs.writeFileSync(hashFile, JSON.stringify(hashes, null, 2) + "\n");
+  if (xml !== old) { fs.writeFileSync(file, xml); console.log("updated  sitemap.xml"); }
+}
+
+function writeLlmsTxt(D, curr) {
+  const C = D.curriculum;
+  const lines = [
+    "# Cyber Elementary",
+    "",
+    "> Cyber security, online safety, digital citizenship and AI safety education for elementary students (grades 3-6): lesson plan books, skills workbooks and free video lessons for teachers and homeschool families. Created by Mark W. Mattei (25+ years in cybersecurity) and published by Baldwin Terney Press LLC.",
+    "",
+  ];
+  if (C && curr.published) {
+    lines.push("## Curriculum", "",
+      `- [Curriculum overview, grades 3-6](${SITE}/curriculum.html): 36 lessons in 4 units, ${C.duration} each, with scope & sequence and FAQ`,
+      `- Grade-level editions: one lesson plan book each for grades 3, 4, 5 and 6 (quiz length by grade: ${["3","4","5","6"].map((g) => `${g}: ${C.quizQuestions[g]} questions`).join(", ")}), plus a complete edition covering all four grades`,
+      "");
+    for (const u of C.units) {
+      const [a, b] = u.lessons.split("-").map(Number);
+      lines.push(`### ${u.name} (Lessons ${a}-${b})`, "",
+        ...C.lessons.filter((l) => l.n >= a && l.n <= b).map((l) => `- Lesson ${l.n}: ${l.topic} — ${l.tagline}`), "");
+    }
+  }
+  lines.push("## Books", "",
+    ...D.books.map((b) => `- ${b.title}${b.subtitle ? ` — ${b.subtitle}` : ""} (${[b.grade, b.formats].filter(Boolean).join("; ")}): ${D.amazonLink(b.amazon)}`),
+    `- Book details: ${SITE}/books.html`, "",
+    "## Videos", "",
+    `- [Video lessons](${SITE}/videos.html): a free companion video for each of the 36 lessons, plus one compilation per unit (YouTube: https://www.youtube.com/@CyberElementary)`, "",
+    "## Other pages", "",
+    `- [About the author](${SITE}/about.html)`,
+    `- [Blog](${SITE}/articles.html)`,
+    `- [Product reviews](${SITE}/reviews.html)`, "",
+    "## Notes", "",
+    "- Book links are Amazon affiliate links.",
+    `- Contact: ${D.config.contactEmail}`, "");
+  const file = path.join(ROOT, "llms.txt");
+  const txt = lines.join("\n");
+  if (!fs.existsSync(file) || fs.readFileSync(file, "utf8") !== txt) { fs.writeFileSync(file, txt); console.log("updated  llms.txt"); }
 }
 
 main();

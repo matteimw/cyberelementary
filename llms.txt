@@ -1,0 +1,85 @@
+# Cyber Elementary
+
+> Cyber security, online safety, digital citizenship and AI safety education for elementary students (grades 3-6): lesson plan books, skills workbooks and free video lessons for teachers and homeschool families. Created by Mark W. Mattei (25+ years in cybersecurity) and published by Baldwin Terney Press LLC.
+
+## Curriculum
+
+- [Curriculum overview, grades 3-6](https://www.cyberelementary.com/curriculum.html): 36 lessons in 4 units, 30–40 minutes each, with scope & sequence and FAQ
+- Grade-level editions: one lesson plan book each for grades 3, 4, 5 and 6 (quiz length by grade: 3: 4 questions, 4: 5 questions, 5: 5 questions, 6: 6 questions), plus a complete edition covering all four grades
+
+### Cyber Security Basics (Lessons 1-9)
+
+- Lesson 1: Creating Strong Passwords — Your Digital Lock and Key
+- Lesson 2: Keeping Devices and Software Updated — Giving Your Digital Tools Their Checkup
+- Lesson 3: Recognizing Phishing Emails and Messages — Don't Take the Bait
+- Lesson 4: Understanding Malware and Viruses — Germs for Your Computer
+- Lesson 5: Safe Wi-Fi and Network Habits — Locking Your Digital Front Door
+- Lesson 6: Protecting Personal Information/Data — Your Digital Treasure Chest
+- Lesson 7: Two-Factor Authentication Basics — A Second Lock on Your Account
+- Lesson 8: Backing Up Important Data — Your Digital Safety Net
+- Lesson 9: Physical Device Security — Protecting the Hardware, Not Just the Data
+
+### Online Safety (Lessons 10-18)
+
+- Lesson 10: Sharing Information Safely Online — Think Before You Post
+- Lesson 11: Understanding Digital Footprints — The Trail You Leave Online
+- Lesson 12: Cyberbullying — Recognizing and Responding
+- Lesson 13: Safe Social Media Habits — Using Apps the Smart Way
+- Lesson 14: Stranger Danger Online — Not Everyone Is Who They Say They Are
+- Lesson 15: Evaluating Trustworthy Websites — Not Everything Online Is True
+- Lesson 16: Screen Time and Digital Balance — Making Room for Everything You Love
+- Lesson 17: Safe Online Gaming — Playing Smart with Others
+- Lesson 18: Reporting Inappropriate Content — Speaking Up the Right Way
+
+### Digital Citizenship & Communication (Lessons 19-27)
+
+- Lesson 19: Being Kind Online (Digital Citizenship) — The Golden Rule Goes Digital
+- Lesson 20: Understanding Copyright and Plagiarism — Giving Credit Where It's Due
+- Lesson 21: Email and Messaging Etiquette — Writing Like a Pro
+- Lesson 22: Video Chat and Webcam Safety — Mind What's in the Frame
+- Lesson 23: Understanding Cookies and Trackers — The Websites That Remember You
+- Lesson 24: Public vs. Private Information — Drawing the Line
+- Lesson 25: Recognizing Scams and Too-Good-To-Be-True Offers — 
+- Lesson 26: Safe Online Shopping Basics — Buying Smart with a Trusted Adult
+- Lesson 27: Digital Footprint Cleanup — Tidying Up Your Online Trail
+
+### AI Security & AI Safety (Lessons 28-36)
+
+- Lesson 28: What Is Artificial Intelligence? — Meeting Our New Digital Helper
+- Lesson 29: How AI Chatbots Work — Talking to a Very Good Guesser
+- Lesson 30: Recognizing AI-Generated Content — Is That Picture or Video Even Real?
+- Lesson 31: AI Bias and Fairness — Why AI Isn't Always Neutral
+- Lesson 32: Privacy with AI Tools and Voice Assistants — Who's Listening?
+- Lesson 33: Safe and Responsible AI Use for Homework — A Helper, Not a Cheat Sheet
+- Lesson 34: AI Misinformation and Fact-Checking — Don't Believe Everything You See
+- Lesson 35: Protecting Personal Data from AI Systems — Guarding Your Information
+- Lesson 36: Being a Responsible AI Citizen — Bringing It All Together
+
+## Books
+
+- The Chatbot Crisis — How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them (Available on Amazon): https://link.amazon/B0cXdD3HA
+- Cyber Elementary School: Complete Lesson Plan Book — The Complete Teacher Lesson Plan Book — 36 Lessons for Grades 3-6 (Grades 3-6; Kindle eBook & Paperback): https://amzn.to/4qmWOPQ
+- Cyber Elementary School: 3rd Grade Lesson Plan Book — 36 Cyber Security, Online Safety & AI Safety Lessons for 3rd Grade (Grade 3; Kindle eBook & Paperback): https://amzn.to/4g02ziV
+- Cyber Elementary School: 4th Grade Lesson Plan Book — 36 Cyber Security, Online Safety & AI Safety Lessons for 4th Grade (Grade 4; Kindle eBook & Paperback): https://amzn.to/4wXGJm4
+- Cyber Elementary School: 5th Grade Lesson Plan Book — 36 Cyber Security, Online Safety & AI Safety Lessons for 5th Grade (Grade 5; Kindle eBook & Paperback): https://amzn.to/4x5uqV5
+- Cyber Elementary School: 6th Grade Lesson Plan Book — 36 Cyber Security, Online Safety & AI Safety Lessons for 6th Grade (Grade 6; Kindle eBook & Paperback): https://amzn.to/3UkxNst
+- Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes — 36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key (Grade 3; Paperback): https://amzn.to/4y4OG9a
+- Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes — 36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key (Grade 4; Paperback): https://amzn.to/3UHi3jr
+- Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes — 36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key (Grade 5; Paperback): https://amzn.to/4xoY1ZL
+- Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes — 36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key (Grade 6; Paperback): https://amzn.to/3SDsyDU
+- Book details: https://www.cyberelementary.com/books.html
+
+## Videos
+
+- [Video lessons](https://www.cyberelementary.com/videos.html): a free companion video for each of the 36 lessons, plus one compilation per unit (YouTube: https://www.youtube.com/@CyberElementary)
+
+## Other pages
+
+- [About the author](https://www.cyberelementary.com/about.html)
+- [Blog](https://www.cyberelementary.com/articles.html)
+- [Product reviews](https://www.cyberelementary.com/reviews.html)
+
+## Notes
+
+- Book links are Amazon affiliate links.
+- Contact: support@baldwinterneypress.com

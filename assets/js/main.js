@@ -10,6 +10,7 @@
 const NAV_LINKS = [
   { href: "index.html", label: "Home" },
   { href: "books.html", label: "Books" },
+  { href: "curriculum.html", label: "Curriculum" },
   { href: "videos.html", label: "Videos" },
   { href: "reviews.html", label: "Reviews" },
   { href: "deals.html", label: "Today's Savings" },
@@ -89,6 +90,7 @@ function renderFooter() {
         <h4>Explore</h4>
         <ul>
           <li><a href="books.html">Books</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="deals.html">Today's Savings</a></li>
