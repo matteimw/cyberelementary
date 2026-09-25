@@ -10,10 +10,188 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cyberelementary.com/#publisher",
+      "name": "Baldwin Terney Press LLC",
+      "url": "https://www.baldwinterneypress.com",
+      "sameAs": [
+        "https://www.facebook.com/baldwinterneypress",
+        "https://www.linkedin.com/company/baldwin-terney-press-llc/"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.cyberelementary.com/#organization",
+      "name": "Cyber Elementary",
+      "url": "https://www.cyberelementary.com/",
+      "logo": "https://www.cyberelementary.com/assets/images/mascot/choco.png",
+      "description": "Cybersecurity, online safety, digital citizenship and AI safety lessons for elementary-age kids (grades 3-6), with lesson plan books, skills workbooks and free video lessons for teachers and homeschool families.",
+      "parentOrganization": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      },
+      "founder": {
+        "@id": "https://www.cyberelementary.com/#founder"
+      },
+      "email": "support@baldwinterneypress.com",
+      "sameAs": [
+        "https://www.youtube.com/@CyberElementary",
+        "https://www.instagram.com/cyberelementary"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.cyberelementary.com/#founder",
+      "name": "Mark W. Mattei",
+      "url": "https://www.cyberelementary.com/about.html",
+      "worksFor": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cyberelementary.com/#website",
+      "url": "https://www.cyberelementary.com/",
+      "name": "Cyber Elementary",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.cyberelementary.com/reviews.html#webpage",
+      "url": "https://www.cyberelementary.com/reviews.html",
+      "name": "Reviews — Cyber Elementary",
+      "description": "Cyber Elementary's reviews of kid-friendly tech products, with Amazon and other affiliate links.",
+      "isPartOf": {
+        "@id": "https://www.cyberelementary.com/#website"
+      },
+      "about": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Cyber Elementary product reviews",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "The Chatbot Crisis: How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them",
+                "image": "https://www.cyberelementary.com/assets/images/books/chatbot-crisis.jpg",
+                "url": "https://link.amazon/B0cXdD3HA"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5,
+                "bestRating": 5,
+                "worstRating": 1
+              },
+              "reviewBody": "Author's note: I wrote this one, so read this as a note from the author rather than an outside review. After 25+ years in cybersecurity and years of teaching kids online and AI safety, I kept seeing the same gap: AI companion chatbots are talking with teens every day, and the safeguards around them aren't keeping up. The Chatbot Crisis is my independent analysis of where these apps fall short for teens, and how Big Tech is shaping the rules meant to stop them. If you're a parent, teacher, or anyone who cares about kids and AI, it's written for you.",
+              "author": {
+                "@id": "https://www.cyberelementary.com/#organization"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning",
+                "url": "https://amzn.to/4g3JnRe"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5,
+                "bestRating": 5,
+                "worstRating": 1
+              },
+              "reviewBody": "I used The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning to help my children build online safety skills and think more carefully about what they see on the internet. The book made it easier to teach them how to spot weak arguments, misleading claims, and logical fallacies in online content. It also helped introduce basic logic in a way that was simple and engaging for them to understand. Overall, it was a valuable resource for protecting my children online while strengthening their critical thinking.",
+              "author": {
+                "@id": "https://www.cyberelementary.com/#organization"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "Santa and Me: The SCADA Before Christmas",
+                "url": "https://amzn.to/4yQcleH"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5,
+                "bestRating": 5,
+                "worstRating": 1
+              },
+              "reviewBody": "Being in the critical infrastructure cyber field, I found this book helpful for explaining my work to my children in a simple, engaging way. It gave me a shared language to talk about online safety, logic, and how to think carefully about information they see every day. The lessons made it easier to connect my job to real-world examples they could understand. Overall, it was a useful book for turning a complex career into something my children could relate to.",
+              "author": {
+                "@id": "https://www.cyberelementary.com/#organization"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "KeePass Password Manager",
+                "url": "https://keepass.info/"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5,
+                "bestRating": 5,
+                "worstRating": 1
+              },
+              "reviewBody": "I use KeePass to create and store all of my passwords in one encrypted database, protected by a single passphrase that I only have to remember once. Every account gets its own long, complex, unique password, but I'm not stuck trying to memorize any of them. I keep my KeePass database file saved in cloud storage and backed up, so it stays safe even if something happens to my computer, and I can open it on my iPhone whenever I need a password on the go. It's a free, open-source tool that's been around for years and is well documented, and it's made managing strong passwords across my whole family's devices simple instead of stressful.",
+              "author": {
+                "@id": "https://www.cyberelementary.com/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<!--jsonld:end-->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header"></header>
+<header class="site-header" id="site-header"><!--prerender:start-->
+    <div class="promo-strip">
+      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page.
+    </div>
+    <div class="nav-bar wrap">
+      <a class="brand" href="index.html">
+        <span class="logo-badge" aria-hidden="true"><img src="assets/images/mascot/choco.png" alt="Cyber Elementary mascot" /></span>
+        Cyber Elementary
+      </a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html" >Home</a><a href="books.html" >Books</a><a href="videos.html" >Videos</a><a href="reviews.html" aria-current="page">Reviews</a><a href="deals.html" >Today's Savings</a><a href="articles.html" >Blog</a><a href="about.html" >About</a><a href="index.html#contact" >Contact</a></nav>
+    </div>
+  <!--prerender:end--></header>
 
 <main id="main">
   <section class="hero" style="padding:44px 24px;">
@@ -31,11 +209,119 @@
   </div>
 
   <section class="section">
-    <div class="grid" id="reviews-grid"></div>
+    <div class="grid" id="reviews-grid"><!--prerender:start-->
+    <article class="card review-card">
+      <div class="card-media">
+        <span class="card-badge">FROM THE AUTHOR</span>
+        <img src="assets/images/books/chatbot-crisis.jpg" alt="The Chatbot Crisis: How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <h3>The Chatbot Crisis: How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them</h3>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="card-meta">5/5</span></div>
+        <p class="card-desc"><strong>Author's note:</strong> I wrote this one, so read this as a note from the author rather than an outside review. After 25+ years in cybersecurity and years of teaching kids online and AI safety, I kept seeing the same gap: AI companion chatbots are talking with teens every day, and the safeguards around them aren't keeping up. The Chatbot Crisis is my independent analysis of where these apps fall short for teens, and how Big Tech is shaping the rules meant to stop them. If you're a parent, teacher, or anyone who cares about kids and AI, it's written for you.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://link.amazon/B0cXdD3HA" target="_blank" rel="nofollow sponsored noopener">
+            🛒 See it on Amazon
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card review-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">🧠</span>
+      </div>
+      <div class="card-body">
+        <h3>The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning</h3>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="card-meta">5/5</span></div>
+        <p class="card-desc">I used The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning to help my children build online safety skills and think more carefully about what they see on the internet. The book made it easier to teach them how to spot weak arguments, misleading claims, and logical fallacies in online content. It also helped introduce basic logic in a way that was simple and engaging for them to understand. Overall, it was a valuable resource for protecting my children online while strengthening their critical thinking.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4g3JnRe" target="_blank" rel="nofollow sponsored noopener">
+            🛒 See it on Amazon
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card review-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">🎄</span>
+      </div>
+      <div class="card-body">
+        <h3>Santa and Me: The SCADA Before Christmas</h3>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="card-meta">5/5</span></div>
+        <p class="card-desc">Being in the critical infrastructure cyber field, I found this book helpful for explaining my work to my children in a simple, engaging way. It gave me a shared language to talk about online safety, logic, and how to think carefully about information they see every day. The lessons made it easier to connect my job to real-world examples they could understand. Overall, it was a useful book for turning a complex career into something my children could relate to.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4yQcleH" target="_blank" rel="nofollow sponsored noopener">
+            🛒 See it on Amazon
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card review-card">
+      <div class="card-media">
+        <span class="card-badge">OPEN SOURCE & FREE</span>
+        <span aria-hidden="true">🔐</span>
+      </div>
+      <div class="card-body">
+        <h3>KeePass Password Manager</h3>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="card-meta">5/5</span></div>
+        <p class="card-desc">I use KeePass to create and store all of my passwords in one encrypted database, protected by a single passphrase that I only have to remember once. Every account gets its own long, complex, unique password, but I'm not stuck trying to memorize any of them. I keep my KeePass database file saved in cloud storage and backed up, so it stays safe even if something happens to my computer, and I can open it on my iPhone whenever I need a password on the go. It's a free, open-source tool that's been around for years and is well documented, and it's made managing strong passwords across my whole family's devices simple instead of stressful.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-sm" href="https://keepass.info/" target="_blank" rel="noopener">
+            🔗 Get KeePass Free
+          </a>
+        </div>
+      </div>
+    </article>
+  <!--prerender:end--></div>
   </section>
 </main>
 
-<footer class="site-footer" id="site-footer"></footer>
+<footer class="site-footer" id="site-footer"><!--prerender:start-->
+    <div class="wrap">
+      <div class="footer-col">
+        <h4>Cyber Elementary</h4>
+        <p style="max-width:26ch; color:rgba(255,255,255,0.75); font-size:0.9rem;">
+          Cybersecurity and digital-safety learning for elementary-age kids —
+          books, articles, and family-friendly picks.
+        </p>
+        <div class="social-row"><a href="https://www.facebook.com/baldwinterneypress" target="_blank" rel="noopener" aria-label="Facebook">📘</a><a href="https://www.instagram.com/cyberelementary" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a href="https://www.linkedin.com/company/baldwin-terney-press-llc/" target="_blank" rel="noopener" aria-label="Linkedin">💼</a><a href="https://www.youtube.com/@CyberElementary?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Youtube">▶️</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="deals.html">Today's Savings</a></li>
+          <li><a href="articles.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Family of Sites</h4>
+        <ul><li><a href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">Baldwin Terney Press</a></li><li><a href="https://www.rachelmattei.com" target="_blank" rel="noopener">Rachel Mattei</a></li><li><a href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">Baldwin Terney Consulting</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@baldwinterneypress.com">support@baldwinterneypress.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Baldwin Terney Press LLC. All rights reserved.</div>
+      <p class="disclosure">
+        As an Amazon Associate, Cyber Elementary earns from qualifying purchases.
+        Some links on this site are affiliate links, which means we may earn a
+        small commission at no extra cost to you.
+      </p>
+    </div>
+  <!--prerender:end--></footer>
 <div id="sticky-bar"></div>
 
 <script src="assets/js/config.js"></script>

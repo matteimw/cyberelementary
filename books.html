@@ -27,10 +27,404 @@
   }
   .book-sample span { color: var(--ink-soft); }
 </style>
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cyberelementary.com/#publisher",
+      "name": "Baldwin Terney Press LLC",
+      "url": "https://www.baldwinterneypress.com",
+      "sameAs": [
+        "https://www.facebook.com/baldwinterneypress",
+        "https://www.linkedin.com/company/baldwin-terney-press-llc/"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.cyberelementary.com/#organization",
+      "name": "Cyber Elementary",
+      "url": "https://www.cyberelementary.com/",
+      "logo": "https://www.cyberelementary.com/assets/images/mascot/choco.png",
+      "description": "Cybersecurity, online safety, digital citizenship and AI safety lessons for elementary-age kids (grades 3-6), with lesson plan books, skills workbooks and free video lessons for teachers and homeschool families.",
+      "parentOrganization": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      },
+      "founder": {
+        "@id": "https://www.cyberelementary.com/#founder"
+      },
+      "email": "support@baldwinterneypress.com",
+      "sameAs": [
+        "https://www.youtube.com/@CyberElementary",
+        "https://www.instagram.com/cyberelementary"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.cyberelementary.com/#founder",
+      "name": "Mark W. Mattei",
+      "url": "https://www.cyberelementary.com/about.html",
+      "worksFor": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cyberelementary.com/#website",
+      "url": "https://www.cyberelementary.com/",
+      "name": "Cyber Elementary",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.cyberelementary.com/books.html#webpage",
+      "url": "https://www.cyberelementary.com/books.html",
+      "name": "Books — Cyber Elementary",
+      "description": "Browse Cyber Elementary's full library of kids' cybersecurity books, with links to buy on Amazon.",
+      "isPartOf": {
+        "@id": "https://www.cyberelementary.com/#website"
+      },
+      "about": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Cyber Elementary books",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#the-chatbot-crisis",
+              "name": "The Chatbot Crisis",
+              "alternativeHeadline": "How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them",
+              "description": "AI chatbots are talking to your kids — and nobody's stopping them. Mark Mattei's independent analysis of how AI companion apps are failing teens, and how Big Tech is shaping the rules meant to rein them in.",
+              "image": "https://www.cyberelementary.com/assets/images/books/chatbot-crisis.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Parents, Educators & Policymakers"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://link.amazon/B0cXdD3HA"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-complete-lesson-plan-book",
+              "name": "Cyber Elementary School: Complete Lesson Plan Book",
+              "alternativeHeadline": "The Complete Teacher Lesson Plan Book — 36 Lessons for Grades 3-6",
+              "description": "One volume covering all four grade levels — 36 lessons with grade-differentiated talking points for 3rd through 6th grade, plus full assessments and answer keys for every grade.",
+              "image": "https://www.cyberelementary.com/assets/images/books/complete-lesson-plan.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grades 3-6",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Co-ops"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4qmWOPQ",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-3rd-grade-lesson-plan-book",
+              "name": "Cyber Elementary School: 3rd Grade Lesson Plan Book",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Lessons for 3rd Grade",
+              "description": "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade3-lesson-plan.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 3",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4g02ziV",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-4th-grade-lesson-plan-book",
+              "name": "Cyber Elementary School: 4th Grade Lesson Plan Book",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Lessons for 4th Grade",
+              "description": "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade4-lesson-plan.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 4",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4wXGJm4",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-5th-grade-lesson-plan-book",
+              "name": "Cyber Elementary School: 5th Grade Lesson Plan Book",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Lessons for 5th Grade",
+              "description": "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade5-lesson-plan.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 5",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4x5uqV5",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-6th-grade-lesson-plan-book",
+              "name": "Cyber Elementary School: 6th Grade Lesson Plan Book",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Lessons for 6th Grade",
+              "description": "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade6-lesson-plan.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 6",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/3UkxNst",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-3rd-grade-skills-workbook-lesson-quizzes",
+              "name": "Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
+              "description": "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 3rd grade only, plus a complete teacher answer key for every worksheet and quiz.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade3-skills-workbook.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 3",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4y4OG9a",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-4th-grade-skills-workbook-lesson-quizzes",
+              "name": "Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
+              "description": "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 4th grade only, plus a complete teacher answer key for every worksheet and quiz.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade4-skills-workbook.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 4",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/3UHi3jr",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-5th-grade-skills-workbook-lesson-quizzes",
+              "name": "Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
+              "description": "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 5th grade only, plus a complete teacher answer key for every worksheet and quiz.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade5-skills-workbook.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 5",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/4xoY1ZL",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "Book",
+              "@id": "https://www.cyberelementary.com/books.html#cyber-elementary-school-6th-grade-skills-workbook-lesson-quizzes",
+              "name": "Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes",
+              "alternativeHeadline": "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
+              "description": "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 6th grade only, plus a complete teacher answer key for every worksheet and quiz.",
+              "image": "https://www.cyberelementary.com/assets/images/books/grade6-skills-workbook.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Mark W. Mattei"
+              },
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#publisher"
+              },
+              "inLanguage": "en",
+              "educationalLevel": "Grade 6",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Teachers & Homeschool Parents"
+              },
+              "url": "https://www.cyberelementary.com/books.html",
+              "sameAs": "https://amzn.to/3SDsyDU",
+              "isPartOf": {
+                "@type": "BookSeries",
+                "name": "Cyber Elementary School"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<!--jsonld:end-->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header"></header>
+<header class="site-header" id="site-header"><!--prerender:start-->
+    <div class="promo-strip">
+      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page.
+    </div>
+    <div class="nav-bar wrap">
+      <a class="brand" href="index.html">
+        <span class="logo-badge" aria-hidden="true"><img src="assets/images/mascot/choco.png" alt="Cyber Elementary mascot" /></span>
+        Cyber Elementary
+      </a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html" >Home</a><a href="books.html" aria-current="page">Books</a><a href="videos.html" >Videos</a><a href="reviews.html" >Reviews</a><a href="deals.html" >Today's Savings</a><a href="articles.html" >Blog</a><a href="about.html" >About</a><a href="index.html#contact" >Contact</a></nav>
+    </div>
+  <!--prerender:end--></header>
 
 <main id="main">
   <section class="hero" style="padding:44px 24px;">
@@ -48,11 +442,317 @@
   </div>
 
   <section class="section">
-    <div class="grid grid-tight" id="books-grid"></div>
+    <div class="grid grid-tight" id="books-grid"><!--prerender:start-->
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">NEW</span>
+            
+            <img src="assets/images/books/chatbot-crisis.jpg" alt="The Chatbot Crisis" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://link.amazon/B0cXdD3HA" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>The Chatbot Crisis</h3>
+            <p class="card-subtitle">How AI Companions Are Failing America's Teens, and How Big Tech Is Rigging the Rules Meant to Stop Them</p>
+            <div class="card-meta">For Parents, Educators & Policymakers</div>
+            <p class="card-desc">AI chatbots are talking to your kids — and nobody's stopping them. Mark Mattei's independent analysis of how AI companion apps are failing teens, and how Big Tech is shaping the rules meant to rein them in.</p>
+            <div class="card-meta">📕 Available on Amazon</div>
+          </div>
+        </article>
+        
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">ALL GRADES</span>
+            
+            <img src="assets/images/books/complete-lesson-plan.jpg" alt="Cyber Elementary School: Complete Lesson Plan Book" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4qmWOPQ" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: Complete Lesson Plan Book</h3>
+            <p class="card-subtitle">The Complete Teacher Lesson Plan Book — 36 Lessons for Grades 3-6</p>
+            <div class="card-meta">Grades 3-6 · For Teachers & Homeschool Co-ops</div>
+            <p class="card-desc">One volume covering all four grade levels — 36 lessons with grade-differentiated talking points for 3rd through 6th grade, plus full assessments and answer keys for every grade.</p>
+            <div class="card-meta">📕 Kindle eBook & Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/lessonplan-sample-lesson01.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/lessonplan-sample-lesson01-thumb.jpg" alt="Preview of Free Sample: Lesson 1 from Cyber Elementary School: Complete Lesson Plan Book" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 1</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">TEACHER RESOURCE</span>
+            
+            <img src="assets/images/books/grade3-lesson-plan.jpg" alt="Cyber Elementary School: 3rd Grade Lesson Plan Book" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4g02ziV" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 3rd Grade Lesson Plan Book</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Lessons for 3rd Grade</p>
+            <div class="card-meta">Grade 3 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.</p>
+            <div class="card-meta">📕 Kindle eBook & Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade3-lesson3-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade3-lesson3-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 3 from Cyber Elementary School: 3rd Grade Lesson Plan Book" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 3</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">TEACHER RESOURCE</span>
+            
+            <img src="assets/images/books/grade4-lesson-plan.jpg" alt="Cyber Elementary School: 4th Grade Lesson Plan Book" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4wXGJm4" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 4th Grade Lesson Plan Book</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Lessons for 4th Grade</p>
+            <div class="card-meta">Grade 4 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.</p>
+            <div class="card-meta">📕 Kindle eBook & Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade4-lesson4-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade4-lesson4-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 4 from Cyber Elementary School: 4th Grade Lesson Plan Book" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 4</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">TEACHER RESOURCE</span>
+            
+            <img src="assets/images/books/grade5-lesson-plan.jpg" alt="Cyber Elementary School: 5th Grade Lesson Plan Book" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4x5uqV5" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 5th Grade Lesson Plan Book</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Lessons for 5th Grade</p>
+            <div class="card-meta">Grade 5 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.</p>
+            <div class="card-meta">📕 Kindle eBook & Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade5-lesson5-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade5-lesson5-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 5 from Cyber Elementary School: 5th Grade Lesson Plan Book" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 5</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">TEACHER RESOURCE</span>
+            
+            <img src="assets/images/books/grade6-lesson-plan.jpg" alt="Cyber Elementary School: 6th Grade Lesson Plan Book" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/3UkxNst" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 6th Grade Lesson Plan Book</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Lessons for 6th Grade</p>
+            <div class="card-meta">Grade 6 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.</p>
+            <div class="card-meta">📕 Kindle eBook & Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade6-lesson6-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade6-lesson6-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 6 from Cyber Elementary School: 6th Grade Lesson Plan Book" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 6</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">Learning Activities</span>
+            
+            <img src="assets/images/books/grade3-skills-workbook.jpg" alt="Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4y4OG9a" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key</p>
+            <div class="card-meta">Grade 3 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 3rd grade only, plus a complete teacher answer key for every worksheet and quiz.</p>
+            <div class="card-meta">📕 Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade3-sample-pages.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade3-sample-pages-thumb.jpg" alt="Preview of Free Sample Pages from Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          <span>⬇ Free Sample Pages</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">Learning Activities</span>
+            
+            <img src="assets/images/books/grade4-skills-workbook.jpg" alt="Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/3UHi3jr" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key</p>
+            <div class="card-meta">Grade 4 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 4th grade only, plus a complete teacher answer key for every worksheet and quiz.</p>
+            <div class="card-meta">📕 Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade4-lesson4-crossword-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade4-lesson4-crossword-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 4 Crossword from Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 4 Crossword</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">Learning Activities</span>
+            
+            <img src="assets/images/books/grade5-skills-workbook.jpg" alt="Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4xoY1ZL" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key</p>
+            <div class="card-meta">Grade 5 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 5th grade only, plus a complete teacher answer key for every worksheet and quiz.</p>
+            <div class="card-meta">📕 Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade5-lesson5-wordsearch-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade5-lesson5-wordsearch-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 5 Word Search from Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 5 Word Search</span>
+        </a>
+      </div>
+    
+      <div class="book-with-sample">
+        <article class="card book-card">
+          <div class="card-media">
+            <span class="card-badge">Learning Activities</span>
+            
+            <img src="assets/images/books/grade6-skills-workbook.jpg" alt="Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-actions card-actions-top">
+              <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/3SDsyDU" target="_blank" rel="nofollow sponsored noopener">
+                🛒 Buy on Amazon
+              </a>
+            </div>
+            <h3>Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes</h3>
+            <p class="card-subtitle">36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key</p>
+            <div class="card-meta">Grade 6 · For Teachers & Homeschool Parents</div>
+            <p class="card-desc">Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 6th grade only, plus a complete teacher answer key for every worksheet and quiz.</p>
+            <div class="card-meta">📕 Paperback</div>
+          </div>
+        </article>
+        
+        <a class="book-sample" href="assets/pdfs/grade6-lesson6-crossword-sample.pdf" download target="_blank" rel="noopener">
+          <img src="assets/images/pdfs/grade6-lesson6-crossword-sample-thumb.jpg" alt="Preview of Free Sample: Lesson 6 Crossword from Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes" loading="lazy" />
+          <span>⬇ Free Sample: Lesson 6 Crossword</span>
+        </a>
+      </div>
+    <!--prerender:end--></div>
   </section>
 </main>
 
-<footer class="site-footer" id="site-footer"></footer>
+<footer class="site-footer" id="site-footer"><!--prerender:start-->
+    <div class="wrap">
+      <div class="footer-col">
+        <h4>Cyber Elementary</h4>
+        <p style="max-width:26ch; color:rgba(255,255,255,0.75); font-size:0.9rem;">
+          Cybersecurity and digital-safety learning for elementary-age kids —
+          books, articles, and family-friendly picks.
+        </p>
+        <div class="social-row"><a href="https://www.facebook.com/baldwinterneypress" target="_blank" rel="noopener" aria-label="Facebook">📘</a><a href="https://www.instagram.com/cyberelementary" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a href="https://www.linkedin.com/company/baldwin-terney-press-llc/" target="_blank" rel="noopener" aria-label="Linkedin">💼</a><a href="https://www.youtube.com/@CyberElementary?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Youtube">▶️</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="deals.html">Today's Savings</a></li>
+          <li><a href="articles.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Family of Sites</h4>
+        <ul><li><a href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">Baldwin Terney Press</a></li><li><a href="https://www.rachelmattei.com" target="_blank" rel="noopener">Rachel Mattei</a></li><li><a href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">Baldwin Terney Consulting</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@baldwinterneypress.com">support@baldwinterneypress.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Baldwin Terney Press LLC. All rights reserved.</div>
+      <p class="disclosure">
+        As an Amazon Associate, Cyber Elementary earns from qualifying purchases.
+        Some links on this site are affiliate links, which means we may earn a
+        small commission at no extra cost to you.
+      </p>
+    </div>
+  <!--prerender:end--></footer>
 <div id="sticky-bar"></div>
 
 <script src="assets/js/config.js"></script>

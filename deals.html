@@ -10,10 +10,92 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cyberelementary.com/#publisher",
+      "name": "Baldwin Terney Press LLC",
+      "url": "https://www.baldwinterneypress.com",
+      "sameAs": [
+        "https://www.facebook.com/baldwinterneypress",
+        "https://www.linkedin.com/company/baldwin-terney-press-llc/"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.cyberelementary.com/#organization",
+      "name": "Cyber Elementary",
+      "url": "https://www.cyberelementary.com/",
+      "logo": "https://www.cyberelementary.com/assets/images/mascot/choco.png",
+      "description": "Cybersecurity, online safety, digital citizenship and AI safety lessons for elementary-age kids (grades 3-6), with lesson plan books, skills workbooks and free video lessons for teachers and homeschool families.",
+      "parentOrganization": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      },
+      "founder": {
+        "@id": "https://www.cyberelementary.com/#founder"
+      },
+      "email": "support@baldwinterneypress.com",
+      "sameAs": [
+        "https://www.youtube.com/@CyberElementary",
+        "https://www.instagram.com/cyberelementary"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.cyberelementary.com/#founder",
+      "name": "Mark W. Mattei",
+      "url": "https://www.cyberelementary.com/about.html",
+      "worksFor": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cyberelementary.com/#website",
+      "url": "https://www.cyberelementary.com/",
+      "name": "Cyber Elementary",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.cyberelementary.com/deals.html#webpage",
+      "url": "https://www.cyberelementary.com/deals.html",
+      "name": "Today's Savings — Cyber Elementary",
+      "description": "Get started with a free Kindle Unlimited trial, then shop the Cyber Elementary book series and current Amazon promotions.",
+      "isPartOf": {
+        "@id": "https://www.cyberelementary.com/#website"
+      },
+      "about": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
+<!--jsonld:end-->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header"></header>
+<header class="site-header" id="site-header"><!--prerender:start-->
+    <div class="promo-strip">
+      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page.
+    </div>
+    <div class="nav-bar wrap">
+      <a class="brand" href="index.html">
+        <span class="logo-badge" aria-hidden="true"><img src="assets/images/mascot/choco.png" alt="Cyber Elementary mascot" /></span>
+        Cyber Elementary
+      </a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html" >Home</a><a href="books.html" >Books</a><a href="videos.html" >Videos</a><a href="reviews.html" >Reviews</a><a href="deals.html" aria-current="page">Today's Savings</a><a href="articles.html" >Blog</a><a href="about.html" >About</a><a href="index.html#contact" >Contact</a></nav>
+    </div>
+  <!--prerender:end--></header>
 
 <main id="main">
   <section class="hero" style="padding:44px 24px;">
@@ -44,7 +126,71 @@
       </div>
       <img src="assets/images/mascot/nacho.png" alt="Nacho the Cyber Elementary mascot holding a phone" style="width:110px; height:auto; flex-shrink:0;" />
     </div>
-    <div class="grid" id="kindle-grid"></div>
+    <div class="grid" id="kindle-grid"><!--prerender:start-->
+    <article class="card kindle-card">
+      <div class="card-media">
+        <span class="card-badge">START HERE</span>
+        <span aria-hidden="true">🎉</span>
+      </div>
+      <div class="card-body">
+        <h3>Kindle Unlimited Free Trial</h3>
+        <p class="card-desc">New to Kindle Unlimited? Start with a free trial and read Cyber Elementary books right away.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4vL8lcF" target="_blank" rel="nofollow sponsored noopener">
+            ✅ Get Started
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card kindle-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">📖</span>
+      </div>
+      <div class="card-body">
+        <h3>Kindle Unlimited — 6 Month Plan</h3>
+        <p class="card-desc">Lock in a semester's worth of reading for the whole family.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4vSiogk" target="_blank" rel="nofollow sponsored noopener">
+            ✅ Get Started
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card kindle-card">
+      <div class="card-media">
+        <span class="card-badge">MOST POPULAR</span>
+        <span aria-hidden="true">📚</span>
+      </div>
+      <div class="card-body">
+        <h3>Kindle Unlimited — 12 Month Plan</h3>
+        <p class="card-desc">A full year of unlimited reading, including the whole Cyber Elementary series.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/3Tm7ulu" target="_blank" rel="nofollow sponsored noopener">
+            ✅ Get Started
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card kindle-card">
+      <div class="card-media">
+        <span class="card-badge">BEST VALUE</span>
+        <span aria-hidden="true">🏆</span>
+      </div>
+      <div class="card-body">
+        <h3>Kindle Unlimited — 24 Month Plan</h3>
+        <p class="card-desc">Our best value option for families who read together often.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4fW04hk" target="_blank" rel="nofollow sponsored noopener">
+            ✅ Get Started
+          </a>
+        </div>
+      </div>
+    </article>
+  <!--prerender:end--></div>
   </section>
 
   <!-- Step 2: Buy the books -->
@@ -65,11 +211,187 @@
         <p>Prime trials and perks, Audible memberships, and other Kindle promotions — we update this list as Amazon runs new offers.</p>
       </div>
     </div>
-    <div class="grid" id="deals-grid"></div>
+    <div class="grid" id="deals-grid"><!--prerender:start-->
+    <article class="card deal-card">
+      <div class="card-media">
+        <span class="card-badge">FREE TRIAL</span>
+        <span aria-hidden="true">📦</span>
+      </div>
+      <div class="card-body">
+        <h3>Prime Free Trial</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">Try Amazon Prime free — fast shipping, Prime Video, and other Prime perks across Amazon.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4hiT1kf" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">🎁</span>
+      </div>
+      <div class="card-body">
+        <h3>Prime Exclusives</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">Prime member-only deals and early access to select Amazon promotions.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/44MWEaB" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        <span class="card-badge">PROMO</span>
+        <span aria-hidden="true">⚡</span>
+      </div>
+      <div class="card-body">
+        <h3>Kindle Unlimited Special Promos</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">Amazon's current limited-time Kindle Unlimited promotions — check for today's discounted trial or membership pricing.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4wsao6P" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        <span class="card-badge">FREE TRIAL</span>
+        <span aria-hidden="true">🎓</span>
+      </div>
+      <div class="card-body">
+        <h3>Prime for Young Adults — Free Trial</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">A free trial of Amazon's discounted Prime plan for young adults (ages 18-24).</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4wYyOEG" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">🎓</span>
+      </div>
+      <div class="card-body">
+        <h3>Prime for Young Adults — Paid Membership</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">Amazon Prime at a reduced rate for young adults (ages 18-24).</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4yHRomh" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        <span class="card-badge">BEST VALUE</span>
+        <span aria-hidden="true">🎧</span>
+      </div>
+      <div class="card-body">
+        <h3>Audible Premium Plus — Annual Membership</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">A full year of Audible's top membership tier — one credit a month, plus unlimited access to their audiobook and podcast catalog.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4fHzTd9" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        <span class="card-badge">FREE TRIAL</span>
+        <span aria-hidden="true">🎧</span>
+      </div>
+      <div class="card-body">
+        <h3>Audible Standard — Free Trial</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">Try Audible free, including your first audiobook credit.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/4fEoWsO" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card deal-card">
+      <div class="card-media">
+        
+        <span aria-hidden="true">🎧</span>
+      </div>
+      <div class="card-body">
+        <h3>Audible Standard — Monthly Membership</h3>
+        <span class="deal-evergreen">🔁 Always available</span>
+        <p class="card-desc">One audiobook credit a month, month-to-month, with no annual commitment.</p>
+        <div class="card-actions">
+          <a class="btn btn-amazon btn-sm" href="https://amzn.to/3RDx8RX" target="_blank" rel="nofollow sponsored noopener">
+            🛒 Shop This Deal
+          </a>
+        </div>
+      </div>
+    </article>
+  <!--prerender:end--></div>
   </section>
 </main>
 
-<footer class="site-footer" id="site-footer"></footer>
+<footer class="site-footer" id="site-footer"><!--prerender:start-->
+    <div class="wrap">
+      <div class="footer-col">
+        <h4>Cyber Elementary</h4>
+        <p style="max-width:26ch; color:rgba(255,255,255,0.75); font-size:0.9rem;">
+          Cybersecurity and digital-safety learning for elementary-age kids —
+          books, articles, and family-friendly picks.
+        </p>
+        <div class="social-row"><a href="https://www.facebook.com/baldwinterneypress" target="_blank" rel="noopener" aria-label="Facebook">📘</a><a href="https://www.instagram.com/cyberelementary" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a href="https://www.linkedin.com/company/baldwin-terney-press-llc/" target="_blank" rel="noopener" aria-label="Linkedin">💼</a><a href="https://www.youtube.com/@CyberElementary?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Youtube">▶️</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="deals.html">Today's Savings</a></li>
+          <li><a href="articles.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Family of Sites</h4>
+        <ul><li><a href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">Baldwin Terney Press</a></li><li><a href="https://www.rachelmattei.com" target="_blank" rel="noopener">Rachel Mattei</a></li><li><a href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">Baldwin Terney Consulting</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@baldwinterneypress.com">support@baldwinterneypress.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Baldwin Terney Press LLC. All rights reserved.</div>
+      <p class="disclosure">
+        As an Amazon Associate, Cyber Elementary earns from qualifying purchases.
+        Some links on this site are affiliate links, which means we may earn a
+        small commission at no extra cost to you.
+      </p>
+    </div>
+  <!--prerender:end--></footer>
 <div id="sticky-bar"></div>
 
 <script src="assets/js/config.js"></script>

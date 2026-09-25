@@ -88,6 +88,28 @@ Edit `assets/js/data/deals.js`. Use `dealType: "time-bound"` for things like a K
 Deal (set `expires` to a human-readable note), or `dealType: "evergreen"` for things like
 Prime Student that don't expire. Delete or comment out a deal once it's no longer running.
 
+## Before you publish: run the prerender step (for AI chat & search)
+
+The cards on every page are drawn by JavaScript. Most AI crawlers (ChatGPT,
+Claude, Perplexity) don't run JavaScript, so `tools/prerender.js` writes the
+finished cards into the HTML files and adds schema.org structured data
+(Books, VideoObjects, Reviews, BlogPostings) to each page's `<head>`.
+
+After editing any data file, from inside `cyberelementary-site`:
+
+    node tools/prerender.js
+    git add . && git commit -m "your message" && git push
+
+- Needs Node.js (https://nodejs.org, the LTS installer). One-time install.
+- Forgot to run it? Nothing breaks. Visitors still see the latest data;
+  crawlers just see the previous version until the next run.
+- Don't hand-edit anything between `<!--prerender:start-->` /
+  `<!--prerender:end-->` or `<!--jsonld:start-->` / `<!--jsonld:end-->`.
+  The next run overwrites it.
+- Optional data fields it uses: `isbn` and `author` on books (author
+  defaults to Mark W. Mattei), `uploadDate` ("2026-09-11") on videos,
+  `itemType` ("SoftwareApplication", etc.) on reviews (default "Product").
+
 ## Your Amazon affiliate tag
 
 Open `assets/js/config.js` and set `amazonTag` to your real Associates tracking ID

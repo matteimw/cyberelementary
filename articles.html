@@ -10,10 +10,162 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cyberelementary.com/#publisher",
+      "name": "Baldwin Terney Press LLC",
+      "url": "https://www.baldwinterneypress.com",
+      "sameAs": [
+        "https://www.facebook.com/baldwinterneypress",
+        "https://www.linkedin.com/company/baldwin-terney-press-llc/"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.cyberelementary.com/#organization",
+      "name": "Cyber Elementary",
+      "url": "https://www.cyberelementary.com/",
+      "logo": "https://www.cyberelementary.com/assets/images/mascot/choco.png",
+      "description": "Cybersecurity, online safety, digital citizenship and AI safety lessons for elementary-age kids (grades 3-6), with lesson plan books, skills workbooks and free video lessons for teachers and homeschool families.",
+      "parentOrganization": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      },
+      "founder": {
+        "@id": "https://www.cyberelementary.com/#founder"
+      },
+      "email": "support@baldwinterneypress.com",
+      "sameAs": [
+        "https://www.youtube.com/@CyberElementary",
+        "https://www.instagram.com/cyberelementary"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.cyberelementary.com/#founder",
+      "name": "Mark W. Mattei",
+      "url": "https://www.cyberelementary.com/about.html",
+      "worksFor": {
+        "@id": "https://www.cyberelementary.com/#publisher"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cyberelementary.com/#website",
+      "url": "https://www.cyberelementary.com/",
+      "name": "Cyber Elementary",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.cyberelementary.com/articles.html#webpage",
+      "url": "https://www.cyberelementary.com/articles.html",
+      "name": "Blog — Cyber Elementary",
+      "description": "Articles from Cyber Elementary on kids' online safety, AI safety, and digital citizenship.",
+      "isPartOf": {
+        "@id": "https://www.cyberelementary.com/#website"
+      },
+      "about": {
+        "@id": "https://www.cyberelementary.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Cyber Elementary blog and resources",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "BlogPosting",
+              "headline": "AI and Teen Mental Health",
+              "name": "AI and Teen Mental Health",
+              "url": "https://www.cyberelementary.com/blog-ai-and-teen-mental-health.html",
+              "description": "AI is now part of everyday teen life — from study apps to chatbots and social feeds. Here's how it affects emotional well-being, and practical steps for teens, parents, and schools to use it more safely.",
+              "author": {
+                "@id": "https://www.cyberelementary.com/#founder"
+              },
+              "datePublished": "2026-07-30",
+              "publisher": {
+                "@id": "https://www.cyberelementary.com/#organization"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "headline": "NOVA Labs: Cybersecurity Lab",
+              "name": "NOVA Labs: Cybersecurity Lab",
+              "url": "https://www.pbs.org/wgbh/nova/labs/lab/cyber/",
+              "description": "A free, interactive game from PBS NOVA where kids defend a company from cyber attacks — cracking passwords, writing code, and outsmarting hackers along the way. A fun, hands-on intro to how cybersecurity really works.",
+              "author": {
+                "@type": "Organization",
+                "name": "PBS NOVA"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "CreativeWork",
+              "headline": "Wall of Sheep: Learn Why Encryption Matters",
+              "name": "Wall of Sheep: Learn Why Encryption Matters",
+              "url": "https://www.phvillage.io/pages/wall-of-lambs/",
+              "description": "An eye-opening cybersecurity exhibit that uses packet-capture tools and forensics games to show how easily unencrypted logins can be exposed on a network — a memorable, real-world lesson in why encryption and strong passwords matter.",
+              "author": {
+                "@type": "Organization",
+                "name": "Packet Hacking Village"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "CreativeWork",
+              "headline": "AI: What Should Parents, Caregivers & Educators Know?",
+              "name": "AI: What Should Parents, Caregivers & Educators Know?",
+              "url": "https://www.adl.org/resources/tools-and-strategies/artificial-intelligence-what-do-parents-caregivers-and-educators",
+              "description": "A practical guide from the ADL on helping kids navigate AI safely and critically — covering AI literacy, bias and misinformation, and conversation starters for building digital resilience at home and in the classroom.",
+              "author": {
+                "@type": "Organization",
+                "name": "Anti-Defamation League"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<!--jsonld:end-->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header"></header>
+<header class="site-header" id="site-header"><!--prerender:start-->
+    <div class="promo-strip">
+      📚 New: browse Cyber Elementary books on our <a href="books.html">Books</a> page.
+    </div>
+    <div class="nav-bar wrap">
+      <a class="brand" href="index.html">
+        <span class="logo-badge" aria-hidden="true"><img src="assets/images/mascot/choco.png" alt="Cyber Elementary mascot" /></span>
+        Cyber Elementary
+      </a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html" >Home</a><a href="books.html" >Books</a><a href="videos.html" >Videos</a><a href="reviews.html" >Reviews</a><a href="deals.html" >Today's Savings</a><a href="articles.html" aria-current="page">Blog</a><a href="about.html" >About</a><a href="index.html#contact" >Contact</a></nav>
+    </div>
+  <!--prerender:end--></header>
 
 <main id="main">
   <section class="hero" style="padding:44px 24px;">
@@ -27,11 +179,115 @@
   </section>
 
   <section class="section">
-    <div class="grid" id="articles-grid"></div>
+    <div class="grid" id="articles-grid"><!--prerender:start-->
+    <article class="card article-card">
+      <div class="card-media">
+        <span class="card-badge">NEW</span>
+        
+        <img src="assets/images/blog/ai-and-teen-mental-health.svg" alt="AI and Teen Mental Health" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <h3>AI and Teen Mental Health</h3>
+        <div class="card-meta">By Mark Mattei · July 30, 2026</div>
+        <p class="card-desc">AI is now part of everyday teen life — from study apps to chatbots and social feeds. Here's how it affects emotional well-being, and practical steps for teens, parents, and schools to use it more safely.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-sm" href="blog-ai-and-teen-mental-health.html">📖 Read Article</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card article-card">
+      <div class="card-media">
+        
+        <span class="card-badge card-badge-external">EXTERNAL RESOURCE</span>
+        <span aria-hidden="true">🛡️</span>
+      </div>
+      <div class="card-body">
+        <h3>NOVA Labs: Cybersecurity Lab</h3>
+        <div class="card-meta">By PBS NOVA · Recommended Resource</div>
+        <p class="card-desc">A free, interactive game from PBS NOVA where kids defend a company from cyber attacks — cracking passwords, writing code, and outsmarting hackers along the way. A fun, hands-on intro to how cybersecurity really works.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-sm" href="https://www.pbs.org/wgbh/nova/labs/lab/cyber/" target="_blank" rel="noopener">🔗 Visit Resource</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card article-card">
+      <div class="card-media">
+        
+        <span class="card-badge card-badge-external">EXTERNAL RESOURCE</span>
+        <span aria-hidden="true">🐑</span>
+      </div>
+      <div class="card-body">
+        <h3>Wall of Sheep: Learn Why Encryption Matters</h3>
+        <div class="card-meta">By Packet Hacking Village · Recommended Resource</div>
+        <p class="card-desc">An eye-opening cybersecurity exhibit that uses packet-capture tools and forensics games to show how easily unencrypted logins can be exposed on a network — a memorable, real-world lesson in why encryption and strong passwords matter.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-sm" href="https://www.phvillage.io/pages/wall-of-lambs/" target="_blank" rel="noopener">🔗 Visit Resource</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="card article-card">
+      <div class="card-media">
+        
+        <span class="card-badge card-badge-external">EXTERNAL RESOURCE</span>
+        <span aria-hidden="true">🤖</span>
+      </div>
+      <div class="card-body">
+        <h3>AI: What Should Parents, Caregivers & Educators Know?</h3>
+        <div class="card-meta">By Anti-Defamation League · Recommended Resource</div>
+        <p class="card-desc">A practical guide from the ADL on helping kids navigate AI safely and critically — covering AI literacy, bias and misinformation, and conversation starters for building digital resilience at home and in the classroom.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-sm" href="https://www.adl.org/resources/tools-and-strategies/artificial-intelligence-what-do-parents-caregivers-and-educators" target="_blank" rel="noopener">🔗 Visit Resource</a>
+        </div>
+      </div>
+    </article>
+  <!--prerender:end--></div>
   </section>
 </main>
 
-<footer class="site-footer" id="site-footer"></footer>
+<footer class="site-footer" id="site-footer"><!--prerender:start-->
+    <div class="wrap">
+      <div class="footer-col">
+        <h4>Cyber Elementary</h4>
+        <p style="max-width:26ch; color:rgba(255,255,255,0.75); font-size:0.9rem;">
+          Cybersecurity and digital-safety learning for elementary-age kids —
+          books, articles, and family-friendly picks.
+        </p>
+        <div class="social-row"><a href="https://www.facebook.com/baldwinterneypress" target="_blank" rel="noopener" aria-label="Facebook">📘</a><a href="https://www.instagram.com/cyberelementary" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a href="https://www.linkedin.com/company/baldwin-terney-press-llc/" target="_blank" rel="noopener" aria-label="Linkedin">💼</a><a href="https://www.youtube.com/@CyberElementary?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Youtube">▶️</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="deals.html">Today's Savings</a></li>
+          <li><a href="articles.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Family of Sites</h4>
+        <ul><li><a href="https://www.baldwinterneypress.com" target="_blank" rel="noopener">Baldwin Terney Press</a></li><li><a href="https://www.rachelmattei.com" target="_blank" rel="noopener">Rachel Mattei</a></li><li><a href="https://www.baldwinterneyconsulting.com" target="_blank" rel="noopener">Baldwin Terney Consulting</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@baldwinterneypress.com">support@baldwinterneypress.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Baldwin Terney Press LLC. All rights reserved.</div>
+      <p class="disclosure">
+        As an Amazon Associate, Cyber Elementary earns from qualifying purchases.
+        Some links on this site are affiliate links, which means we may earn a
+        small commission at no extra cost to you.
+      </p>
+    </div>
+  <!--prerender:end--></footer>
 <div id="sticky-bar"></div>
 
 <script src="assets/js/config.js"></script>
