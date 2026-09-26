@@ -440,7 +440,9 @@ function main() {
   if (fs.existsSync(builder)) curr = require(builder)(ROOT, D0);
 
   const pages = fs.readdirSync(ROOT).filter(
-    (f) => f.endsWith(".html") && !/draft|backup/i.test(f)
+    (f) => f.endsWith(".html") && !/draft|backup/i.test(f) &&
+      // skip tiny redirect pages that forward old addresses
+      !/http-equiv="refresh"/i.test(fs.readFileSync(path.join(ROOT, f), "utf8"))
   );
   const D = D0;
   D.curriculumFaq = curr.faq;
