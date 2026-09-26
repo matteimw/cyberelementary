@@ -32,6 +32,39 @@
 
 const ARTICLES = [
   {
+    title: "How to Tell If a Picture or Video Was Made by AI",
+    author: "Mark Mattei",
+    date: "September 25, 2026",
+    url: "blog-how-to-tell-if-an-image-or-video-is-ai.html",
+    excerpt:
+      "No single trick proves a picture or video is real. Here's a quick routine for parents, teachers and kids: AI labels, Content Credentials, reverse image search, and a simple Pause-Check-Ask habit.",
+    icon: "🕵️",
+    image: "",
+    badge: "NEW",
+  },
+  {
+    title: "Chatbot Privacy for Kids: What's Safe to Share and What Isn't",
+    author: "Mark Mattei",
+    date: "September 25, 2026",
+    url: "blog-chatbot-privacy-for-kids.html",
+    excerpt:
+      "Kids should treat a chatbot like a stranger who writes everything down. What never to share, what's fine to ask, red flags to watch for, age rules and parental controls.",
+    icon: "🤖",
+    image: "",
+    badge: "NEW",
+  },
+  {
+    title: "A Parent's Checklist for a Child's First Phone or Tablet",
+    author: "Mark Mattei",
+    date: "September 25, 2026",
+    url: "blog-first-phone-checklist.html",
+    excerpt:
+      "Most of the protection comes from the first hour of setup. A step-by-step checklist: child accounts, screen time, contacts, privacy, passwords, family rules and check-ins.",
+    icon: "📱",
+    image: "",
+    badge: "NEW",
+  },
+  {
     title: "AI and Teen Mental Health",
     author: "Mark Mattei",
     date: "July 30, 2026",
@@ -40,7 +73,7 @@ const ARTICLES = [
       "AI is now part of everyday teen life — from study apps to chatbots and social feeds. Here's how it affects emotional well-being, and practical steps for teens, parents, and schools to use it more safely.",
     icon: "🧠",
     image: "assets/images/blog/ai-and-teen-mental-health.svg",
-    badge: "NEW",
+    badge: "",
   },
   {
     title: "NOVA Labs: Cybersecurity Lab",

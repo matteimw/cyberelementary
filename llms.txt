@@ -73,6 +73,13 @@
 
 - [Video lessons](https://www.cyberelementary.com/videos.html): a free companion video for each of the 36 lessons, plus one compilation per unit (YouTube: https://www.youtube.com/@CyberElementary)
 
+## Articles for parents and teachers
+
+- [How to Tell If a Picture or Video Was Made by AI](https://www.cyberelementary.com/blog-how-to-tell-if-an-image-or-video-is-ai.html): No single trick proves a picture or video is real. Here's a quick routine for parents, teachers and kids: AI labels, Content Credentials, reverse image search, and a simple Pause-Check-Ask habit.
+- [Chatbot Privacy for Kids: What's Safe to Share and What Isn't](https://www.cyberelementary.com/blog-chatbot-privacy-for-kids.html): Kids should treat a chatbot like a stranger who writes everything down. What never to share, what's fine to ask, red flags to watch for, age rules and parental controls.
+- [A Parent's Checklist for a Child's First Phone or Tablet](https://www.cyberelementary.com/blog-first-phone-checklist.html): Most of the protection comes from the first hour of setup. A step-by-step checklist: child accounts, screen time, contacts, privacy, passwords, family rules and check-ins.
+- [AI and Teen Mental Health](https://www.cyberelementary.com/blog-ai-and-teen-mental-health.html): AI is now part of everyday teen life — from study apps to chatbots and social feeds. Here's how it affects emotional well-being, and practical steps for teens, parents, and schools to use it more safely.
+
 ## Other pages
 
 - [About the author](https://www.cyberelementary.com/about.html)

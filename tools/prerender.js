@@ -484,7 +484,9 @@ function writeSitemap(pages, curr) {
   for (const m of old.matchAll(/<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>)?/g)) oldLastmod[m[1]] = m[2];
   const hidden = new Set(curr.published ? [] : curr.pages);
   const order = ["index.html", "curriculum.html", "books.html", "videos.html"];
-  const list = pages.filter((p) => !hidden.has(p) && p !== "404.html")
+  // Pages marked <meta name="robots" content="noindex"> (drafts) stay out.
+  const isNoindex = (p) => /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(fs.readFileSync(path.join(ROOT, p), "utf8"));
+  const list = pages.filter((p) => !hidden.has(p) && p !== "404.html" && !isNoindex(p))
     .sort((a, b) => ((order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99)) || a.localeCompare(b));
   const entries = list.map((p) => {
     const loc = p === "index.html" ? `${SITE}/` : `${SITE}/${p}`;
@@ -533,6 +535,8 @@ function writeLlmsTxt(D, curr) {
     `- Book details: ${SITE}/books.html`, "",
     "## Videos", "",
     `- [Video lessons](${SITE}/videos.html): a free companion video for each of the 36 lessons, plus one compilation per unit (YouTube: https://www.youtube.com/@CyberElementary)`, "",
+    "## Articles for parents and teachers", "",
+    ...D.articles.filter((a) => !/^https?:/i.test(a.url)).map((a) => `- [${a.title}](${SITE}/${a.url}): ${stripTags(a.excerpt)}`), "",
     "## Other pages", "",
     `- [About the author](${SITE}/about.html)`,
     `- [Blog](${SITE}/articles.html)`,
