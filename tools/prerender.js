@@ -268,6 +268,10 @@ function bookNode(D, b) {
     publisher: { "@id": ID.publisher },
     inLanguage: "en",
     isbn: b.isbn || undefined,
+    workExample: ((x) => (x.length ? x : undefined))([
+      b.isbnEbook ? { "@type": "Book", bookFormat: "https://schema.org/EBook", isbn: b.isbnEbook, name: `${b.title} (Kindle eBook)` } : null,
+      b.isbnPaperback ? { "@type": "Book", bookFormat: "https://schema.org/Paperback", isbn: b.isbnPaperback, name: `${b.title} (Paperback)` } : null,
+    ].filter(Boolean)),
     educationalLevel: b.grade || undefined,
     audience: b.audience
       ? { "@type": "Audience", audienceType: b.audience.replace(/^For\s+/i, "") }

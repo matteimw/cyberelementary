@@ -35,6 +35,9 @@
    formats     - e.g. "Kindle eBook & Paperback"
    amazon      - Your amzn.to link (already tagged — used as-is), a full
                  Amazon URL, or a bare ASIN
+   isbnEbook   - Optional Kindle eBook ISBN (only if the eBook is published)
+   isbnPaperback - Optional paperback ISBN
+                 (both go into the search-engine data; not shown on the page)
    badge       - Optional ribbon text, e.g. "TEACHER RESOURCE"
    freePromo   - Set to true to show the round "FREE / limited time" stamp
                  next to the cover (assets/images/badges/free-stamp.svg).
@@ -60,6 +63,8 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: Complete Lesson Plan Book",
+    isbnEbook: "978-1-954422-06-3",
+    isbnPaperback: "978-1-954422-20-9",
     subtitle: "The Complete Teacher Lesson Plan Book — 36 Lessons for Grades 3-6",
     grade: "Grades 3-6",
     audience: "For Teachers & Homeschool Co-ops",
@@ -74,6 +79,8 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 3rd Grade Lesson Plan Book",
+    isbnEbook: "978-1-954422-16-2",
+    isbnPaperback: "978-1-954422-21-6",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 3rd Grade",
     grade: "Grade 3",
     audience: "For Teachers & Homeschool Parents",
@@ -88,6 +95,8 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 4th Grade Lesson Plan Book",
+    isbnEbook: "978-1-954422-17-9",
+    isbnPaperback: "978-1-954422-22-3",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 4th Grade",
     grade: "Grade 4",
     audience: "For Teachers & Homeschool Parents",
@@ -102,6 +111,8 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 5th Grade Lesson Plan Book",
+    isbnEbook: "978-1-954422-18-6",
+    isbnPaperback: "978-1-954422-23-0",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 5th Grade",
     grade: "Grade 5",
     audience: "For Teachers & Homeschool Parents",
@@ -116,6 +127,8 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 6th Grade Lesson Plan Book",
+    isbnEbook: "978-1-954422-19-3",
+    isbnPaperback: "978-1-954422-24-7",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Lessons for 6th Grade",
     grade: "Grade 6",
     audience: "For Teachers & Homeschool Parents",
@@ -130,6 +143,7 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes",
+    isbnPaperback: "978-1-954422-34-6",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
     grade: "Grade 3",
     audience: "For Teachers & Homeschool Parents",
@@ -144,6 +158,7 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 4th Grade Skills Workbook & Lesson Quizzes",
+    isbnPaperback: "978-1-954422-35-3",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
     grade: "Grade 4",
     audience: "For Teachers & Homeschool Parents",
@@ -158,6 +173,7 @@ const BOOKS = [
   },
   {
     title: "Cyber Elementary School: 5th Grade Skills Workbook & Lesson Quizzes",
+    isbnPaperback: "978-1-954422-36-0",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
     grade: "Grade 5",
     audience: "For Teachers & Homeschool Parents",
@@ -171,6 +187,7 @@ const BOOKS = [
     freePromo: false,
   },  {
     title: "Cyber Elementary School: 6th Grade Skills Workbook & Lesson Quizzes",
+    isbnPaperback: "978-1-954422-37-7",
     subtitle: "36 Cyber Security, Online Safety & AI Safety Practice Worksheets & a Full Teacher Answer Key",
     grade: "Grade 6",
     audience: "For Teachers & Homeschool Parents",
