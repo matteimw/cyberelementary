@@ -36,6 +36,11 @@
   .home-books-grid .card-media { aspect-ratio: 5 / 8; font-size: 1.8rem; }
   .home-books-grid .card-body { padding: 10px 10px 12px; gap: 6px; }
   .home-books-grid .card-body h3 { font-size: 0.82rem; line-height: 1.25; margin: 0; }
+  .home-books-grid .btn-ingram.btn-sm {
+    font-size: 0.7rem;
+    padding: 5px 6px;
+    gap: 4px;
+  }
   .home-books-grid .btn-amazon {
     font-size: 0.7rem;
     padding: 7px 6px;
@@ -269,6 +274,10 @@
               <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4qmWOPQ" target="_blank" rel="nofollow sponsored noopener">
                 🛒 Buy on Amazon
               </a>
+              
+          <a class="btn btn-ingram btn-sm btn-block" href="https://shop.ingramspark.com/b/084?params=s7Ov7DSfs4rIv41iej5eW11Ha0h6aGBn1LpWnY6BDwY" target="_blank" rel="noopener">
+            📦 Buy on IngramSpark
+          </a>
             </div>
             <h3>Cyber Elementary School: Complete Lesson Plan Book</h3>
           </div>
@@ -291,6 +300,10 @@
               <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4g02ziV" target="_blank" rel="nofollow sponsored noopener">
                 🛒 Buy on Amazon
               </a>
+              
+          <a class="btn btn-ingram btn-sm btn-block" href="https://shop.ingramspark.com/b/084?params=QhDCXVMDHbyqdXevrQxVtLRmfRmxc57D6D5LlxxAw5A" target="_blank" rel="noopener">
+            📦 Buy on IngramSpark
+          </a>
             </div>
             <h3>Cyber Elementary School: 3rd Grade Lesson Plan Book</h3>
           </div>
@@ -313,6 +326,10 @@
               <a class="btn btn-amazon btn-sm btn-block" href="https://amzn.to/4y4OG9a" target="_blank" rel="nofollow sponsored noopener">
                 🛒 Buy on Amazon
               </a>
+              
+          <a class="btn btn-ingram btn-sm btn-block" href="https://shop.ingramspark.com/b/084?params=CCiOTxAbkMGyFrOINhG6S0NyYhjGdEAl5Depr6tpLtF" target="_blank" rel="noopener">
+            📦 Buy on IngramSpark
+          </a>
             </div>
             <h3>Cyber Elementary School: 3rd Grade Skills Workbook & Lesson Quizzes</h3>
           </div>
@@ -731,6 +748,7 @@
               <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
                 🛒 Buy on Amazon
               </a>
+              ${ingramButton(b)}
             </div>
             <h3>${b.title}</h3>
           </div>

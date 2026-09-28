@@ -145,6 +145,17 @@ function mediaBlock(imagePath, icon, altText) {
 
 /* ---------------- Books ---------------- */
 
+// White pill "Buy on IngramSpark" button shown under the Amazon button
+// when a book in books.js has an "ingram" link. Used by the Books page,
+// the home page, and renderBooks() below.
+function ingramButton(b) {
+  if (!b.ingram) return "";
+  return `
+          <a class="btn btn-ingram btn-sm btn-block" href="${b.ingram}" target="_blank" rel="noopener">
+            📦 Buy on IngramSpark
+          </a>`;
+}
+
 function renderBooks() {
   const mount = document.getElementById("books-grid");
   if (!mount || typeof BOOKS === "undefined") return;
@@ -166,6 +177,7 @@ function renderBooks() {
           <a class="btn btn-amazon btn-sm btn-block" href="${buildAmazonLink(b.amazon)}" target="_blank" rel="nofollow sponsored noopener">
             🛒 Buy on Amazon
           </a>
+          ${ingramButton(b)}
         </div>
         <h3>${b.title}</h3>
         ${b.subtitle ? `<p class="card-subtitle">${b.subtitle}</p>` : ""}
@@ -475,12 +487,21 @@ function loadAnalytics() {
 
     const isAmazon = /amazon\.[a-z.]+|amzn\.to/i.test(link.href);
     const isYouTube = /youtube\.com/i.test(link.href);
+    const isIngram = /ingramspark\.com/i.test(link.href);
     const familySite = SITE_CONFIG.familySites.find((s) => link.href.startsWith(s.url));
 
     if (isAmazon) {
       const card = link.closest(".card");
       const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
       gtag("event", "affiliate_click", {
+        link_url: link.href,
+        item_name: itemName,
+        page_path: window.location.pathname,
+      });
+    } else if (isIngram) {
+      const card = link.closest(".card");
+      const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
+      gtag("event", "ingram_click", {
         link_url: link.href,
         item_name: itemName,
         page_path: window.location.pathname,

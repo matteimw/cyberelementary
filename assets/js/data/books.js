@@ -35,6 +35,11 @@
    formats     - e.g. "Kindle eBook & Paperback"
    amazon      - Your amzn.to link (already tagged — used as-is), a full
                  Amazon URL, or a bare ASIN
+   ingram      - Optional IngramSpark "Buy Now" link (paste just the
+                 https://shop.ingramspark.com/... address from the
+                 IngramSpark HTML snippet). Adds a white "Buy on
+                 IngramSpark" button under the Amazon button. Leave it
+                 out and only the Amazon button shows.
    isbnEbook   - Optional Kindle eBook ISBN (only if the eBook is published)
    isbnPaperback - Optional paperback ISBN
                  (both go into the search-engine data; not shown on the page)
@@ -74,6 +79,7 @@ const BOOKS = [
       "One volume covering all four grade levels — 36 lessons with grade-differentiated talking points for 3rd through 6th grade, plus full assessments and answer keys for every grade.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4qmWOPQ",
+    ingram: "https://shop.ingramspark.com/b/084?params=s7Ov7DSfs4rIv41iej5eW11Ha0h6aGBn1LpWnY6BDwY",
     badge: "ALL GRADES",
     freePromo: false,
   },
@@ -90,6 +96,7 @@ const BOOKS = [
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4g02ziV",
+    ingram: "https://shop.ingramspark.com/b/084?params=QhDCXVMDHbyqdXevrQxVtLRmfRmxc57D6D5LlxxAw5A",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -106,6 +113,7 @@ const BOOKS = [
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4wXGJm4",
+    ingram: "https://shop.ingramspark.com/b/084?params=KcfOepVivO44Q9wSKFaS0AWPRODZVnCkTPtFS6q9Xap",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -122,6 +130,7 @@ const BOOKS = [
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/4x5uqV5",
+    ingram: "https://shop.ingramspark.com/b/084?params=DFVI5pIKTJZL6v1Gw2bryVxMMpLX4LiMoLLMt4vxBat",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -138,6 +147,7 @@ const BOOKS = [
       "A full foundation in cyber security, online safety, and AI safety — 36 ready-to-teach lessons with guided practice, independent practice, and a full assessment with answer key.",
     formats: "Kindle eBook & Paperback",
     amazon: "https://amzn.to/3UkxNst",
+    ingram: "https://shop.ingramspark.com/b/084?params=RaY9S2dz0LqMuKgTl4EBNeZjnSg9CvY75t5N7ODfT0U",
     badge: "TEACHER RESOURCE",
     freePromo: false,
   },
@@ -153,6 +163,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 3rd grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4y4OG9a",
+    ingram: "https://shop.ingramspark.com/b/084?params=CCiOTxAbkMGyFrOINhG6S0NyYhjGdEAl5Depr6tpLtF",
     badge: "Learning Activities",
     freePromo: false,
   },
@@ -168,6 +179,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 4th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/3UHi3jr",
+    ingram: "https://shop.ingramspark.com/b/084?params=VVQeogglJAq7xcq2bEsg6Xrp2SrIgq6gQ9sFu2rgFlD",
     badge: "Learning Activities",
     freePromo: false,
   },
@@ -183,6 +195,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 5th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/4xoY1ZL",
+    ingram: "https://shop.ingramspark.com/b/084?params=qRCqXgCFBHuf0DXWzJEPJ63fb65RYMGAsWFjQmbjlge",
     badge: "Learning Activities",
     freePromo: false,
   },  {
@@ -197,6 +210,7 @@ const BOOKS = [
       "Print-and-copy Independent Practice / Homework worksheet pages and student quiz pages for all 36 lessons, for 6th grade only, plus a complete teacher answer key for every worksheet and quiz.",
     formats: "Paperback",
     amazon: "https://amzn.to/3SDsyDU",
+    ingram: "https://shop.ingramspark.com/b/084?params=EnJaoj9Nnrj94FyFXrBpX6AAf2gA6dpy0ZWLPF7nSrl",
     badge: "Learning Activities",
     freePromo: false,
   },
