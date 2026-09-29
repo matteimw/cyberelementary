@@ -32,6 +32,17 @@
 
 const ARTICLES = [
   {
+    title: "Online Gaming Safety for Kids: Chat, Strangers and In-Game Purchases",
+    author: "Mark Mattei",
+    date: "September 29, 2026",
+    url: "blog-online-gaming-safety.html",
+    excerpt:
+      "Online games are social networks with a game attached. How to set parental controls on consoles, Roblox and Fortnite, handle chat and strangers, stop surprise purchases, and spot gaming scams.",
+    icon: "🎮",
+    image: "",
+    badge: "NEW",
+  },
+  {
     title: "How to Tell If a Picture or Video Was Made by AI",
     author: "Mark Mattei",
     date: "September 25, 2026",
@@ -40,7 +51,7 @@ const ARTICLES = [
       "No single trick proves a picture or video is real. Here's a quick routine for parents, teachers and kids: AI labels, Content Credentials, reverse image search, and a simple Pause-Check-Ask habit.",
     icon: "🕵️",
     image: "",
-    badge: "NEW",
+    badge: "",
   },
   {
     title: "Chatbot Privacy for Kids: What's Safe to Share and What Isn't",
@@ -51,7 +62,7 @@ const ARTICLES = [
       "Kids should treat a chatbot like a stranger who writes everything down. What never to share, what's fine to ask, red flags to watch for, age rules and parental controls.",
     icon: "🤖",
     image: "",
-    badge: "NEW",
+    badge: "",
   },
   {
     title: "A Parent's Checklist for a Child's First Phone or Tablet",
@@ -62,7 +73,7 @@ const ARTICLES = [
       "Most of the protection comes from the first hour of setup. A step-by-step checklist: child accounts, screen time, contacts, privacy, passwords, family rules and check-ins.",
     icon: "📱",
     image: "",
-    badge: "NEW",
+    badge: "",
   },
   {
     title: "AI and Teen Mental Health",
