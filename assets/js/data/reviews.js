@@ -15,6 +15,11 @@
    icon        - Emoji shown if no image is set
    rating      - A number 1-5 (can use .5, e.g. 4.5)
    summary     - Your short review / why you recommend it
+   selfReview  - Optional. Set to true for your OWN products (like your own
+                 books). It still shows on the page, but is left out of the
+                 search-engine data, since Google doesn't allow review stars
+                 for self-reviews. (A badge containing "AUTHOR" does the same.)
+   itemType    - Optional. "Product" (default), "Book" or "SoftwareApplication".
    linkType    - "amazon" or "other"
    linkTarget  - If linkType is "amazon": an ASIN or full Amazon URL.
                  If linkType is "other": the full affiliate URL to use as-is.

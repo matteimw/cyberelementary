@@ -302,21 +302,29 @@ function videoNode(v) {
   };
 }
 
+// Each reviewed item is a Product (or Book, SoftwareApplication, ...) that
+// CARRIES its review, which is the shape Google's review/product checks expect.
 function reviewNode(D, r) {
   const href = r.linkType === "amazon" ? D.amazonLink(r.linkTarget) : r.linkTarget;
   return {
-    "@type": "Review",
-    itemReviewed: {
-      "@type": r.itemType || "Product",
-      name: r.productName,
-      image: abs(r.image),
-      url: href || undefined,
+    "@type": r.itemType || "Product",
+    name: r.productName,
+    image: abs(r.image),
+    url: href || undefined,
+    review: {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+      reviewBody: stripTags(r.summary),
+      author: { "@id": ID.founder },
+      publisher: { "@id": ID.brand },
     },
-    reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-    reviewBody: stripTags(r.summary),
-    author: { "@id": ID.brand },
   };
 }
+
+// Google doesn't allow review markup for your own products ("self-serving"
+// reviews), so author's-own items (badge "FROM THE AUTHOR", or selfReview:
+// true in reviews.js) still show on the page but are left out of the data.
+const isSelfReview = (r) => r.selfReview === true || /author/i.test(r.badge || "");
 
 function isoDate(s) {
   const d = new Date(s);
@@ -405,7 +413,7 @@ function pageGraph(D, page, html) {
     webPage.mainEntity = itemList("Cyber Elementary video lessons", D.videos.map(videoNode));
   } else if (page === "reviews.html") {
     webPage["@type"] = "CollectionPage";
-    webPage.mainEntity = itemList("Cyber Elementary product reviews", D.reviews.map((r) => reviewNode(D, r)));
+    webPage.mainEntity = itemList("Cyber Elementary product reviews", D.reviews.filter((r) => !isSelfReview(r)).map((r) => reviewNode(D, r)));
   } else if (page === "articles.html") {
     webPage["@type"] = "CollectionPage";
     webPage.mainEntity = itemList("Cyber Elementary blog and resources", D.articles.map(articleNode));
