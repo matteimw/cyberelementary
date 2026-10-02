@@ -284,7 +284,7 @@ function renderReviews() {
         <div class="stars" aria-label="${r.rating} out of 5 stars">${starString(r.rating)} <span class="card-meta">${r.rating}/5</span></div>
         <p class="card-desc">${r.summary}</p>
         <div class="card-actions">
-          <a class="btn ${r.linkType === "amazon" ? "btn-amazon" : "btn-primary"} btn-sm" href="${href}" target="_blank" ${relAttr}>
+          <a class="btn ${r.linkType === "amazon" ? "btn-amazon" : "btn-primary"} btn-sm" href="${href}" target="_blank" ${relAttr}${r.linkType === "amazon" ? "" : ' data-track="other-link"'}>
             ${r.linkType === "amazon" ? "🛒" : "🔗"} ${r.linkLabel || "Learn More"}
           </a>
         </div>
@@ -305,7 +305,12 @@ function renderDeals() {
     return;
   }
 
-  mount.innerHTML = DEALS.map((d) => `
+  mount.innerHTML = DEALS.map((d) => {
+    const isOther = d.linkType === "other";
+    const href = isOther ? d.link : buildAmazonLink(d.amazon);
+    const defaultLabel = isOther ? "Check It Out" : "Shop This Deal";
+    const trackAttr = isOther ? ' data-track="other-link"' : "";
+    return `
     <article class="card deal-card">
       <div class="card-media">
         ${d.badge ? `<span class="card-badge">${d.badge}</span>` : ""}
@@ -320,13 +325,14 @@ function renderDeals() {
         }
         <p class="card-desc">${d.description}</p>
         <div class="card-actions">
-          <a class="btn btn-amazon btn-sm" href="${buildAmazonLink(d.amazon)}" target="_blank" rel="nofollow sponsored noopener">
-            🛒 Shop This Deal
+          <a class="btn ${isOther ? "btn-primary" : "btn-amazon"} btn-sm" href="${href}" target="_blank" rel="nofollow sponsored noopener"${trackAttr}>
+            ${isOther ? "🔗" : "🛒"} ${d.linkLabel || defaultLabel}
           </a>
         </div>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 
 /* ---------------- Articles / Blog ---------------- */
@@ -462,8 +468,10 @@ function renderStickyBar() {
    item and which page it happened on — that's what lets you see clicks
    toward a purchase in GA4, not just visits. It also tags outbound clicks to
    your other sites (Baldwin Terney Press, Rachel Mattei, Baldwin Terney
-   Consulting) as "family_site_click" events, and clicks to your YouTube
-   channel link as "youtube_click", so you can see which cross-promotion is
+   Consulting) as "family_site_click" events, clicks to your YouTube
+   channel link as "youtube_click", and clicks on any non-Amazon affiliate
+   button (reviews/deals with linkType "other" — Outschool/Awin, Impact,
+   HackerDNA, etc.) as "other_click", so you can see which cross-promotion is
    actually working. */
 
 function loadAnalytics() {
@@ -514,6 +522,14 @@ function loadAnalytics() {
     } else if (isYouTube) {
       gtag("event", "youtube_click", {
         link_url: link.href,
+        page_path: window.location.pathname,
+      });
+    } else if (link.dataset.track === "other-link") {
+      const card = link.closest(".card");
+      const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
+      gtag("event", "other_click", {
+        link_url: link.href,
+        item_name: itemName,
         page_path: window.location.pathname,
       });
     }

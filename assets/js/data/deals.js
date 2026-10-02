@@ -1,5 +1,6 @@
 /* =========================================================================
-   DEALS DATA — Amazon promotions (Prime, Audible, Kindle promos, etc.)
+   DEALS DATA — Amazon promotions AND other affiliate-program deals
+   (Prime, Audible, Kindle promos, Outschool, etc.)
    =========================================================================
    HOW TO ADD A NEW DEAL
    ------------------------
@@ -15,8 +16,14 @@
    image       - Path to an image, or "" to use the emoji in "icon"
    icon        - Emoji shown if no image is set
    description - A sentence about the promotion
-   amazon      - Your amzn.to link (already tagged — used as-is), a full
-                 Amazon URL, or a bare ASIN
+   linkType    - "amazon" (default if omitted) or "other". Use "other" for
+                 non-Amazon affiliate programs (Outschool/Awin, Impact, etc.)
+   amazon      - Used when linkType is "amazon": your amzn.to link (already
+                 tagged — used as-is), a full Amazon URL, or a bare ASIN
+   link        - Used when linkType is "other": the full tracked affiliate
+                 URL to use as-is (e.g. an Awin/Impact deep link)
+   linkLabel   - Optional. Button text. Defaults to "Shop This Deal" for
+                 Amazon, "Check It Out" for other. e.g. "Browse Classes"
    dealType    - "time-bound" or "evergreen"
    expires     - For time-bound deals, a human-readable end date/time,
                  e.g. "Ends Aug 3, 2026". Ignored for evergreen deals.
@@ -24,6 +31,23 @@
    ========================================================================= */
 
 const DEALS = [
+  {
+    title: "Outschool — Current Promotion",
+    image: "https://www.awin1.com/cshow.php?s=3627547&v=18973&q=413499&r=3062633",
+    icon: "🎓",
+    description:
+      "Outschool's current discount or promotional offer on live, small-group online classes for kids and teens. This banner is pulled live from Outschool/Awin, so it updates automatically whenever they change the promotion -- no edits needed here.",
+    linkType: "other",
+    // This image + link pair both come from the same Awin "deal" banner
+    // creative (s=3627547) Mark pulled from the Outschool program's creative
+    // library -- using the banner's own href keeps the picture and the
+    // destination in sync with whatever specific promo Outschool is running.
+    link: "https://www.awin1.com/cread.php?s=3627547&v=18973&q=413499&r=3062633",
+    linkLabel: "See Today's Offer",
+    dealType: "evergreen",
+    expires: "",
+    badge: "DEAL",
+  },
   {
     title: "Prime Free Trial",
     image: "",

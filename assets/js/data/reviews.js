@@ -76,4 +76,16 @@ const REVIEWS = [
     linkLabel: "Get KeePass Free",
     badge: "OPEN SOURCE & FREE",
   },
+  {
+    productName: "Outschool — AI for Kids Classes",
+    image: "https://www.awin1.com/cshow.php?s=3491913&v=18973&q=413499&r=3062633",
+    icon: "🧑‍💻",
+    rating: 5,
+    summary:
+      "With AI tools showing up in classrooms and on kids' phones faster than most curricula can keep up, Outschool's live, small-group AI for Kids classes are a good way to teach kids -- much like Cyber Elementary does -- how AI chatbots and tools actually work, where they fall short, and how to use them safely and critically, all taught live by vetted instructors in small groups. It pairs well with the online-safety habits we teach at Cyber Elementary.",
+    linkType: "other",
+    linkTarget: "https://www.awin1.com/cread.php?awinmid=18973&awinaffid=3062633&campaign=d131e1ba-3e90-45cd-fc32-08db7bba1be6&clickref=AI&ued=https%3A%2F%2Foutschool.com%2Fonline-classes%2Fai",
+    linkLabel: "See AI for Kids Classes",
+    badge: "PARTNER",
+  },
 ];
