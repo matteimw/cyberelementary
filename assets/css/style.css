@@ -699,3 +699,39 @@ body.has-sticky-bar { padding-bottom: 64px; }
   padding: 18px 22px; margin-top: 2em; box-shadow: var(--shadow);
 }
 .article-related h2 { margin-top: 0 !important; }
+
+
+/* ---------------- Teachers Pay Teachers (TPT) digital downloads ---------------- */
+.btn-tpt {
+  background: #1E8A5A; color: #fff; border: 2px solid #1E8A5A;
+}
+.btn-tpt:hover { background: #17724A; border-color: #17724A; color: #fff; }
+.tpt-media { aspect-ratio: 1 / 1; background: #fff; }
+.tpt-media img { width: 100%; height: 100%; object-fit: cover; }
+.card-badge-tpt { background: #1E8A5A; }
+.tpt-includes {
+  margin: 0; padding-left: 18px; font-size: 0.85rem; color: var(--ink-soft);
+}
+.tpt-includes li { margin: 2px 0; }
+.tpt-grade-grid, .tpt-products-grid, .tpt-subhead, .tpt-note {
+  max-width: var(--max-width); margin-left: auto; margin-right: auto;
+}
+.tpt-grade-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.tpt-grade-card .card-body { padding: 12px 12px 14px; gap: 8px; }
+.tpt-grade-card h3 { margin: 0; font-size: 1.05rem; text-align: center; }
+.tpt-actions { flex-direction: column; gap: 6px; }
+.tpt-actions .btn { font-size: 0.78rem; padding: 7px 8px; white-space: nowrap; }
+@media (max-width: 860px) { .tpt-grade-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .tpt-grade-grid { grid-template-columns: 1fr; } }
+.tpt-subhead { margin-top: 32px; margin-bottom: 14px; font-size: 1.25rem; }
+.tpt-products-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.tpt-products-grid .card-body { padding: 12px 12px 14px; gap: 6px; }
+.tpt-products-grid .card-body h3 { font-size: 0.95rem; }
+.tpt-products-grid .card-desc { font-size: 0.82rem; }
+@media (max-width: 900px) { .tpt-products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .tpt-products-grid { grid-template-columns: 1fr; } }
+.tpt-note { font-size: 0.85rem; color: var(--ink-soft); margin-top: 22px; margin-bottom: 0; }

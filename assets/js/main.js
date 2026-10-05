@@ -189,6 +189,68 @@ function renderBooks() {
   `).join("");
 }
 
+/* ---------------- Teachers Pay Teachers (TPT) digital downloads ---------------- */
+/* Data lives in assets/js/data/tpt.js (TPT_PRODUCTS). Two layouts:
+   renderTptGrades(mountId)        - home page: one tile per grade, with both
+                                     products (Lessons + Slides, Workbook +
+                                     Quizzes) as buttons.
+   renderTptProducts(mountId, type) - Books page: one full card per product,
+                                     filtered by type ("lessons"/"workbook").
+   Pages that don't load tpt.js or don't have the mount just skip it. */
+
+const GRADE_LABEL = { "3": "3rd Grade", "4": "4th Grade", "5": "5th Grade", "6": "6th Grade" };
+
+function tptButton(p, label) {
+  return `<a class="btn btn-tpt btn-sm btn-block" href="${p.url}" target="_blank" rel="noopener">${label}</a>`;
+}
+
+function renderTptGrades(mountId) {
+  const mount = document.getElementById(mountId);
+  if (!mount || typeof TPT_PRODUCTS === "undefined") return;
+  const grades = [...new Set(TPT_PRODUCTS.map((p) => p.grade))];
+  mount.innerHTML = grades.map((g) => {
+    const lessons = TPT_PRODUCTS.find((p) => p.grade === g && p.type === "lessons");
+    const workbook = TPT_PRODUCTS.find((p) => p.grade === g && p.type === "workbook");
+    const cover = (lessons || workbook).cover;
+    return `
+      <article class="card tpt-grade-card">
+        <div class="card-media tpt-media">
+          ${mediaBlock(cover, "📄", `${GRADE_LABEL[g] || g} Cyber & AI Safety digital lessons on Teachers Pay Teachers`)}
+        </div>
+        <div class="card-body">
+          <h3>${GRADE_LABEL[g] || g + " Grade"}</h3>
+          <div class="card-actions tpt-actions">
+            ${lessons ? tptButton(lessons, `📘 Lessons + Slides${lessons.price ? ` · ${lessons.price}` : ""}`) : ""}
+            ${workbook ? tptButton(workbook, `✏️ Workbook + Quizzes${workbook.price ? ` · ${workbook.price}` : ""}`) : ""}
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+}
+
+function renderTptProducts(mountId, type) {
+  const mount = document.getElementById(mountId);
+  if (!mount || typeof TPT_PRODUCTS === "undefined") return;
+  const items = TPT_PRODUCTS.filter((p) => !type || p.type === type);
+  mount.innerHTML = items.map((p) => `
+    <article class="card tpt-card">
+      <div class="card-media tpt-media">
+        ${p.badge ? `<span class="card-badge card-badge-tpt">${p.badge}</span>` : ""}
+        ${mediaBlock(p.cover, "📄", p.title)}
+      </div>
+      <div class="card-body">
+        <div class="card-actions card-actions-top">
+          ${tptButton(p, `🍎 Get it on TPT${p.price ? ` · ${p.price}` : ""}`)}
+        </div>
+        <h3>${p.title}</h3>
+        <p class="card-desc">${p.description}</p>
+        ${p.includes && p.includes.length ? `<ul class="tpt-includes">${p.includes.map((i) => `<li>${i}</li>`).join("")}</ul>` : ""}
+        <div class="card-meta">📄 Instant PDF download</div>
+      </div>
+    </article>
+  `).join("");
+}
+
 /* ---------------- Videos ---------------- */
 
 function renderVideos() {
@@ -471,7 +533,8 @@ function renderStickyBar() {
    Consulting) as "family_site_click" events, clicks to your YouTube
    channel link as "youtube_click", and clicks on any non-Amazon affiliate
    button (reviews/deals with linkType "other" — Outschool/Awin, Impact,
-   HackerDNA, etc.) as "other_click", so you can see which cross-promotion is
+   HackerDNA, etc.) as "other_click", and clicks to Teachers Pay Teachers
+   (assets/js/data/tpt.js) as "tpt_click", so you can see which cross-promotion is
    actually working. */
 
 function loadAnalytics() {
@@ -496,6 +559,7 @@ function loadAnalytics() {
     const isAmazon = /amazon\.[a-z.]+|amzn\.to/i.test(link.href);
     const isYouTube = /youtube\.com/i.test(link.href);
     const isIngram = /ingramspark\.com/i.test(link.href);
+    const isTpt = /teacherspayteachers\.com/i.test(link.href);
     const familySite = SITE_CONFIG.familySites.find((s) => link.href.startsWith(s.url));
 
     if (isAmazon) {
@@ -510,6 +574,14 @@ function loadAnalytics() {
       const card = link.closest(".card");
       const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
       gtag("event", "ingram_click", {
+        link_url: link.href,
+        item_name: itemName,
+        page_path: window.location.pathname,
+      });
+    } else if (isTpt) {
+      const card = link.closest(".card");
+      const itemName = card ? (card.querySelector("h3")?.textContent || "") : "";
+      gtag("event", "tpt_click", {
         link_url: link.href,
         item_name: itemName,
         page_path: window.location.pathname,

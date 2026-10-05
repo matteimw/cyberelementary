@@ -401,6 +401,69 @@
     </div>
   </section>
 
+  <!-- Teachers Pay Teachers digital downloads — edit in assets/js/data/tpt.js -->
+  <section class="section" id="tpt">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">For Teachers · Instant PDF Downloads</div>
+        <h2>Ready-to-teach lessons on Teachers Pay Teachers</h2>
+        <p>Prefer a printable PDF you can project and copy today? Every grade's 36 lesson plans with teacher slides, and the matching workbook with quizzes and answer key, are on Teachers Pay Teachers.</p>
+      </div>
+    </div>
+    <div class="tpt-grade-grid" id="tpt-grade-grid"><!--prerender:start-->
+      <article class="card tpt-grade-card">
+        <div class="card-media tpt-media">
+          <img src="assets/images/tpt/grade3-lessons.jpg" alt="3rd Grade Cyber & AI Safety digital lessons on Teachers Pay Teachers" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3>3rd Grade</h3>
+          <div class="card-actions tpt-actions">
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/3rd-Grade-Cyber-AI-Security-and-Safety-36-Lessons-with-Lesson-Plans-and-Slide-17816849" target="_blank" rel="noopener">📘 Lessons + Slides · $4.99</a>
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/Cyber-Elementary-3rd-Grade-Cyber-AI-Security-and-Safety-Workbooks-and-Quizzes-17817224" target="_blank" rel="noopener">✏️ Workbook + Quizzes · $4.99</a>
+          </div>
+        </div>
+      </article>
+      <article class="card tpt-grade-card">
+        <div class="card-media tpt-media">
+          <img src="assets/images/tpt/grade4-lessons.jpg" alt="4th Grade Cyber & AI Safety digital lessons on Teachers Pay Teachers" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3>4th Grade</h3>
+          <div class="card-actions tpt-actions">
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/4th-Grade-Cyber-AI-Security-and-Safety-36-Lesson-Plans-and-Slides-17816988" target="_blank" rel="noopener">📘 Lessons + Slides · $4.99</a>
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/Cyber-Elementary-4th-Grade-Cyber-AI-Security-and-Safety-Workbooks-and-Quizzes-17817318" target="_blank" rel="noopener">✏️ Workbook + Quizzes · $4.99</a>
+          </div>
+        </div>
+      </article>
+      <article class="card tpt-grade-card">
+        <div class="card-media tpt-media">
+          <img src="assets/images/tpt/grade5-lessons.jpg" alt="5th Grade Cyber & AI Safety digital lessons on Teachers Pay Teachers" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3>5th Grade</h3>
+          <div class="card-actions tpt-actions">
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/5th-Grade-Cyber-AI-Security-and-Safety-36-Lessons-and-Slides-17817032" target="_blank" rel="noopener">📘 Lessons + Slides · $4.99</a>
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/Cyber-Elementary-5th-Grade-Cyber-AI-Security-and-Safety-Workbooks-and-Quizzes-17817398" target="_blank" rel="noopener">✏️ Workbook + Quizzes · $4.99</a>
+          </div>
+        </div>
+      </article>
+      <article class="card tpt-grade-card">
+        <div class="card-media tpt-media">
+          <img src="assets/images/tpt/grade6-lessons.jpg" alt="6th Grade Cyber & AI Safety digital lessons on Teachers Pay Teachers" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3>6th Grade</h3>
+          <div class="card-actions tpt-actions">
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/6th-Grade-Cyber-AI-Security-and-Safety-36-Lessons-and-Slides-17817082" target="_blank" rel="noopener">📘 Lessons + Slides · $4.99</a>
+            <a class="btn btn-tpt btn-sm btn-block" href="https://www.teacherspayteachers.com/Product/Cyber-Elementary-6th-Grade-Cyber-AI-Security-and-Safety-Workbooks-and-Quizzes-17817433" target="_blank" rel="noopener">✏️ Workbook + Quizzes · $4.99</a>
+          </div>
+        </div>
+      </article><!--prerender:end--></div>
+    <div class="text-center" style="margin-top:20px;">
+      <a class="btn btn-outline btn-sm" href="books.html#tpt">See all digital downloads →</a>
+    </div>
+  </section>
+
   <!-- Reviews + Articles, side by side -->
   <section class="section">
     <div class="home-split-narrow">
@@ -654,6 +717,7 @@
 <script src="assets/js/data/articles.js"></script>
 <script src="assets/js/data/deals.js"></script>
 <script src="assets/js/data/kindle.js"></script>
+<script src="assets/js/data/tpt.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -682,6 +746,7 @@
 
     renderHomeBooks();
     renderHomeVideos();
+    renderTptGrades("tpt-grade-grid");
   });
 
   // Returns just the first sentence of a longer description (used to keep
