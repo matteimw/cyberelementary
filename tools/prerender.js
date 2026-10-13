@@ -349,6 +349,23 @@ function articleNode(a) {
 }
 
 const ORD = { 3: "3rd", 4: "4th", 5: "5th", 6: "6th" };
+
+// A lesson's video, as a complete VideoObject. Reuses the full entry from
+// videos.js (same name/description/@id as videos.html) so Google never sees
+// a VideoObject without a description; falls back to the lesson tagline.
+function lessonVideoNode(D, l) {
+  const v = D.videos.find((x) => x.id === l.videoId);
+  if (v) return videoNode(v);
+  return {
+    "@type": "VideoObject",
+    name: `Lesson ${l.n}: ${l.topic}`,
+    description: `Cyber Elementary video lesson ${l.n}: ${l.topic} \u2014 ${l.tagline}`,
+    embedUrl: `https://www.youtube.com/embed/${l.videoId}`,
+    thumbnailUrl: `https://i.ytimg.com/vi/${l.videoId}/hqdefault.jpg`,
+    isFamilyFriendly: true,
+    inLanguage: "en",
+  };
+}
 function courseNode(D, g, url) {
   const C = D.curriculum;
   const book = D.books.find((b) => new RegExp(`${ORD[g]} Grade Lesson Plan Book`, "i").test(b.title));
@@ -375,7 +392,7 @@ function courseNode(D, g, url) {
       educationalLevel: `Grade ${g}`,
       about: l.topic,
       isPartOf: { "@type": "CreativeWorkSeries", name: C.units.find((u) => { const [a, b] = u.lessons.split("-").map(Number); return l.n >= a && l.n <= b; }).name },
-      associatedMedia: l.videoId ? { "@type": "VideoObject", name: `Lesson ${l.n}: ${l.topic}`, embedUrl: `https://www.youtube.com/embed/${l.videoId}`, thumbnailUrl: `https://i.ytimg.com/vi/${l.videoId}/hqdefault.jpg` } : undefined,
+      associatedMedia: l.videoId ? lessonVideoNode(D, l) : undefined,
     })),
   };
 }
