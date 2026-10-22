@@ -167,6 +167,42 @@ function injectJsonLd(html, graph) {
   return html.replace(/<\/head>/i, () => `${block}\n</head>`);
 }
 
+/* Social-preview tags (Open Graph + X/Twitter card) — what Facebook,
+   LinkedIn, X, WhatsApp, etc. show when someone shares a page: title,
+   description and the picture at SHARE_IMAGE. Built from each page's own
+   <title>, meta description and canonical link, between
+   <!--og:start--> / <!--og:end--> markers. Swap the picture by replacing
+   assets/images/social/share-card.png (1200x630). */
+const SHARE_IMAGE = "assets/images/social/share-card.png";
+function injectSocialMeta(html, page) {
+  if (/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) return html;
+  const title = (html.match(/<title>([^<]*)<\/title>/i) || [])[1] || "Cyber Elementary";
+  const desc = (html.match(/<meta\s+name="description"\s+content="([^"]*)"/i) || [])[1] || "";
+  const url = (html.match(/<link\s+rel="canonical"\s+href="([^"]*)"/i) || [])[1] ||
+    (page === "index.html" ? `${SITE}/` : `${SITE}/${page}`);
+  const type = /^blog-/.test(page) ? "article" : "website";
+  const img = `${SITE}/${SHARE_IMAGE}`;
+  const block = `<!--og:start-->
+<meta property="og:type" content="${type}" />
+<meta property="og:site_name" content="Cyber Elementary" />
+<meta property="og:title" content="${title.trim()}" />
+<meta property="og:description" content="${desc}" />
+<meta property="og:url" content="${url}" />
+<meta property="og:image" content="${img}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cyber Elementary — cyber safety for kids, grades 3-6" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${title.trim()}" />
+<meta name="twitter:description" content="${desc}" />
+<meta name="twitter:image" content="${img}" />
+<!--og:end-->`;
+  if (/<!--og:start-->[\s\S]*?<!--og:end-->/.test(html)) {
+    return html.replace(/<!--og:start-->[\s\S]*?<!--og:end-->/, () => block);
+  }
+  return html.replace(/<\/head>/i, () => `${block}\n</head>`);
+}
+
 function bodyScripts(html) {
   const body = html.slice(html.search(/<body\b/i));
   const out = [];
@@ -494,6 +530,9 @@ function main() {
 
     // 2. Structured data.
     html = injectJsonLd(html, pageGraph(D, page, html));
+
+    // 3. Social-share preview tags (Facebook / LinkedIn / X cards).
+    html = injectSocialMeta(html, page);
 
     if (html !== original) {
       fs.writeFileSync(file, html);

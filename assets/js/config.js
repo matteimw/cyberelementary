@@ -74,6 +74,17 @@ const SITE_CONFIG = {
   // below, replacing "G-XXXXXXXXXX". Analytics stays off (no script loads,
   // nothing to worry about privacy-wise) until you paste a real ID here.
   gaMeasurementId: "G-VNRNG6XJ7V",
+
+  // "Share" button (header + footer) — the popup with Facebook, X,
+  // LinkedIn, Instagram, TikTok, WhatsApp, Email and Copy link.
+  //   siteUrl  — the address shared when someone picks "Whole site"
+  //   siteText — the message that goes with it (X, WhatsApp, Email)
+  //   hashtags — comma-separated, added to X posts only ("" for none)
+  share: {
+    siteUrl: "https://www.cyberelementary.com",
+    siteText: "Free cyber safety video lessons and books for kids in grades 3-6 from Cyber Elementary",
+    hashtags: "CyberSafety,KidsOnlineSafety",
+  },
 };
 
 /**

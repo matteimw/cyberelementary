@@ -47,7 +47,10 @@ function renderHeader() {
         <span class="logo-badge" aria-hidden="true">${logoInner}</span>
         Cyber Elementary
       </a>
-      <nav class="main-nav" aria-label="Main navigation">${navHtml}</nav>
+      <div class="nav-right">
+        <nav class="main-nav" aria-label="Main navigation">${navHtml}</nav>
+        <button type="button" class="share-btn" data-share-open aria-haspopup="dialog" aria-label="Share this site">📤<span class="share-label"> Share</span></button>
+      </div>
     </div>
   `;
 }
@@ -85,6 +88,7 @@ function renderFooter() {
           books, articles, and family-friendly picks.
         </p>
         <div class="social-row">${socialHtml}</div>
+        <button type="button" class="share-btn footer-share" data-share-open aria-haspopup="dialog">📤 Share this site</button>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -519,6 +523,193 @@ function renderStickyBar() {
   document.body.classList.add("has-sticky-bar");
 }
 
+/* ---------------- Share button + popup ---------------- */
+/* The "Share" button in the header (and the "Share this site" button in the
+   footer) opens a popup with Facebook, X, LinkedIn, Instagram, TikTok,
+   WhatsApp, Email and Copy Link. Wording and the site address come from
+   SITE_CONFIG.share in config.js — edit them there.
+
+   Instagram and TikTok don't offer a web "share this link" page like
+   Facebook/X/LinkedIn do. So on phones, those buttons open the phone's own
+   share sheet (where the Instagram/TikTok apps appear); on computers, they
+   copy the link and open Instagram/TikTok in a new tab so the visitor can
+   paste it into a post, story, bio or message.
+
+   Every shared link gets UTM tags (utm_source=facebook, etc.) so Google
+   Analytics shows which platform each visitor came from, and every click
+   fires a GA4 "share" event. */
+
+const SHARE_PLATFORMS = [
+  { key: "facebook",  label: "Facebook",  icon: "📘", url: (u) => `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { key: "x",         label: "X",         icon: "✖️", url: (u, t) => `https://x.com/intent/post?url=${u}&text=${t}` },
+  { key: "linkedin",  label: "LinkedIn",  icon: "💼", url: (u) => `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { key: "instagram", label: "Instagram", icon: "📸", app: "https://www.instagram.com/" },
+  { key: "tiktok",    label: "TikTok",    icon: "🎵", app: "https://www.tiktok.com/" },
+  { key: "whatsapp",  label: "WhatsApp",  icon: "💬", url: (u, t) => `https://wa.me/?text=${t}%20${u}` },
+  { key: "email",     label: "Email",     icon: "✉️", url: (u, t, s) => `mailto:?subject=${s}&body=${t}%0A%0A${u}` },
+  { key: "copy",      label: "Copy link", icon: "🔗" },
+];
+
+function shareConfig() {
+  const c = SITE_CONFIG.share || {};
+  return {
+    siteUrl: (c.siteUrl || "https://www.cyberelementary.com").replace(/\/$/, ""),
+    siteText: c.siteText || "Free cyber safety video lessons and books for kids in grades 3-6 from Cyber Elementary",
+    hashtags: c.hashtags || "",
+  };
+}
+
+// Address being shared: the whole site, or the page the visitor is on.
+function shareTarget(scope) {
+  const c = shareConfig();
+  const page = currentPage();
+  const onHome = !page || page === "index.html";
+  if (scope === "site" || onHome) return { url: c.siteUrl + "/", text: c.siteText };
+  const title = (document.title || "").replace(/\s+[—|-]\s+Cyber Elementary.*$/i, "").trim();
+  return { url: c.siteUrl + "/" + page, text: (title ? title + " — " : "") + "Cyber Elementary" };
+}
+
+function withUtm(url, source) {
+  try {
+    const u = new URL(url);
+    u.searchParams.set("utm_source", source);
+    u.searchParams.set("utm_medium", "social");
+    u.searchParams.set("utm_campaign", "share_button");
+    return u.toString();
+  } catch (e) {
+    return url;
+  }
+}
+
+function copyText(text) {
+  // Synchronous copy first (works everywhere, keeps the click "user gesture"
+  // intact so the Instagram/TikTok tab can still open right after).
+  let ok = false;
+  try {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    ok = document.execCommand("copy");
+    document.body.removeChild(ta);
+  } catch (e) { ok = false; }
+  if (!ok && navigator.clipboard) {
+    navigator.clipboard.writeText(text).catch(() => {});
+    ok = true;
+  }
+  return ok;
+}
+
+function isPhone() {
+  return !!(navigator.share && window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+}
+
+function trackShare(method, url) {
+  if (window.gtag) window.gtag("event", "share", { method, content_type: "page", item_id: url, page_path: window.location.pathname });
+}
+
+function buildShareModal() {
+  const page = currentPage();
+  const onHome = !page || page === "index.html";
+  const wrap = document.createElement("div");
+  wrap.id = "share-modal";
+  wrap.className = "share-modal";
+  wrap.hidden = true;
+  wrap.innerHTML = `
+    <div class="share-backdrop" data-share-close></div>
+    <div class="share-dialog" role="dialog" aria-modal="true" aria-labelledby="share-title">
+      <button class="share-close" type="button" aria-label="Close" data-share-close>✕</button>
+      <h3 id="share-title">Share Cyber Elementary</h3>
+      <p class="share-sub">Help other parents and teachers find free cyber safety lessons for kids.</p>
+      ${onHome ? "" : `
+      <div class="share-scope" role="radiogroup" aria-label="What to share">
+        <label><input type="radio" name="share-scope" value="page" checked> This page</label>
+        <label><input type="radio" name="share-scope" value="site"> Whole site</label>
+      </div>`}
+      <div class="share-grid">
+        ${SHARE_PLATFORMS.map((p) => `
+          <button type="button" class="share-opt share-${p.key}" data-share="${p.key}">
+            <span class="share-ico" aria-hidden="true">${p.icon}</span>${p.label}
+          </button>`).join("")}
+      </div>
+      <div class="share-url-row">
+        <input type="text" class="share-url" readonly aria-label="Link to share">
+      </div>
+      <p class="share-msg" role="status" aria-live="polite"></p>
+    </div>`;
+  document.body.appendChild(wrap);
+
+  const urlBox = wrap.querySelector(".share-url");
+  const msg = wrap.querySelector(".share-msg");
+  const scope = () => (wrap.querySelector('input[name="share-scope"]:checked') || {}).value || "page";
+  const refresh = () => { urlBox.value = shareTarget(scope()).url; msg.textContent = ""; };
+  wrap.addEventListener("change", refresh);
+  urlBox.addEventListener("focus", () => urlBox.select());
+
+  wrap.addEventListener("click", (e) => {
+    if (e.target.closest("[data-share-close]")) { closeShareModal(); return; }
+    const btn = e.target.closest("[data-share]");
+    if (!btn) return;
+    const p = SHARE_PLATFORMS.find((x) => x.key === btn.dataset.share);
+    const t = shareTarget(scope());
+    const link = withUtm(t.url, p.key);
+    const tags = shareConfig().hashtags;
+    const text = t.text + (tags && (p.key === "x") ? " " + tags.split(",").map((h) => "#" + h.trim()).join(" ") : "");
+    trackShare(p.key, t.url);
+
+    if (p.key === "copy") {
+      copyText(link);
+      msg.textContent = "✅ Link copied — paste it anywhere.";
+      return;
+    }
+    if (p.app) {
+      if (isPhone()) {
+        navigator.share({ title: "Cyber Elementary", text: t.text, url: link }).catch(() => {});
+        return;
+      }
+      copyText(link);
+      msg.textContent = `✅ Link copied! Paste it into your ${p.label} post, story, bio or message.`;
+      window.open(p.app, "_blank", "noopener");
+      return;
+    }
+    const href = p.url(encodeURIComponent(link), encodeURIComponent(text), encodeURIComponent(t.text));
+    if (p.key === "email") { window.location.href = href; return; }
+    window.open(href, "_blank", "noopener,width=640,height=600");
+  });
+
+  wrap._refresh = refresh;
+  return wrap;
+}
+
+let shareReturnFocus = null;
+function openShareModal() {
+  const m = document.getElementById("share-modal") || buildShareModal();
+  m._refresh();
+  shareReturnFocus = document.activeElement;
+  m.hidden = false;
+  document.body.classList.add("share-open");
+  const first = m.querySelector(".share-opt");
+  if (first) first.focus();
+}
+
+function closeShareModal() {
+  const m = document.getElementById("share-modal");
+  if (!m || m.hidden) return;
+  m.hidden = true;
+  document.body.classList.remove("share-open");
+  if (shareReturnFocus && shareReturnFocus.focus) shareReturnFocus.focus();
+}
+
+function initShare() {
+  document.addEventListener("click", (e) => {
+    if (e.target.closest && e.target.closest("[data-share-open]")) { e.preventDefault(); openShareModal(); }
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeShareModal(); });
+}
+
 /* ---------------- Analytics (Google Analytics 4) ---------------- */
 /* Loads GA4 automatically on every page, past and future, once you paste a
    real Measurement ID into SITE_CONFIG.gaMeasurementId (assets/js/config.js)
@@ -652,4 +843,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderStickyBar();
   loadAnalytics();
   loadYouTubeSubscribeWidget();
+  initShare();
 });
