@@ -65,6 +65,19 @@ const REVIEWS = [
     badge: "",
   },
   {
+    productName: "SCADA and Me: A Book for Children and Management",
+    image: "",
+    icon: "🏭",
+    rating: 5,
+    summary:
+      "SCADA and Me by Robert M. Lee is the companion to Santa and Me, and it was the first book I used to explain my critical infrastructure cyber work to my children. In just a few simple pages it shows what industrial control systems do, why they keep things like power and water running, and why protecting them matters. It's written so kids can follow along, and honestly it works just as well for adults who are new to the topic. It gave my family an easy starting point for talking about what I do and why cybersecurity matters beyond our own phones and computers.",
+    itemType: "Book",
+    linkType: "amazon",
+    linkTarget: "https://link.amazon/B0dvRShHt",
+    linkLabel: "See it on Amazon",
+    badge: "",
+  },
+  {
     productName: "KeePass Password Manager",
     image: "",
     icon: "🔐",
